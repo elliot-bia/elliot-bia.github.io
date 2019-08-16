@@ -27,9 +27,9 @@
     scheme: 'Pisces',
     version: '7.3.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":true},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    save_scroll: false,
+    save_scroll: true,
     copycode: {"enable":true,"show_result":true,"style":"flat"},
     fancybox: false,
     mediumzoom: false,
@@ -42,8 +42,8 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: 'Copy',
@@ -195,9 +195,36 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+      </li>
+    
   </ul>
 
 </nav>
+  <div class="site-search">
+    
+  <div class="popup search-popup">
+  <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-wrapper">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+  <div id="search-result"></div>
+</div>
+
+
+  </div>
 </div>
     </header>
 
@@ -341,7 +368,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
             
           </div>
         
@@ -485,7 +512,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-number">1.</span> <span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-安装"><span class="nav-number">2.</span> <span class="nav-text">01 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-图片"><span class="nav-number">3.</span> <span class="nav-text">02 图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-音乐"><span class="nav-number">4.</span> <span class="nav-text">03 音乐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-美化"><span class="nav-number">5.</span> <span class="nav-text">04 美化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-安装"><span class="nav-text">01 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-图片"><span class="nav-text">02 图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-音乐"><span class="nav-text">03 音乐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-美化"><span class="nav-text">04 美化</span></a></li></ol></div>
             
 
           </div>
@@ -564,6 +591,8 @@
 
 
 
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
 
 
 

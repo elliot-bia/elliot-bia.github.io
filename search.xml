@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo博客安装进行时]]></title>
+    <url>%2F2019%2F08%2F16%2Fhexo_installation%2F</url>
+    <content type="text"><![CDATA[00 前言换博客, 辣鸡wordpress 01 安装本机安装git, Node.js设置npm代理: 12npm config set proxy http://server:portnpm config set https-proxy http://server:port 然后打开cmd 运行npm install -g hexo 安装hexo新建一个文件夹，如MyBlog进入该文件夹内，右击运行git，输入：hexo init（生成hexo模板, 从GitHub上download下来） 生成完模板，运行npm install最后运行：hexo server （运行程序，访问本地localhost:4000可以看到博客已经搭建成功） 02 图片测试用, 放在source/upload_image使用的时候就/upload_image 03 音乐参考网易云的mp3链接:http://music.163.com/song/media/outer/url?id=ID数字.mp3通过分享的审查元素可以找到图片最后的\themes\next\source\dist\music.js格式为: 123456{ name: "", artist: '', url: 'http://music.163.com/song/media/outer/url?id=.mp3', cover: '',} 04 美化这里美化直接百度吧, 注意版本为NexT6.x以上 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F08%2F16%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
