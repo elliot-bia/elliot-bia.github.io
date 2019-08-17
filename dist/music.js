@@ -45,7 +45,25 @@ const ap = new APlayer({
             name: "雪落下的声音",
             artist: '林俊杰',
             url: '/music/雪落下的声音.mp3',
-            cover: '//y.gtimg.cn/music/photo_new/T002R300x300M0000042DlJJ3QNC0P.jpg',
+            cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M0000042DlJJ3QNC0P.jpg',
+        },
+        {
+            name: "何须问",
+            artist: '银临',
+            url: '/music/何须问.mp3',
+            cover: 'http://pic.xiami.net/images/album/img50/124/5c3c2796e8cf4_6241450_1547446166.jpg',
+        },
+        {
+            name: "千里之外",
+            artist: '周杰伦/费玉清',
+            url: '/music/千里之外.mp3',
+            cover: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002jLGWe16Tf1H.jpg',
+        },
+        {
+            name: "梦一场",
+            artist: '李健',
+            url: '/music/梦一场.mp3',
+            cover: '//y.gtimg.cn/music/photo_new/T002R300x300M000001HDJU02YJuNQ.jpg',
         }
         
     ]
