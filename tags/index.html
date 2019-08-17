@@ -84,14 +84,14 @@
 
 <meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
+<meta property="og:title" content="Tagcloud">
 <meta property="og:url" content="https://zzdkl.com.cn/tags/index.html">
 <meta property="og:site_name" content="One Blog">
 <meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-16T03:55:05.000Z">
+<meta property="og:updated_time" content="2019-08-17T04:10:09.109Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Tagcloud">
 <meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>tags | One Blog</title>
+  <title>Tagcloud | One Blog</title>
   
 
 
@@ -281,7 +281,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
+	<h1 class="post-title" itemprop="name headline">Tagcloud</h1>
 
 
 
@@ -293,25 +293,14 @@
       <div class="post-body">
         
         
-          <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+                1 tag in total
+            </div>
+            <div class="tag-cloud-tags">
+              <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a>
+            </div>
+          </div>
         
       </div>
       
@@ -383,10 +372,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">categories</span>
-                
+                </a>
               </div>
             
 
@@ -394,10 +383,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
