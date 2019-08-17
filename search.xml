@@ -1,188 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>巨硬Win10与Office激活</title>
-      <link href="/2019/08/17/MS_activate/"/>
-      <url>/2019/08/17/MS_activate/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>闲来无事，刚好遇到了激活类的问题，以及群里有人问到了，就写一下微软激活类的文章吧。</p><p>由于激活类存在时效性，因此不会对此文章进行更新，能用一天是一天，实在不行用报毒的KMS搞他一波</p><a id="more"></a><h1 id="01-激活Windows"><a href="#01-激活Windows" class="headerlink" title="01 激活Windows"></a>01 激活Windows</h1><p>Windows版本有几类，具体哪几类自己百度，我只推荐<code>专业版</code>和<code>企业长期支持版LTSB</code></p><p>Windows专业版激活步骤</p><figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">slmgr<span class="selector-class">.vbs</span> /upk</span><br><span class="line"></span><br><span class="line">slmgr /ipk W269N-WFGWX-YVC9B-<span class="number">4</span>J6C9-T83GX</span><br><span class="line"></span><br><span class="line">slmgr /skms zh<span class="selector-class">.us</span><span class="selector-class">.to</span></span><br><span class="line"></span><br><span class="line">slmgr /ato</span><br></pre></td></tr></tbody></table></figure><p>用管理员权限打开的<code>CMD</code>或者<code>PowerShell</code>都可以</p><p>家庭版可用密钥 ： <code>PPBK3-M92CH-MRR9X-34Y9P-7CH2F</code></p><h1 id="02-激活office"><a href="#02-激活office" class="headerlink" title="02 激活office"></a>02 激活office</h1><p>office同样有很多版本，我只安装需要的<code>Word</code>,<code>Excel</code>,<code>PowerPoint</code>这三件套，在安装的时候选择自定义选项把其他的插件取消勾选就好，具体有机会再演示</p><p>激活步骤如下：</p><figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files\Microsoft Office\Office16</span><br><span class="line">cscript ospp<span class="selector-class">.vbs</span> /inpkey:XQNVK-<span class="number">8</span>JYDB-WJ9W3-YJ8YR-WFG99</span><br><span class="line">cscript ospp<span class="selector-class">.vbs</span> /sethst:kms.<span class="number">03</span>k.org</span><br><span class="line">cscript ospp<span class="selector-class">.vbs</span> /act</span><br></pre></td></tr></tbody></table></figure><p>操作步骤同Windows激活，第一条命令是打开office安装目录，详细可参考<a href="https://www.hack520.com/ospp-vbs.html" target="_blank" rel="noopener">参考链接1 : ospp.vbs在哪里？</a></p><p>附上可能用得到的密钥 ：</p><figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Office Professional Plus <span class="number">2016</span>：XQNVK<span class="number">-8</span>JYDB-WJ9W3-YJ8YR-WFG99</span><br><span class="line"></span><br><span class="line">Office Standard <span class="number">2016</span>：JNRGM-WHDWX-FJJG3-K47QV-DRTFM</span><br><span class="line"></span><br><span class="line">Project Professional <span class="number">2016</span>：YG9NW<span class="number">-3</span>K39V<span class="number">-2</span>T3HJ<span class="number">-93</span>F3Q-G83KT</span><br><span class="line"></span><br><span class="line">Project Standard <span class="number">2016</span>：GNFHQ-F6YQM-KQDGJ<span class="number">-327</span>XX-KQBVC</span><br></pre></td></tr></tbody></table></figure><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[巨硬Win10与Office激活]]></title>
+    <url>%2F2019%2F08%2F17%2FMS_activate%2F</url>
+    <content type="text"><![CDATA[00 前言闲来无事，刚好遇到了激活类的问题，以及群里有人问到了，就写一下微软激活类的文章吧。 由于激活类存在时效性，因此不会对此文章进行更新，能用一天是一天，实在不行用报毒的KMS搞他一波 01 激活WindowsWindows版本有几类，具体哪几类自己百度，我只推荐专业版和企业长期支持版LTSB Windows专业版激活步骤 1234567slmgr.vbs /upkslmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GXslmgr /skms zh.us.toslmgr /ato 用管理员权限打开的CMD或者PowerShell都可以 家庭版可用密钥 ： PPBK3-M92CH-MRR9X-34Y9P-7CH2F 02 激活officeoffice同样有很多版本，我只安装需要的Word,Excel,PowerPoint这三件套，在安装的时候选择自定义选项把其他的插件取消勾选就好，具体有机会再演示 激活步骤如下： 1234cd C:\Program Files\Microsoft Office\Office16cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99cscript ospp.vbs /sethst:kms.03k.orgcscript ospp.vbs /act 操作步骤同Windows激活，第一条命令是打开office安装目录，详细可参考参考链接1 : ospp.vbs在哪里？ 附上可能用得到的密钥 ： 1234567Office Professional Plus 2016：XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99Office Standard 2016：JNRGM-WHDWX-FJJG3-K47QV-DRTFMProject Professional 2016：YG9NW-3K39V-2T3HJ-93F3Q-G83KTProject Standard 2016：GNFHQ-F6YQM-KQDGJ-327XX-KQBVC document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> other </category>
-          
+        <category>other</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Microsoft </tag>
-            
-            <tag> Activate </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>虚拟机上网相关</title>
-      <link href="/2019/08/17/network_in_VM/"/>
-      <url>/2019/08/17/network_in_VM/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究</p><a id="more"></a><h1 id="01-预备知识"><a href="#01-预备知识" class="headerlink" title="01. 预备知识"></a>01. 预备知识</h1><ol><li>首先参考这两个链接，很有用</li></ol><p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">NAT转换</a></p><p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">桥接模式</a></p><ol start="2"><li>之后就是设置IP的操作<ol><li>Windows下的<code>ipconfig/release SPECIFY_NETWORK_ADAPTER(etho0;WLAN)</code> 释放指定网卡，然后重设IP</li><li>Linux下设置IP地址<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__ip地址配置__</span><br><span class="line">ifconfig   <span class="comment">//查看与配置网络状态命令</span></span><br><span class="line">ifconfig eth0 <span class="number">192.168</span><span class="number">.0</span><span class="number">.200</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>        <span class="comment">//临时设置eth0网卡的ip地址与子网掩码</span></span><br><span class="line">service network restart<span class="comment">//重启网络服务</span></span><br></pre></td></tr></tbody></table></figure></li></ol></li></ol><h1 id="02-宿主机通过虚拟机上网-桥接"><a href="#02-宿主机通过虚拟机上网-桥接" class="headerlink" title="02. 宿主机通过虚拟机上网(桥接)"></a>02. 宿主机通过虚拟机上网(桥接)</h1><p>通过参考链接的网络拓扑图我们可以清楚VMWare软件的网卡配置原理</p><p>首先，让虚拟机获得IP，测试能否上网</p><p>第二，释放掉宿主机IP，设置新IP，并设置虚拟机IP为网关地址</p><p>进行测试</p><h1 id="03-宿主机通过虚拟机上网-NAT"><a href="#03-宿主机通过虚拟机上网-NAT" class="headerlink" title="03. 宿主机通过虚拟机上网(NAT)"></a>03. 宿主机通过虚拟机上网(NAT)</h1><p>这个就是 <strong>难点</strong> 了.23333,其实如果能看懂网络拓扑图，问题也不难</p><p>最重要的点就是：如何通过VMnet8上网而不是宿主机的物理网卡，于此同时又不停用宿主机物理网卡(因为虚拟机出口网关要用)</p><p>这样就显得有点 <strong>没事找事干</strong> 了。</p><p>这里没有其他特别好的办法，也就VPN了</p><h1 id="04-总结"><a href="#04-总结" class="headerlink" title="04. 总结"></a>04. 总结</h1><p>没事瞎折腾找资料写着玩</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>Microsoft</tag>
+        <tag>Activate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[虚拟机上网相关]]></title>
+    <url>%2F2019%2F08%2F17%2Fnetwork_in_VM%2F</url>
+    <content type="text"><![CDATA[00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究 01. 预备知识 首先参考这两个链接，很有用 NAT转换 桥接模式 之后就是设置IP的操作 Windows下的ipconfig/release SPECIFY_NETWORK_ADAPTER(etho0;WLAN) 释放指定网卡，然后重设IP Linux下设置IP地址1234__ip地址配置__ifconfig //查看与配置网络状态命令ifconfig eth0 192.168.0.200 netmask 255.255.255.0 //临时设置eth0网卡的ip地址与子网掩码service network restart //重启网络服务 02. 宿主机通过虚拟机上网(桥接)通过参考链接的网络拓扑图我们可以清楚VMWare软件的网卡配置原理 首先，让虚拟机获得IP，测试能否上网 第二，释放掉宿主机IP，设置新IP，并设置虚拟机IP为网关地址 进行测试 03. 宿主机通过虚拟机上网(NAT)这个就是 难点 了.23333,其实如果能看懂网络拓扑图，问题也不难 最重要的点就是：如何通过VMnet8上网而不是宿主机的物理网卡，于此同时又不停用宿主机物理网卡(因为虚拟机出口网关要用) 这样就显得有点 没事找事干 了。 这里没有其他特别好的办法，也就VPN了 04. 总结没事瞎折腾找资料写着玩 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> Network </category>
-          
+        <category>Network</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> VM </tag>
-            
-            <tag> Network </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>私有云搭建, 打造家庭网络中心</title>
-      <link href="/2019/08/17/private_cloud_and_more/"/>
-      <url>/2019/08/17/private_cloud_and_more/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>最近博客更新的内容少了，主要是最近太累了，又接近考试了，所以不能权衡两方面的工作</p><p>最近有了搭建私有云的想法，实现目的有其下几个：</p><ol><li>离线下载（主要是百度云离线、下载）</li><li>家庭数据备份（如相片）</li><li>数据同步（私有云）</li><li>（个人服务器）<a id="more"></a></li></ol><h2 id="0-1-HTPC-离线下载"><a href="#0-1-HTPC-离线下载" class="headerlink" title="0.1 HTPC + 离线下载"></a>0.1 HTPC + 离线下载</h2><p>主要是为了能够高清看美剧（1080P），国内没有1080P在线看网站（基本都是720P），国外高清源没有中英字幕</p><p>解决办法 ： 下载无字幕版，加字幕    <del>(隐藏坑点 ： 投影到电视盒子的时候是否可以添加字幕？)</del></p><pre><code>新增问题 : 如何搭建一个网站可以在移动端进行观看？</code></pre><p>新解决办法 ： <strong>kodi + emby</strong></p><h2 id="0-2-家庭数据备份"><a href="#0-2-家庭数据备份" class="headerlink" title="0.2 家庭数据备份"></a>0.2 家庭数据备份</h2><p>我们会遇到这样的一个场景 ： 外出游玩时弄了很多相片，导致手机存储空间越来越小</p><p>主要是相片，应用场景为 ： 可以通过一个APP将相片上传到NAS，网络环境可以为内外网</p><h1 id="01-基本设置"><a href="#01-基本设置" class="headerlink" title="01 基本设置"></a>01 基本设置</h1><p>基本定了，上X86处理器，win10系统  <del>esxi底层</del> + Windows自带资源池 <del>ZFS存储服务器</del>  + 软路由 + HTPC + NAS</p><p><a href="https://post.smzdm.com/p/674680/" target="_blank" rel="noopener">参考资料：总方向</a></p><p><del>~ 配置<a href="https://post.smzdm.com/p/296026/p11/" target="_blank" rel="noopener">ZFS存储服务器</a> ~</del> zfs过于麻烦，选用Windows自带资源池<br><del><a href="https://www.chiphell.com/thread-1547570-1-1.html" target="_blank" rel="noopener">freenas与omnios+napp-it的速度对比</a></del></p><h2 id="1-1-HTPC-设置"><a href="#1-1-HTPC-设置" class="headerlink" title="1.1 HTPC 设置"></a>1.1 HTPC 设置</h2><p>使用kodi，很好用的播放器，暂定为Win10机上的HTPC播放器</p><p><a href="https://zhuanlan.zhihu.com/p/43939225" target="_blank" rel="noopener">参考资料1</a><br><a href="https://www.iplaysoft.com/kodi.html" target="_blank" rel="noopener">参考资料2</a></p><p>另外对于本地媒体库可<a href="https://pockies.github.io/2019/03/25/everaver-emby-kodi/" target="_blank" rel="noopener">参考链接</a></p><p>使用emby <a href="https://emby.media/index.html" target="_blank" rel="noopener">官方链接</a>  这东西真的是太棒了！！！</p><h2 id="1-2-HTPC-总结"><a href="#1-2-HTPC-总结" class="headerlink" title="1.2 HTPC 总结"></a>1.2 HTPC 总结</h2><p>HTPC基本告一段落，win10机器同时启用kodi作为HTPC，使用emby作为网络流媒体播放器！</p><p>字幕kodi可以自选，emby可以通过同样的命名可进行识别。</p><h1 id="02-软路由"><a href="#02-软路由" class="headerlink" title="02 软路由"></a>02 软路由</h1><p>软路由要求 ： <strong>5G WiFi</strong> （取决于AP）和 <strong>无缝漫游</strong> （DHCP的IP地址不变）</p><h2 id="2-1-AP选择"><a href="#2-1-AP选择" class="headerlink" title="2.1 AP选择"></a>2.1 AP选择</h2><p><a href="https://zhuanlan.zhihu.com/p/30492965" target="_blank" rel="noopener">AC和AP是什么</a></p><p>需要终端和AP同时支持无缝漫游才行，这里推荐<code>Ubnt 捷联讯通</code>的AP方案，支持5G WiFi和无缝漫游</p><p><a href="https://post.smzdm.com/p/a83dz8vn/" target="_blank" rel="noopener">参考链接</a></p><h2 id="2-2-软路由设置"><a href="#2-2-软路由设置" class="headerlink" title="2.2 软路由设置"></a>2.2 软路由设置</h2><p>软路由lede<a href="https://www.right.com.cn/forum/thread-211792-1-1.html" target="_blank" rel="noopener">入门阅读</a></p><p>首先，使用hyper-V虚拟机，下载LEDE的虚拟机<a href="https://firmware.koolshare.cn/LEDE_X64_fw867/虚拟机转盘或PE下写盘专用/" target="_blank" rel="noopener">vmdk镜像</a>  这里原本是gz，通过一个工具转为vmdk，这个网站已经给了转好后的文件，参考即可（注意坑点）</p><p>然后<a href="https://blog.skk.moe/post/hyper-v-win10-lede/" target="_blank" rel="noopener">安装它</a></p><p><a href="https://post.smzdm.com/p/631452/" target="_blank" rel="noopener">安装链接2</a></p><p>软路由就告一段落了~</p><hr><p>坑点1 ： 注意下载的镜像是否与虚拟机设置一致为uefi或legacy</p><p>坑点2 ： 好像需要在外部虚拟交换机上更改IP才行，问题不大</p><p><del><a href="https://wp.gxnas.com/2365.html" target="_blank" rel="noopener">最好的编译参考链接</a></del></p><p><a href="http://www.openwrt.pro/post-388.html" target="_blank" rel="noopener">完美设置链接</a><br><a href="https://www.landiannews.com/archives/43024.html" target="_blank" rel="noopener">完美设置链接2</a></p><hr><p>分割线</p><p><a href="https://3mile.github.io/archives/968/" target="_blank" rel="noopener">参考资料1</a><br><a href="https://0066.in/archives/801" target="_blank" rel="noopener">参考了解2</a></p><p><a href="http://www.openwrt.pro/post-215.html" target="_blank" rel="noopener">编译参考链接</a></p><p>[]</p><h1 id="03-硬盘测试"><a href="#03-硬盘测试" class="headerlink" title="03 硬盘测试"></a>03 硬盘测试</h1><p>使用Windows自带资源池，现在测试性能。</p><p>已在虚拟机上做完实验，镜像类资源池（raid1可以完美支持单盘损坏替换）</p><p>raid0出了点问题，不过问题不大，所以不再测试。 </p><p><a href="http://cnc.xitek.com/thread-1480623-1-1-1.html" target="_blank" rel="noopener">推荐阅读: </a>  </p><p><a href="https://www.sysgeek.cn/storage-spaces-windows-10/" target="_blank" rel="noopener">参考链接</a>  </p><h1 id="04-黑裙辉"><a href="#04-黑裙辉" class="headerlink" title="04 黑裙辉"></a>04 黑裙辉</h1><p><a href="https://post.smzdm.com/p/444521/" target="_blank" rel="noopener">老旧版本参考</a></p><p>黑裙辉的应该有挺多教程的，先暂置吧，看啥时候有空就直接上手了</p><p>先弄到这里吧，以后上真机了再慢慢操作</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>VM</tag>
+        <tag>Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[私有云搭建, 打造家庭网络中心]]></title>
+    <url>%2F2019%2F08%2F17%2Fprivate_cloud_and_more%2F</url>
+    <content type="text"><![CDATA[00 前言最近博客更新的内容少了，主要是最近太累了，又接近考试了，所以不能权衡两方面的工作 最近有了搭建私有云的想法，实现目的有其下几个： 离线下载（主要是百度云离线、下载） 家庭数据备份（如相片） 数据同步（私有云） （个人服务器） 0.1 HTPC + 离线下载主要是为了能够高清看美剧（1080P），国内没有1080P在线看网站（基本都是720P），国外高清源没有中英字幕 解决办法 ： 下载无字幕版，加字幕 (隐藏坑点 ： 投影到电视盒子的时候是否可以添加字幕？) 新增问题 : 如何搭建一个网站可以在移动端进行观看？新解决办法 ： kodi + emby 0.2 家庭数据备份我们会遇到这样的一个场景 ： 外出游玩时弄了很多相片，导致手机存储空间越来越小 主要是相片，应用场景为 ： 可以通过一个APP将相片上传到NAS，网络环境可以为内外网 01 基本设置基本定了，上X86处理器，win10系统 esxi底层 + Windows自带资源池 ZFS存储服务器 + 软路由 + HTPC + NAS 参考资料：总方向 ~ 配置ZFS存储服务器 ~ zfs过于麻烦，选用Windows自带资源池freenas与omnios+napp-it的速度对比 1.1 HTPC 设置使用kodi，很好用的播放器，暂定为Win10机上的HTPC播放器 参考资料1参考资料2 另外对于本地媒体库可参考链接 使用emby 官方链接 这东西真的是太棒了！！！ 1.2 HTPC 总结HTPC基本告一段落，win10机器同时启用kodi作为HTPC，使用emby作为网络流媒体播放器！ 字幕kodi可以自选，emby可以通过同样的命名可进行识别。 02 软路由软路由要求 ： 5G WiFi （取决于AP）和 无缝漫游 （DHCP的IP地址不变） 2.1 AP选择AC和AP是什么 需要终端和AP同时支持无缝漫游才行，这里推荐Ubnt 捷联讯通的AP方案，支持5G WiFi和无缝漫游 参考链接 2.2 软路由设置软路由lede入门阅读 首先，使用hyper-V虚拟机，下载LEDE的虚拟机vmdk镜像 这里原本是gz，通过一个工具转为vmdk，这个网站已经给了转好后的文件，参考即可（注意坑点） 然后安装它 安装链接2 软路由就告一段落了~ 坑点1 ： 注意下载的镜像是否与虚拟机设置一致为uefi或legacy 坑点2 ： 好像需要在外部虚拟交换机上更改IP才行，问题不大 最好的编译参考链接 完美设置链接完美设置链接2 分割线 参考资料1参考了解2 编译参考链接 [] 03 硬盘测试使用Windows自带资源池，现在测试性能。 已在虚拟机上做完实验，镜像类资源池（raid1可以完美支持单盘损坏替换） raid0出了点问题，不过问题不大，所以不再测试。 推荐阅读: 参考链接 04 黑裙辉老旧版本参考 黑裙辉的应该有挺多教程的，先暂置吧，看啥时候有空就直接上手了 先弄到这里吧，以后上真机了再慢慢操作 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> Network </category>
-          
-          <category> Home </category>
-          
+        <category>Network</category>
+        <category>Home</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Private Cloud </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tpot安装与介绍</title>
-      <link href="/2019/08/17/tpot_installation/"/>
-      <url>/2019/08/17/tpot_installation/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>某日接到一个任务, 搞定一个蜜罐: <a href="https://github.com/dtag-dev-sec/tpotce" target="_blank" rel="noopener">tpot</a><br>让我一个菜鸡来干这个, 心虚的很  </p><a id="more"></a><p>今日份的任务有两个:<br>第一个是如何搭建<br>第二个是简单使用办法</p><p>所有的问题解决最好办法就是参考官方文档.</p><h1 id="01-搭建前言"><a href="#01-搭建前言" class="headerlink" title="01 搭建前言"></a>01 搭建前言</h1><p><a href="https://github.com/dtag-dev-sec/tpotce#installation" target="_blank" rel="noopener">官方搭建文档-英</a><br><a href="https://www.youtube.com/watch?v=dWbJS_9sFNE&amp;feature=youtu.be" target="_blank" rel="noopener">官当搭建文档-视频-旧-16.0</a><br>这里提一句, 版本号是按照年份进行命令的, [官方博客]在这(<a href="http://dtag-dev-sec.github.io/" target="_blank" rel="noopener">http://dtag-dev-sec.github.io/</a>)  </p><p>安装方式有三种:</p><ol><li>ISO镜像安装</li><li>从Linux系统中直接安装</li><li>自己创建ISO镜像</li></ol><p>问题不大, 网络上基本都在推荐第二种方法, 因为说可以手动进行调整…个人认为太麻烦. 我认为第一种方法最合适, 因为不用系统啥balabala的弄, 省心. </p><p>闲话少说, 开干  </p><h1 id="02-搭建实操"><a href="#02-搭建实操" class="headerlink" title="02 搭建实操"></a>02 搭建实操</h1><p>安装条件: 稳定的DHCP网络<br>这里稳定就不说了, 下载的东西还挺大的, 具体就不知道了, 从33M的iso文件到8G多大的虚拟硬盘, 从防火墙看下载了2G左右的文件<br>DHCP, 我这里跳过了静态IP的配置, 可能这里会是一个坑点, 晚点再解决, 这里先占个位(官方文档要求DHCP)</p><p>下载官方ISO文件, <a href="https://github.com/dtag-dev-sec/tpotce/releases/download/19.03/tpot.iso" target="_blank" rel="noopener">19.03链接在这(github下载)</a></p><p>安装, 对硬件要求略高, 这里贴出配置要求:</p><ul><li>6-8 GB RAM (less RAM is possible but might introduce swapping)</li><li>128 GB SSD (smaller is possible but limits the capacity of storing events)</li><li>Network via DHCP</li><li>A working, non-proxied, internet connection</li></ul><p>贴一下我的配置<br><img src="/upload_image/2019/07/Snipaste_2019-07-22_14-36-20.png" alt=""></p><p>接下来就是毫无难度的安装了, 然后设置密码, 设置web端账号和密码, 两个<br><a href="https://www.freebuf.com/news/193347.html" target="_blank" rel="noopener">安装参考链接</a>, 里面还包含了一些介绍, 推荐阅读</p><p>我这边2M/s的小水管大概2个小时完成安装</p><p>安装好以后有两个界面: 1, web管理界面: 64297 和 2, 主机管理界面: 64294, 均用https访问</p><p>安装好后界面如下:<br>VM界面<img src="/upload_image/2019/07/Snipaste_2019-07-22_15-03-23.png" alt=""><br>web管理界面, 端口<code>64297</code>(填web账号密码)<img src="/upload_image/2019/07/Snipaste_2019-07-22_15-03-44.png" alt=""><br>主机管理界面, 端口<code>64294</code>(填主机账号密码)<img src="/upload_image/2019/07/Snipaste_2019-07-22_15-04-11.png" alt=""></p><h1 id="03-介绍"><a href="#03-介绍" class="headerlink" title="03 介绍"></a>03 介绍</h1><p>安装到此就告一段落, 接下来看一下这玩意怎么用  </p><ol><li>Dashboard<br>这里有很多现成可用的大版, 各种高大上, 分别对应各个蜜罐的视图  <img src="/upload_image/2019/07/Snipaste_2019-07-22_15-48-33.png" alt=""></li></ol><ul><li>adbhoney,</li><li>ciscoasa,</li><li>conpot,</li><li>cowrie,</li><li>dionaea,</li><li>elasticpot,</li><li>glastopf,</li><li>glutton,</li><li>heralding,</li><li>honeypy,</li><li>honeytrap,</li><li>mailoney,</li><li>medpot,</li><li>rdpy,</li><li>snare,</li><li>tanner</li></ul><p>上面各个蜜罐的介绍就看<a href="http://dtag-dev-sec.github.io/mediator/feature/2019/04/01/tpot-1903.html" target="_blank" rel="noopener">官方文档</a>吧</p><ol start="2"><li>实用工具<br>在界面上方会有5个工具  <img src="/upload_image/2019/07/Snipaste_2019-07-22_15-50-14.png" alt=""></li></ol><p>分别对应:<br>Furthermore we use the following tools</p><ul><li><strong>Cockpit</strong> for a lightweight, webui for docker, os, real-time performance monitoring and web terminal.</li><li><strong>Cyberchef</strong> a web app for encryption, encoding, compression and data analysis.</li><li><strong>ELK</strong> stack to beautifully visualize all the events captured by T-Pot.</li><li><strong>Elasticsearch</strong> Head a web front end for browsing and interacting with an Elastic Search cluster.</li><li><strong>Spiderfoot</strong> a open source intelligence automation tool.</li><li><strong>Suricata</strong> a Network Security Monitoring engine.</li></ul><ol start="3"><li><p>Discover界面<br>这个界面是用来过滤包, 所有的数据包都在这里, 然后可以经过左边的筛选出http包头, user-agent等数据, 时间戳等, 右上角就有很方便的设置<br><img src="/upload_image/2019/07/Snipaste_2019-07-22_16-25-35.png" alt=""></p></li><li><p>Visualize界面<br>那么这个界面用来干啥的呢.  是用来展示可视化界面的, 这里还可以新建一个自定义可视化视图, 例如饼状图, 柱状图等<br><img src="/upload_image/2019/07/Snipaste_2019-07-22_16-28-25.png" alt=""><br><img src="/upload_image/2019/07/Snipaste_2019-07-22_16-28-25.png" alt=""></p></li><li><p>Dev Tools界面<br>难度太高, 个人认为是大佬们用的, 这里就跳过了吧…</p></li><li><p>Monitoring界面<br>顾名思义, 就知道这个是用来monitor的, 和DashBoard不一样的是, 这里可以监视5个实用工具的状态和硬件信息<br><img src="/upload_image/2019/07/Snipaste_2019-07-22_16-49-44.png" alt=""></p></li><li><p>Management界面<br>这里就是关于一些设置的东东, 包括了远程主机, 过滤器设置等东西, 用得上的时候再说吧<br><img src="/upload_image/2019/07/Snipaste_2019-07-22_16-52-27.png" alt=""></p></li></ol><h1 id="04-后记"><a href="#04-后记" class="headerlink" title="04 后记"></a>04 后记</h1><p>emmm, 略显简陋的blog, 大概了解就好, 简单了解以后还是很好上手的. Done</p><h1 id="05-后后记"><a href="#05-后后记" class="headerlink" title="05 后后记"></a>05 后后记</h1><p>安装完以后, 可以用 sudo su 命令切换成root,  默认是Debian, 操作命令就不献丑贴出来的, 更改IP啥的操作都是可以进行的</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>Private Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tpot安装与介绍]]></title>
+    <url>%2F2019%2F08%2F17%2Ftpot_installation%2F</url>
+    <content type="text"><![CDATA[00 前言某日接到一个任务, 搞定一个蜜罐: tpot让我一个菜鸡来干这个, 心虚的很 今日份的任务有两个:第一个是如何搭建第二个是简单使用办法 所有的问题解决最好办法就是参考官方文档. 01 搭建前言官方搭建文档-英官当搭建文档-视频-旧-16.0这里提一句, 版本号是按照年份进行命令的, [官方博客]在这(http://dtag-dev-sec.github.io/) 安装方式有三种: ISO镜像安装 从Linux系统中直接安装 自己创建ISO镜像 问题不大, 网络上基本都在推荐第二种方法, 因为说可以手动进行调整…个人认为太麻烦. 我认为第一种方法最合适, 因为不用系统啥balabala的弄, 省心. 闲话少说, 开干 02 搭建实操安装条件: 稳定的DHCP网络这里稳定就不说了, 下载的东西还挺大的, 具体就不知道了, 从33M的iso文件到8G多大的虚拟硬盘, 从防火墙看下载了2G左右的文件DHCP, 我这里跳过了静态IP的配置, 可能这里会是一个坑点, 晚点再解决, 这里先占个位(官方文档要求DHCP) 下载官方ISO文件, 19.03链接在这(github下载) 安装, 对硬件要求略高, 这里贴出配置要求: 6-8 GB RAM (less RAM is possible but might introduce swapping) 128 GB SSD (smaller is possible but limits the capacity of storing events) Network via DHCP A working, non-proxied, internet connection 贴一下我的配置 接下来就是毫无难度的安装了, 然后设置密码, 设置web端账号和密码, 两个安装参考链接, 里面还包含了一些介绍, 推荐阅读 我这边2M/s的小水管大概2个小时完成安装 安装好以后有两个界面: 1, web管理界面: 64297 和 2, 主机管理界面: 64294, 均用https访问 安装好后界面如下:VM界面web管理界面, 端口64297(填web账号密码)主机管理界面, 端口64294(填主机账号密码) 03 介绍安装到此就告一段落, 接下来看一下这玩意怎么用 Dashboard这里有很多现成可用的大版, 各种高大上, 分别对应各个蜜罐的视图 adbhoney, ciscoasa, conpot, cowrie, dionaea, elasticpot, glastopf, glutton, heralding, honeypy, honeytrap, mailoney, medpot, rdpy, snare, tanner 上面各个蜜罐的介绍就看官方文档吧 实用工具在界面上方会有5个工具 分别对应:Furthermore we use the following tools Cockpit for a lightweight, webui for docker, os, real-time performance monitoring and web terminal. Cyberchef a web app for encryption, encoding, compression and data analysis. ELK stack to beautifully visualize all the events captured by T-Pot. Elasticsearch Head a web front end for browsing and interacting with an Elastic Search cluster. Spiderfoot a open source intelligence automation tool. Suricata a Network Security Monitoring engine. Discover界面这个界面是用来过滤包, 所有的数据包都在这里, 然后可以经过左边的筛选出http包头, user-agent等数据, 时间戳等, 右上角就有很方便的设置 Visualize界面那么这个界面用来干啥的呢. 是用来展示可视化界面的, 这里还可以新建一个自定义可视化视图, 例如饼状图, 柱状图等 Dev Tools界面难度太高, 个人认为是大佬们用的, 这里就跳过了吧… Monitoring界面顾名思义, 就知道这个是用来monitor的, 和DashBoard不一样的是, 这里可以监视5个实用工具的状态和硬件信息 Management界面这里就是关于一些设置的东东, 包括了远程主机, 过滤器设置等东西, 用得上的时候再说吧 04 后记emmm, 略显简陋的blog, 大概了解就好, 简单了解以后还是很好上手的. Done 05 后后记安装完以后, 可以用 sudo su 命令切换成root, 默认是Debian, 操作命令就不献丑贴出来的, 更改IP啥的操作都是可以进行的 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> other </category>
-          
+        <category>other</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> tpot </tag>
-            
-            <tag> Honey Pot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>代理类集合(持续更新)</title>
-      <link href="/2019/08/17/proxy_in_all/"/>
-      <url>/2019/08/17/proxy_in_all/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>代理的事情是真的烦, 国内的网络环境真是辣鸡, 现在把所有的代理都集合一起, 免得到处找</p><a id="more"></a><h1 id="01-终端代理类"><a href="#01-终端代理类" class="headerlink" title="01 终端代理类"></a>01 终端代理类</h1><p><a href="https://blog.fazero.me/2015/09/15/%E8%AE%A9%E7%BB%88%E7%AB%AF%E8%B5%B0%E4%BB%A3%E7%90%86%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">参考链接: 让终端走代理的几种方法</a></p><p>如何让终端命令比如apt、这些走代理？</p><p>比较好的方法是proxychains，或者export也可以</p><p>export的范围会小一点，但是会更方便</p><p>比如wget、curl，proxychains就很万能了，但是每次都要在前面加语句，略为麻烦，主要针对一些不适用</p><h1 id="02-fish"><a href="#02-fish" class="headerlink" title="02 fish"></a>02 fish</h1><p>在 <code>~/.config/fish/config.fish</code> 中设置，兼容bashrc指令</p><h1 id="03-git"><a href="#03-git" class="headerlink" title="03 git"></a>03 git</h1><p>命令为</p><p><code>git config --global/local http.proxy 'http/socks5://127.0.0.1:1080'</code></p><p><code>git config --global/local https.proxy 'https/socks5://127.0.0.1:1080'</code></p><h1 id="04-shell-bashrc"><a href="#04-shell-bashrc" class="headerlink" title="04 shell/bashrc"></a>04 shell/bashrc</h1><p>命令为</p><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> setproxysocks5=<span class="string">'export ALL_PROXY=socks5h://127.0.0.1:10808'</span></span><br><span class="line"><span class="built_in">alias</span> unsetproxy=<span class="string">'unset ALL_PROXY'</span></span><br><span class="line"><span class="built_in">alias</span> setproxyhttp=<span class="string">'export ALL_PROXY=http://127.0.0.1:10888'</span>  <span class="comment">##v2ray和curl会有socks5的冲突,从网上找到的参考链接里可以发现，我们加上socks5h就可以了</span></span><br></pre></td></tr></tbody></table></figure><hr><p>对于 socks5 和 socks5h 的区别：</p><p>socks5h: the hostname is resolved by the SOCKS server (also known as CURLPROXY_SOCKS5_HOSTNAME type);<br>socks5: the hostname is resolved locally;</p><p>也就是说socks5适合本地能够解析目标主机域名(比如github.com)但是访问速度慢,来提高下载速度<br>socks5h用与本地不能解析目标主机域名(比如google),由代理服务器解析目标主机域名</p><hr><h1 id="05-npm"><a href="#05-npm" class="headerlink" title="05 npm"></a>05 npm</h1><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> proxy <span class="keyword">http</span>://<span class="keyword">server</span>:port</span><br><span class="line">npm config <span class="keyword">set</span> https-proxy <span class="keyword">http</span>://<span class="keyword">server</span>:port</span><br></pre></td></tr></tbody></table></figure><h1 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h1><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>tpot</tag>
+        <tag>Honey Pot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[代理类集合(持续更新)]]></title>
+    <url>%2F2019%2F08%2F17%2Fproxy_in_all%2F</url>
+    <content type="text"><![CDATA[00 前言代理的事情是真的烦, 国内的网络环境真是辣鸡, 现在把所有的代理都集合一起, 免得到处找 01 终端代理类参考链接: 让终端走代理的几种方法 如何让终端命令比如apt、这些走代理？ 比较好的方法是proxychains，或者export也可以 export的范围会小一点，但是会更方便 比如wget、curl，proxychains就很万能了，但是每次都要在前面加语句，略为麻烦，主要针对一些不适用 02 fish在 ~/.config/fish/config.fish 中设置，兼容bashrc指令 03 git命令为 git config --global/local http.proxy 'http/socks5://127.0.0.1:1080' git config --global/local https.proxy 'https/socks5://127.0.0.1:1080' 04 shell/bashrc命令为 123alias setproxysocks5='export ALL_PROXY=socks5h://127.0.0.1:10808'alias unsetproxy='unset ALL_PROXY'alias setproxyhttp='export ALL_PROXY=http://127.0.0.1:10888' ##v2ray和curl会有socks5的冲突,从网上找到的参考链接里可以发现，我们加上socks5h就可以了 对于 socks5 和 socks5h 的区别： socks5h: the hostname is resolved by the SOCKS server (also known as CURLPROXY_SOCKS5_HOSTNAME type);socks5: the hostname is resolved locally; 也就是说socks5适合本地能够解析目标主机域名(比如github.com)但是访问速度慢,来提高下载速度socks5h用与本地不能解析目标主机域名(比如google),由代理服务器解析目标主机域名 05 npm12npm config set proxy http://server:portnpm config set https-proxy http://server:port 待补充 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> Network </category>
-          
-          <category> Continuously Update </category>
-          
+        <category>Network</category>
+        <category>Continuously Update</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Proxy </tag>
-            
-            <tag> Continuously Update </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo安装后续2</title>
-      <link href="/2019/08/17/hexo_installation_2/"/>
-      <url>/2019/08/17/hexo_installation_2/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>继无限折腾后, 终于把博客弄成了自己喜欢的模样, 赞一个!</p><a id="more"></a><h1 id="01-折腾事项"><a href="#01-折腾事项" class="headerlink" title="01 折腾事项"></a>01 折腾事项</h1><p>折腾了许多东东, 不过最着急的是版本太新, 自己找不到地方可以调整的, 只能换成旧版5.x的<br>虽然7.x版本的新特性很多, 也很方便, 但教程始终不多, 还特别多误导, 网上的教程除了抄还是抄<br><strong>拥有阅读官方文档的能力很重要</strong><br>也就是我英语得抓紧学了</p><h1 id="02-优化项目"><a href="#02-优化项目" class="headerlink" title="02 优化项目"></a>02 优化项目</h1><p>bgm, bg picture, copyright, code copy, icp等等, 都加上去了</p><h1 id="03-博客迁移计划"><a href="#03-博客迁移计划" class="headerlink" title="03 博客迁移计划"></a>03 博客迁移计划</h1><p>啊, 心态巨崩, 看我怎么把我的旧博客迁移回来, 包括了图片,<br>最重要的还是要重新整理, 心态巨崩  </p><p>新版博客计划: </p><ul><li>取消掉过多的参考链接, 参考链接均详细描述</li><li>进行详细tag标志, 以及categories分类</li><li>对于未完成的blog进行<code>持续更新</code>tag和categories, 完成后进行删除</li><li>后续新增英文blog计划</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
+      <tags>
+        <tag>Proxy</tag>
+        <tag>Continuously Update</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo安装后续2]]></title>
+    <url>%2F2019%2F08%2F17%2Fhexo_installation_2%2F</url>
+    <content type="text"><![CDATA[00 前言继无限折腾后, 终于把博客弄成了自己喜欢的模样, 赞一个! 01 折腾事项折腾了许多东东, 不过最着急的是版本太新, 自己找不到地方可以调整的, 只能换成旧版5.x的虽然7.x版本的新特性很多, 也很方便, 但教程始终不多, 还特别多误导, 网上的教程除了抄还是抄拥有阅读官方文档的能力很重要也就是我英语得抓紧学了 02 优化项目bgm, bg picture, copyright, code copy, icp等等, 都加上去了 03 博客迁移计划啊, 心态巨崩, 看我怎么把我的旧博客迁移回来, 包括了图片,最重要的还是要重新整理, 心态巨崩 新版博客计划: 取消掉过多的参考链接, 参考链接均详细描述 进行详细tag标志, 以及categories分类 对于未完成的blog进行持续更新tag和categories, 完成后进行删除 后续新增英文blog计划 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-          
-          <category> blog </category>
-          
+        <category>blog</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo博客安装进行时</title>
-      <link href="/2019/08/16/hexo_installation/"/>
-      <url>/2019/08/16/hexo_installation/</url>
-      
-        <content type="html"><![CDATA[<h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>换博客, 辣鸡wordpress</p><a id="more"></a><h1 id="01-安装"><a href="#01-安装" class="headerlink" title="01 安装"></a>01 安装</h1><p>本机安装<code>git</code>, <code>Node.js</code><br>设置npm代理: </p><figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> proxy <span class="keyword">http</span>://<span class="keyword">server</span>:port</span><br><span class="line">npm config <span class="keyword">set</span> https-proxy <span class="keyword">http</span>://<span class="keyword">server</span>:port</span><br></pre></td></tr></tbody></table></figure><p>然后打开cmd 运行<code>npm install -g hexo</code> 安装hexo<br>新建一个文件夹，如MyBlog<br>进入该文件夹内，右击运行git，输入：hexo init（生成hexo模板, 从GitHub上download下来）   </p><p>生成完模板，运行npm install<br>最后运行：hexo server （运行程序，访问本地localhost:4000可以看到博客已经搭建成功）  </p><h1 id="02-图片"><a href="#02-图片" class="headerlink" title="02 图片"></a>02 图片</h1><p>测试用, 放在<br>source/upload_image<br>使用的时候就/upload_image</p><p><img src="/upload_image/avatar.jpg" alt="2"></p><p><img src="/upload_image/test.jpg" alt="这里"></p><h1 id="03-音乐"><a href="#03-音乐" class="headerlink" title="03 音乐"></a>03 音乐</h1><p><a href="https://blog.yleao.com/2018/0902/hexo%E4%B8%8A%E7%9A%84aplayer%E5%BA%94%E7%94%A8.html" target="_blank" rel="noopener">参考</a><br>网易云的mp3链接:<br><code>http://music.163.com/song/media/outer/url?id=ID数字.mp3</code><br>通过分享的审查元素可以找到图片<br>最后的<code>\themes\next\source\dist\music.js</code>格式为:</p><figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  <span class="attribute">name</span>: <span class="string">""</span>,</span><br><span class="line">  artist: <span class="string">''</span>,</span><br><span class="line">  url: <span class="string">'http://music.163.com/song/media/outer/url?id=.mp3'</span>,</span><br><span class="line">  cover: <span class="string">''</span>,</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h1 id="04-美化"><a href="#04-美化" class="headerlink" title="04 美化"></a>04 美化</h1><p>这里美化直接百度吧, 注意版本为NexT6.x以上</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo博客安装进行时]]></title>
+    <url>%2F2019%2F08%2F16%2Fhexo_installation%2F</url>
+    <content type="text"><![CDATA[00 前言换博客, 辣鸡wordpress 01 安装本机安装git, Node.js设置npm代理: 12npm config set proxy http://server:portnpm config set https-proxy http://server:port 然后打开cmd 运行npm install -g hexo 安装hexo新建一个文件夹，如MyBlog进入该文件夹内，右击运行git，输入：hexo init（生成hexo模板, 从GitHub上download下来） 生成完模板，运行npm install最后运行：hexo server （运行程序，访问本地localhost:4000可以看到博客已经搭建成功） 02 图片测试用, 放在source/upload_image使用的时候就/upload_image 03 音乐参考网易云的mp3链接:http://music.163.com/song/media/outer/url?id=ID数字.mp3通过分享的审查元素可以找到图片最后的\themes\next\source\dist\music.js格式为: 123456{ name: "", artist: '', url: 'http://music.163.com/song/media/outer/url?id=.mp3', cover: '',} 04 美化这里美化直接百度吧, 注意版本为NexT6.x以上 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>

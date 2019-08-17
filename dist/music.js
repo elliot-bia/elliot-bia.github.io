@@ -9,7 +9,7 @@ const ap = new APlayer({
     preload: 'auto',
     volume: 0.7,
     listFolded: true,
-    listMaxHeight: 90,
+    listMaxHeight: 290,
     audio: [
         {
             name: 'Sophie',
