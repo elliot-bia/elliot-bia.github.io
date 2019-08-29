@@ -28,12 +28,14 @@
     <url>%2F2019%2F08%2F29%2FswitchOmege%2F</url>
     <content type="text"><![CDATA[00 前言强烈推荐SwitchyOmega！ 插件SwitchyOmega在Chrome和Firefox上都有，强烈推荐需要“文明#PC#上网”的朋友！ 首先推荐阅读链接：简单配置 配置上图，主要有两个配置 2. 对于PAC没有涉及到的网站，手工进行添加即可 然后在配置文件中就可以看到添加的文件了，我把配置放上来 我把网址参数发上来 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 参考网站2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
+        <category>Browers</category>
         <category>Network</category>
         <category>SwitchyOmega</category>
+        <category>Chrome</category>
       </categories>
       <tags>
-        <tag>Network</tag>
         <tag>Proxy</tag>
+        <tag>Network</tag>
       </tags>
   </entry>
   <entry>
@@ -137,8 +139,7 @@
     <url>%2F2019%2F08%2F29%2Fvscode_optimize%2F</url>
     <content type="text"><![CDATA[00 前言VS Code天下第一, 现在说一下VS Code写python的时候一些调优 01 代码错误提示和补全首先在settings.json中加入python.linting.enabled为true截图如下: 然后直接在设置首选项搜索flake8, autopep8全部勾选上 02 函数提示Emmm, 暂未发现, 先保存一下, 后续补充 03 快捷键大全官方文档GitHub中文版 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Programming</category>
-        <category>Python</category>
+        <category>VSCode</category>
       </categories>
       <tags>
         <tag>VSCode</tag>
@@ -175,8 +176,8 @@
     <url>%2F2019%2F08%2F29%2Fsql_db_learning%2F</url>
     <content type="text"><![CDATA[00 前言今天任务：数据库文件gbk转utf-8码 01. 工具：Navicatnavicat官方教程 Navicat其他非官方教程 02. 操作步骤网上找了找，确实没有很好的工具进行直接转换。 只能手工操作了，思路如下： 把数据从数据库导出来 再把数据导进去就可以了 操作是不是很简单？屁了，慢慢操作吧 03. 导出数据现在要对数据库进行导出，首先要干的肯定是先备份数据 导出数据有两种操作，一种是用命令行，一种是用python 这里我们选择用python 哦吼，搞不定，放弃。先弄sql命令吧 哦吼，又搞不定，放弃，弄回python脚本，毕竟有现成的成功读取的脚本 用上之前写好的脚本，报错，报错。 算了，自己重新写一份吧python读取sqlite参考链接 淦，改了改总算好了 我们把之前的脚本进行改了改，就可以实现读取功能了: 12345678910111213141516#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,#导入模块vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#对读取的sqlite进行gbk处理res = conn.execute( r"""select * from VULNDB""").fetchone()print(res[3]) 04. 写入数据 把数据导出来之后就要进行utf-8写入了 现在尝试进行尝试写入数据后，会报错，找了一下资料，找到了解决办法写入参考链接 最终代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先# 这里应该是对数据库进行转码res = conn.execute( r"""select * from VULNDB""").fetchone()# # print(type(res.fetchone()))# pluginID, vulname, _, vul_desc, vul_solu = resprint(res)sql = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""para = resconn.execute(sql,para)conn.commit() 05. 批量读取写入接下来就是如何把这个数据库逐步读取，然后写入了 刚开始的思路是for进行迭代读取，然后发现有问题 找资料，无果 不说了，问大佬去，得到结果如下： 123451. fetchall出来的结果可迭代的2. for i in conn.execute(sql).fetchall(): conn.execute(update_sql) 当然，这样写可能导致异常 进行尝试，除了点小错误就是for i in conn.execute(sql).fetchall这里忘了加上括号，导致报错说不可迭代。大佬一语中的的指出了问题，这就是大佬啊 最后代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先sqlread = r"""select * from VULNDB"""sqlwrite = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""for i in conn.execute(sqlread).fetchall(): print(i) para = i conn.execute(sqlwrite,para)conn.commit() 还有个小知识点就是commit()函数不要写在循环里面，占用资源 06. 总结总的来说就是不断排坑的过程，但是思路要清晰，然后找找资料，遇到了关卡先思考一下，实在不行就去麻烦大佬 XD (笑) GitHub代码地址 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Database</category>
         <category>Python</category>
+        <category>Database</category>
         <category>sql</category>
         <category>db</category>
       </categories>
@@ -188,7 +189,7 @@
   <entry>
     <title><![CDATA[Shell调优]]></title>
     <url>%2F2019%2F08%2F29%2Fshell_optimize%2F</url>
-    <content type="text"><![CDATA[00 前言今天来折腾一下最后的shell调优，参考以前的fish安装链接 和tmux设置链接 今天折腾的就将会是最终的shell界面了 01. 设置自启和默认shell这里我们设置一下默认shell是fish，然后默认打开tmux 01. 默认打开shell为oh-my-fish参考链接：不要把fish设置成默认fish from Arch Linux 在.bashrc最后加入exec fish就可以了 如果你想进入bash而不是fish，使用命令 bash --norc !!!下面的操作过于危险，我们选择上面更好的 设置fish为默认shell参考链接 123456789101112如何把 fish 设置为我默认的 shell?添加 Fish 到 /etc/shells:echo "/usr/local/bin/fish" | sudo tee -a /etc/shells切换并保存默认 shell:chsh -s /usr/local/bin/fish切换之前的 shell:一般来说是 /bin/bash、/bin/tcsh 或者 /bin/zsh.chsh -s /bin/bash上面是参考答案，首先找出fish这个shell在哪里 whereis fish 我的是在/usr/bin/fish上，更改后重连即可 02. 终端默认开启tmux更改 .bashrc 12345678if [[ -z "$TMUX" ]] ;then ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session if [[ -z "$ID" ]] ;then # if not available create a new one tmux new-session else tmux attach-session -t "$ID" # if available attach to it fifi 参考链接这里面的每次启动shell时连接上之前的tmux 坑点血淋淋的教训，谨记谨记 不要把fish设置成默认shell，很麻烦，在.bashrc里设置自启就好，需要bash的时候就bash -norc即可，非常方便 把tmux的.bashrc设置放在fish前面，顺序不要搞错，不然就没有想要的效果 最后结果如下： document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[00 前言今天来折腾一下最后的shell调优，参考以前的fish安装和tmux设置 今天折腾的就将会是最终的shell界面了 01. 设置自启和默认shell这里我们设置一下默认shell是fish，然后默认打开tmux 01. 默认打开shell为oh-my-fish参考链接：不要把fish设置成默认fish from Arch Linux 在.bashrc最后加入exec fish就可以了 如果你想进入bash而不是fish，使用命令 bash --norc !!!下面的操作过于危险，我们选择上面更好的 设置fish为默认shell参考链接 123456789101112如何把 fish 设置为我默认的 shell?添加 Fish 到 /etc/shells:echo "/usr/local/bin/fish" | sudo tee -a /etc/shells切换并保存默认 shell:chsh -s /usr/local/bin/fish切换之前的 shell:一般来说是 /bin/bash、/bin/tcsh 或者 /bin/zsh.chsh -s /bin/bash上面是参考答案，首先找出fish这个shell在哪里 whereis fish 我的是在/usr/bin/fish上，更改后重连即可 02. 终端默认开启tmux更改 .bashrc 12345678if [[ -z "$TMUX" ]] ;then ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session if [[ -z "$ID" ]] ;then # if not available create a new one tmux new-session else tmux attach-session -t "$ID" # if available attach to it fifi 参考链接这里面的每次启动shell时连接上之前的tmux 坑点血淋淋的教训，谨记谨记 不要把fish设置成默认shell，很麻烦，在.bashrc里设置自启就好，需要bash的时候就bash -norc即可，非常方便 把tmux的.bashrc设置放在fish前面，顺序不要搞错，不然就没有想要的效果 最后结果如下： document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Linux</category>
         <category>Shell</category>
@@ -351,6 +352,7 @@
     <content type="text"><![CDATA[00 前言Firefox虽然好用, 但还没有chrome好用, 可能是用习惯了.通过一些调优就可以适合个性化使用 01 为什么要转向Firefox的怀抱？第一，Firefox插件有很多很方便 第二，Firefox内存占用比Chrome低一点 第三，没有文明 $和谐字符$ 上网工具的话，同步账号会有点麻烦（虽然对于我来说不是个事） 第四，渗透测试用Firefox会更多一点 02 注意事项第一，避免下载到天 $和谐字符$ 朝特供版Firefox，检验方法： 打开菜单--帮助--关于 里面没有说什么中国xx科技的即可 03 关于Flash国内万恶的思杰马克丁…烦暂未有较好的解决办法… document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Browers</category>
+        <category>Firefox</category>
       </categories>
       <tags>
         <tag>Firefox</tag>
@@ -361,7 +363,7 @@
     <url>%2F2019%2F08%2F23%2Fthe_best_vscode%2F</url>
     <content type="text"><![CDATA[00 前言今天推荐一个宇宙最强的编辑器：VS Code VS Code是VS团队拆出来写的，和VS比，更轻量化 这个编辑器最好的优点是通过强大的各种插件，能编辑任何东西，这个chrome浏览器有点像 01. 功能那么这个编辑器常用的功能有哪些呢？我常用的有这几个：git，python，markdown，其余后续进行补充 02. 介绍 git： git的使用我推荐查看这个文档 参考链接 参考其中的“提交保存”即可 python 装好python插件即可 markdown md有两个插件，一个国人开发的 Markdown Preview Enhanced,一个是官方的 Markdown All in One, 两者差距有点大，因为我的是黑色调，所以我选择all in one，轻便，集成性好 03. 快捷键对于快捷键，肯定是学多一点好啦。推荐这个 也可以点此下载 其余功能以后介绍 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Programming</category>
+        <category>VSCode</category>
       </categories>
       <tags>
         <tag>VSCode</tag>
@@ -386,7 +388,7 @@
     <url>%2F2019%2F08%2F18%2FMS_activate%2F</url>
     <content type="text"><![CDATA[00 前言闲来无事，刚好遇到了激活类的问题，以及群里有人问到了，就写一下微软激活类的文章吧。 由于激活类存在时效性，因此不会对此文章进行更新，能用一天是一天，实在不行用报毒的KMS搞他一波 01 激活WindowsWindows版本有几类，具体哪几类自己百度，我只推荐专业版和企业长期支持版LTSB Windows专业版激活步骤 1234567slmgr.vbs /upkslmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GXslmgr /skms zh.us.toslmgr /ato 用管理员权限打开的CMD或者PowerShell都可以 家庭版可用密钥 ： PPBK3-M92CH-MRR9X-34Y9P-7CH2F 02 激活officeoffice同样有很多版本，我只安装需要的Word,Excel,PowerPoint这三件套，在安装的时候选择自定义选项把其他的插件取消勾选就好，具体有机会再演示 激活步骤如下： 1234cd C:\Program Files\Microsoft Office\Office16cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99cscript ospp.vbs /sethst:kms.03k.orgcscript ospp.vbs /act 操作步骤同Windows激活，第一条命令是打开office安装目录，详细可参考参考链接1 : ospp.vbs在哪里？ 附上可能用得到的密钥 ： 1234567Office Professional Plus 2016：XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99Office Standard 2016：JNRGM-WHDWX-FJJG3-K47QV-DRTFMProject Professional 2016：YG9NW-3K39V-2T3HJ-93F3Q-G83KTProject Standard 2016：GNFHQ-F6YQM-KQDGJ-327XX-KQBVC document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>other</category>
+        <category>Others</category>
       </categories>
       <tags>
         <tag>Microsoft</tag>
@@ -406,23 +408,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[私有云搭建, 打造家庭网络中心]]></title>
-    <url>%2F2019%2F08%2F18%2Fprivate_cloud_and_more%2F</url>
-    <content type="text"><![CDATA[00 前言最近博客更新的内容少了，主要是最近太累了，又接近考试了，所以不能权衡两方面的工作 最近有了搭建私有云的想法，实现目的有其下几个： 离线下载（主要是百度云离线、下载） 家庭数据备份（如相片） 数据同步（私有云） （个人服务器） 0.1 HTPC + 离线下载主要是为了能够高清看美剧（1080P），国内没有1080P在线看网站（基本都是720P），国外高清源没有中英字幕 解决办法 ： 下载无字幕版，加字幕 (隐藏坑点 ： 投影到电视盒子的时候是否可以添加字幕？) 新增问题 : 如何搭建一个网站可以在移动端进行观看？新解决办法 ： kodi + emby 0.2 家庭数据备份我们会遇到这样的一个场景 ： 外出游玩时弄了很多相片，导致手机存储空间越来越小 主要是相片，应用场景为 ： 可以通过一个APP将相片上传到NAS，网络环境可以为内外网 01 基本设置基本定了，上X86处理器，win10系统 esxi底层 + Windows自带资源池 ZFS存储服务器 + 软路由 + HTPC + NAS 参考资料：总方向 ~ 配置ZFS存储服务器 ~ zfs过于麻烦，选用Windows自带资源池freenas与omnios+napp-it的速度对比 1.1 HTPC 设置使用kodi，很好用的播放器，暂定为Win10机上的HTPC播放器 参考资料1参考资料2 另外对于本地媒体库可参考链接 使用emby 官方链接 这东西真的是太棒了！！！ 1.2 HTPC 总结HTPC基本告一段落，win10机器同时启用kodi作为HTPC，使用emby作为网络流媒体播放器！ 字幕kodi可以自选，emby可以通过同样的命名可进行识别。 02 软路由软路由要求 ： 5G WiFi （取决于AP）和 无缝漫游 （DHCP的IP地址不变） 2.1 AP选择AC和AP是什么 需要终端和AP同时支持无缝漫游才行，这里推荐Ubnt 捷联讯通的AP方案，支持5G WiFi和无缝漫游 参考链接 2.2 软路由设置软路由lede入门阅读 首先，使用hyper-V虚拟机，下载LEDE的虚拟机vmdk镜像 这里原本是gz，通过一个工具转为vmdk，这个网站已经给了转好后的文件，参考即可（注意坑点） 然后安装它 安装链接2 软路由就告一段落了~ 坑点1 ： 注意下载的镜像是否与虚拟机设置一致为uefi或legacy 坑点2 ： 好像需要在外部虚拟交换机上更改IP才行，问题不大 最好的编译参考链接 完美设置链接完美设置链接2 分割线 参考资料1参考了解2 编译参考链接 [] 03 硬盘测试使用Windows自带资源池，现在测试性能。 已在虚拟机上做完实验，镜像类资源池（raid1可以完美支持单盘损坏替换） raid0出了点问题，不过问题不大，所以不再测试。 推荐阅读: 参考链接 04 黑裙辉老旧版本参考 黑裙辉的应该有挺多教程的，先暂置吧，看啥时候有空就直接上手了 先弄到这里吧，以后上真机了再慢慢操作 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Home</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Private Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[tpot安装与介绍]]></title>
     <url>%2F2019%2F08%2F18%2Ftpot_installation%2F</url>
     <content type="text"><![CDATA[00 前言某日接到一个任务, 搞定一个蜜罐: tpot让我一个菜鸡来干这个, 心虚的很 今日份的任务有两个:第一个是如何搭建第二个是简单使用办法 所有的问题解决最好办法就是参考官方文档. 01 搭建前言官方搭建文档-英官当搭建文档-视频-旧-16.0这里提一句, 版本号是按照年份进行命令的, [官方博客]在这(http://dtag-dev-sec.github.io/) 安装方式有三种: ISO镜像安装 从Linux系统中直接安装 自己创建ISO镜像 问题不大, 网络上基本都在推荐第二种方法, 因为说可以手动进行调整…个人认为太麻烦. 我认为第一种方法最合适, 因为不用系统啥balabala的弄, 省心. 闲话少说, 开干 02 搭建实操安装条件: 稳定的DHCP网络这里稳定就不说了, 下载的东西还挺大的, 具体就不知道了, 从33M的iso文件到8G多大的虚拟硬盘, 从防火墙看下载了2G左右的文件DHCP, 我这里跳过了静态IP的配置, 可能这里会是一个坑点, 晚点再解决, 这里先占个位(官方文档要求DHCP) 下载官方ISO文件, 19.03链接在这(github下载) 安装, 对硬件要求略高, 这里贴出配置要求: 6-8 GB RAM (less RAM is possible but might introduce swapping) 128 GB SSD (smaller is possible but limits the capacity of storing events) Network via DHCP A working, non-proxied, internet connection 贴一下我的配置 接下来就是毫无难度的安装了, 然后设置密码, 设置web端账号和密码, 两个安装参考链接, 里面还包含了一些介绍, 推荐阅读 我这边2M/s的小水管大概2个小时完成安装 安装好以后有两个界面: 1, web管理界面: 64297 和 2, 主机管理界面: 64294, 均用https访问 安装好后界面如下:VM界面web管理界面, 端口64297(填web账号密码)主机管理界面, 端口64294(填主机账号密码) 03 介绍安装到此就告一段落, 接下来看一下这玩意怎么用 Dashboard这里有很多现成可用的大版, 各种高大上, 分别对应各个蜜罐的视图 adbhoney, ciscoasa, conpot, cowrie, dionaea, elasticpot, glastopf, glutton, heralding, honeypy, honeytrap, mailoney, medpot, rdpy, snare, tanner 上面各个蜜罐的介绍就看官方文档吧 实用工具在界面上方会有5个工具 分别对应:Furthermore we use the following tools Cockpit for a lightweight, webui for docker, os, real-time performance monitoring and web terminal. Cyberchef a web app for encryption, encoding, compression and data analysis. ELK stack to beautifully visualize all the events captured by T-Pot. Elasticsearch Head a web front end for browsing and interacting with an Elastic Search cluster. Spiderfoot a open source intelligence automation tool. Suricata a Network Security Monitoring engine. Discover界面这个界面是用来过滤包, 所有的数据包都在这里, 然后可以经过左边的筛选出http包头, user-agent等数据, 时间戳等, 右上角就有很方便的设置 Visualize界面那么这个界面用来干啥的呢. 是用来展示可视化界面的, 这里还可以新建一个自定义可视化视图, 例如饼状图, 柱状图等 Dev Tools界面难度太高, 个人认为是大佬们用的, 这里就跳过了吧… Monitoring界面顾名思义, 就知道这个是用来monitor的, 和DashBoard不一样的是, 这里可以监视5个实用工具的状态和硬件信息 Management界面这里就是关于一些设置的东东, 包括了远程主机, 过滤器设置等东西, 用得上的时候再说吧 04 后记emmm, 略显简陋的blog, 大概了解就好, 简单了解以后还是很好上手的. Done 05 后后记安装完以后, 可以用 sudo su 命令切换成root, 默认是Debian, 操作命令就不献丑贴出来的, 更改IP啥的操作都是可以进行的 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>other</category>
+        <category>Others</category>
       </categories>
       <tags>
         <tag>tpot</tag>
@@ -447,7 +437,7 @@
     <url>%2F2019%2F08%2F18%2Fhexo_installation_2%2F</url>
     <content type="text"><![CDATA[00 前言继无限折腾后, 终于把博客弄成了自己喜欢的模样, 赞一个! 01 折腾事项折腾了许多东东, 不过最着急的是版本太新, 自己找不到地方可以调整的, 只能换成旧版5.x的虽然7.x版本的新特性很多, 也很方便, 但教程始终不多, 还特别多误导, 网上的教程除了抄还是抄拥有阅读官方文档的能力很重要也就是我英语得抓紧学了 02 优化项目bgm, bg picture, copyright, code copy, icp等等, 都加上去了 03 博客迁移计划啊, 心态巨崩, 看我怎么把我的旧博客迁移回来, 包括了图片,最重要的还是要重新整理, 心态巨崩 新版博客计划: 取消掉过多的参考链接, 参考链接均详细描述 进行详细tag标志, 以及categories分类 对于未完成的blog进行持续更新tag和categories, 完成后进行删除 后续新增英文blog计划 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>blog</category>
+        <category>Others</category>
       </categories>
       <tags>
         <tag>hexo</tag>
@@ -457,6 +447,9 @@
     <title><![CDATA[Hexo博客安装进行时]]></title>
     <url>%2F2019%2F08%2F16%2Fhexo_installation%2F</url>
     <content type="text"><![CDATA[00 前言换博客, 辣鸡wordpress 01 安装本机安装git, Node.js设置npm代理: 12npm config set proxy http://server:portnpm config set https-proxy http://server:port 然后打开cmd 运行npm install -g hexo 安装hexo新建一个文件夹，如MyBlog进入该文件夹内，右击运行git，输入：hexo init（生成hexo模板, 从GitHub上download下来） 生成完模板，运行npm install最后运行：hexo server （运行程序，访问本地localhost:4000可以看到博客已经搭建成功） 02 图片测试用, 放在source/upload_image使用的时候就/upload_image 03 音乐参考网易云的mp3链接:http://music.163.com/song/media/outer/url?id=ID数字.mp3通过分享的审查元素可以找到图片最后的\themes\next\source\dist\music.js格式为: 123456{ name: "", artist: '', url: 'http://music.163.com/song/media/outer/url?id=.mp3', cover: '',} 04 美化这里美化直接百度吧, 注意版本为NexT6.x以上 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Others</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
