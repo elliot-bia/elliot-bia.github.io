@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzdkl.com.cn/"/>
-  <updated>2019-08-29T02:24:48.512Z</updated>
+  <updated>2019-08-30T02:16:23.211Z</updated>
   <id>https://zzdkl.com.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试用</title>
+    <link href="https://zzdkl.com.cn/2019/08/30/test/"/>
+    <id>https://zzdkl.com.cn/2019/08/30/test/</id>
+    <published>2019-08-30T02:15:43.361Z</published>
+    <updated>2019-08-30T02:16:23.211Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>test</p><a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;00-前言&quot;&gt;&lt;a href=&quot;#00-前言&quot; class=&quot;headerlink&quot; title=&quot;00 前言&quot;&gt;&lt;/a&gt;00 前言&lt;/h1&gt;&lt;p&gt;test&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>MarkDown跳转</title>
@@ -90,9 +110,9 @@
       <category term="Chrome" scheme="https://zzdkl.com.cn/categories/Browers/Chrome/"/>
     
     
-      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
-    
       <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
+    
+      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
     
   </entry>
   
@@ -386,9 +406,9 @@
     
     </summary>
     
-      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
-    
       <category term="Python" scheme="https://zzdkl.com.cn/categories/Python/"/>
+    
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
       <category term="sql" scheme="https://zzdkl.com.cn/categories/Database/sql/"/>
     
@@ -603,9 +623,9 @@
     
       <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
-    
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
+    
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
       <category term="IP" scheme="https://zzdkl.com.cn/categories/Network/IP/"/>
     
@@ -634,9 +654,9 @@
     
       <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
-    
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
+    
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Database/excel/"/>
     
