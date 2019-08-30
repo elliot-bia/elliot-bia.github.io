@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.zzdkl.com.cn/"/>
+  <link href="https://zzdkl.com.cn/"/>
   <updated>2019-08-29T02:24:48.512Z</updated>
-  <id>http://blog.zzdkl.com.cn/</id>
+  <id>https://zzdkl.com.cn/</id>
   
   <author>
     <name>Elliot Bia</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>MarkDown跳转</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/markdown_grammar/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/markdown_grammar/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/markdown_grammar/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/markdown_grammar/</id>
     <published>2019-08-29T02:24:09.227Z</published>
     <updated>2019-08-29T02:24:48.512Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="MarkDown" scheme="http://blog.zzdkl.com.cn/categories/MarkDown/"/>
+      <category term="MarkDown" scheme="https://zzdkl.com.cn/categories/MarkDown/"/>
     
     
-      <category term="MarkDown" scheme="http://blog.zzdkl.com.cn/tags/MarkDown/"/>
+      <category term="MarkDown" scheme="https://zzdkl.com.cn/tags/MarkDown/"/>
     
   </entry>
   
   <entry>
     <title>python request模块进行破解</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/python_bruteforce_simple1/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/python_bruteforce_simple1/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/python_bruteforce_simple1/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/python_bruteforce_simple1/</id>
     <published>2019-08-29T02:21:46.358Z</published>
     <updated>2019-08-29T02:23:43.147Z</updated>
     
@@ -56,19 +56,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://blog.zzdkl.com.cn/categories/Python/"/>
+      <category term="Python" scheme="https://zzdkl.com.cn/categories/Python/"/>
     
-      <category term="Brute force" scheme="http://blog.zzdkl.com.cn/categories/Python/Brute-force/"/>
+      <category term="Brute force" scheme="https://zzdkl.com.cn/categories/Python/Brute-force/"/>
     
     
-      <category term="Python" scheme="http://blog.zzdkl.com.cn/tags/Python/"/>
+      <category term="Python" scheme="https://zzdkl.com.cn/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>SwitchyOmega</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/switchOmege/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/switchOmege/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/switchOmege/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/switchOmege/</id>
     <published>2019-08-29T02:18:25.813Z</published>
     <updated>2019-08-29T02:44:11.533Z</updated>
     
@@ -81,25 +81,25 @@
     
     </summary>
     
-      <category term="Browers" scheme="http://blog.zzdkl.com.cn/categories/Browers/"/>
+      <category term="Browers" scheme="https://zzdkl.com.cn/categories/Browers/"/>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/categories/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
-      <category term="SwitchyOmega" scheme="http://blog.zzdkl.com.cn/categories/Network/SwitchyOmega/"/>
+      <category term="SwitchyOmega" scheme="https://zzdkl.com.cn/categories/Network/SwitchyOmega/"/>
     
-      <category term="Chrome" scheme="http://blog.zzdkl.com.cn/categories/Browers/Chrome/"/>
+      <category term="Chrome" scheme="https://zzdkl.com.cn/categories/Browers/Chrome/"/>
     
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/tags/Network/"/>
+      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
     
-      <category term="Proxy" scheme="http://blog.zzdkl.com.cn/tags/Proxy/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
   <entry>
     <title>安全基础知识</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/sec_base_knowladge/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/sec_base_knowladge/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/sec_base_knowladge/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/sec_base_knowladge/</id>
     <published>2019-08-29T02:16:27.995Z</published>
     <updated>2019-08-29T02:17:14.690Z</updated>
     
@@ -111,17 +111,17 @@
     
     </summary>
     
-      <category term="Sec" scheme="http://blog.zzdkl.com.cn/categories/Sec/"/>
+      <category term="Sec" scheme="https://zzdkl.com.cn/categories/Sec/"/>
     
     
-      <category term="Sec" scheme="http://blog.zzdkl.com.cn/tags/Sec/"/>
+      <category term="Sec" scheme="https://zzdkl.com.cn/tags/Sec/"/>
     
   </entry>
   
   <entry>
     <title>安全工具</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/sec_tools/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/sec_tools/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/sec_tools/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/sec_tools/</id>
     <published>2019-08-29T02:11:49.601Z</published>
     <updated>2019-08-29T02:17:01.583Z</updated>
     
@@ -133,17 +133,17 @@
     
     </summary>
     
-      <category term="Sec" scheme="http://blog.zzdkl.com.cn/categories/Sec/"/>
+      <category term="Sec" scheme="https://zzdkl.com.cn/categories/Sec/"/>
     
     
-      <category term="Sec" scheme="http://blog.zzdkl.com.cn/tags/Sec/"/>
+      <category term="Sec" scheme="https://zzdkl.com.cn/tags/Sec/"/>
     
   </entry>
   
   <entry>
     <title>比ConEmu更好用的Cmder</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/cmder/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/cmder/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/cmder/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/cmder/</id>
     <published>2019-08-29T02:10:31.476Z</published>
     <updated>2019-08-29T02:11:27.021Z</updated>
     
@@ -156,19 +156,19 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://blog.zzdkl.com.cn/categories/Windows/"/>
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="Cmder" scheme="http://blog.zzdkl.com.cn/categories/Windows/Cmder/"/>
+      <category term="Cmder" scheme="https://zzdkl.com.cn/categories/Windows/Cmder/"/>
     
     
-      <category term="Cmder" scheme="http://blog.zzdkl.com.cn/tags/Cmder/"/>
+      <category term="Cmder" scheme="https://zzdkl.com.cn/tags/Cmder/"/>
     
   </entry>
   
   <entry>
     <title>靶机getshell</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/getshell_in_target_drone/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/getshell_in_target_drone/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/getshell_in_target_drone/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/getshell_in_target_drone/</id>
     <published>2019-08-29T02:07:47.637Z</published>
     <updated>2019-08-29T02:09:21.045Z</updated>
     
@@ -180,17 +180,17 @@
     
     </summary>
     
-      <category term="Penetration" scheme="http://blog.zzdkl.com.cn/categories/Penetration/"/>
+      <category term="Penetration" scheme="https://zzdkl.com.cn/categories/Penetration/"/>
     
     
-      <category term="Penetration" scheme="http://blog.zzdkl.com.cn/tags/Penetration/"/>
+      <category term="Penetration" scheme="https://zzdkl.com.cn/tags/Penetration/"/>
     
   </entry>
   
   <entry>
     <title>家庭服务器：NAS+HTPC+软路由</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/Home_server/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/Home_server/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/Home_server/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/Home_server/</id>
     <published>2019-08-29T02:04:35.850Z</published>
     <updated>2019-08-29T02:05:59.068Z</updated>
     
@@ -209,23 +209,23 @@
     
     </summary>
     
-      <category term="Home" scheme="http://blog.zzdkl.com.cn/categories/Home/"/>
+      <category term="Home" scheme="https://zzdkl.com.cn/categories/Home/"/>
     
     
-      <category term="NAS" scheme="http://blog.zzdkl.com.cn/tags/NAS/"/>
+      <category term="NAS" scheme="https://zzdkl.com.cn/tags/NAS/"/>
     
-      <category term="HTPC" scheme="http://blog.zzdkl.com.cn/tags/HTPC/"/>
+      <category term="HTPC" scheme="https://zzdkl.com.cn/tags/HTPC/"/>
     
-      <category term="RouterOS" scheme="http://blog.zzdkl.com.cn/tags/RouterOS/"/>
+      <category term="RouterOS" scheme="https://zzdkl.com.cn/tags/RouterOS/"/>
     
-      <category term="Home" scheme="http://blog.zzdkl.com.cn/tags/Home/"/>
+      <category term="Home" scheme="https://zzdkl.com.cn/tags/Home/"/>
     
   </entry>
   
   <entry>
     <title>正则表达式</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/regular_expression/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/regular_expression/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/regular_expression/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/regular_expression/</id>
     <published>2019-08-29T02:02:43.425Z</published>
     <updated>2019-08-29T02:03:29.989Z</updated>
     
@@ -237,19 +237,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://blog.zzdkl.com.cn/categories/Python/"/>
+      <category term="Python" scheme="https://zzdkl.com.cn/categories/Python/"/>
     
-      <category term="re" scheme="http://blog.zzdkl.com.cn/categories/Python/re/"/>
+      <category term="re" scheme="https://zzdkl.com.cn/categories/Python/re/"/>
     
     
-      <category term="re" scheme="http://blog.zzdkl.com.cn/tags/re/"/>
+      <category term="re" scheme="https://zzdkl.com.cn/tags/re/"/>
     
   </entry>
   
   <entry>
     <title>WSL设置</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/wsl_configuration/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/wsl_configuration/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/wsl_configuration/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/wsl_configuration/</id>
     <published>2019-08-29T01:59:50.835Z</published>
     <updated>2019-08-29T02:01:13.925Z</updated>
     
@@ -262,23 +262,23 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="Windows" scheme="http://blog.zzdkl.com.cn/categories/Windows/"/>
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="WSL" scheme="http://blog.zzdkl.com.cn/categories/Windows/WSL/"/>
+      <category term="WSL" scheme="https://zzdkl.com.cn/categories/Windows/WSL/"/>
     
-      <category term="Kali" scheme="http://blog.zzdkl.com.cn/categories/Linux/Kali/"/>
+      <category term="Kali" scheme="https://zzdkl.com.cn/categories/Linux/Kali/"/>
     
     
-      <category term="WSL" scheme="http://blog.zzdkl.com.cn/tags/WSL/"/>
+      <category term="WSL" scheme="https://zzdkl.com.cn/tags/WSL/"/>
     
   </entry>
   
   <entry>
     <title>watobo安装使用</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/watobo_installation/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/watobo_installation/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/watobo_installation/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/watobo_installation/</id>
     <published>2019-08-29T01:57:38.791Z</published>
     <updated>2019-08-29T01:59:20.136Z</updated>
     
@@ -290,17 +290,17 @@
     
     </summary>
     
-      <category term="Others" scheme="http://blog.zzdkl.com.cn/categories/Others/"/>
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
     
     
-      <category term="watobo" scheme="http://blog.zzdkl.com.cn/tags/watobo/"/>
+      <category term="watobo" scheme="https://zzdkl.com.cn/tags/watobo/"/>
     
   </entry>
   
   <entry>
     <title>VSCode写Python调优</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/vscode_optimize/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/vscode_optimize/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/vscode_optimize/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/vscode_optimize/</id>
     <published>2019-08-29T01:53:48.368Z</published>
     <updated>2019-08-29T02:42:27.479Z</updated>
     
@@ -312,17 +312,17 @@
     
     </summary>
     
-      <category term="VSCode" scheme="http://blog.zzdkl.com.cn/categories/VSCode/"/>
+      <category term="VSCode" scheme="https://zzdkl.com.cn/categories/VSCode/"/>
     
     
-      <category term="VSCode" scheme="http://blog.zzdkl.com.cn/tags/VSCode/"/>
+      <category term="VSCode" scheme="https://zzdkl.com.cn/tags/VSCode/"/>
     
   </entry>
   
   <entry>
     <title>tmux+fish调优终端</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/tmux_and_fish/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/tmux_and_fish/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/tmux_and_fish/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/tmux_and_fish/</id>
     <published>2019-08-29T01:50:16.946Z</published>
     <updated>2019-08-29T01:52:28.096Z</updated>
     
@@ -334,23 +334,23 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="Shell" scheme="http://blog.zzdkl.com.cn/categories/Linux/Shell/"/>
+      <category term="Shell" scheme="https://zzdkl.com.cn/categories/Linux/Shell/"/>
     
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/tags/Linux/"/>
     
-      <category term="tmux" scheme="http://blog.zzdkl.com.cn/tags/tmux/"/>
+      <category term="tmux" scheme="https://zzdkl.com.cn/tags/tmux/"/>
     
-      <category term="fish" scheme="http://blog.zzdkl.com.cn/tags/fish/"/>
+      <category term="fish" scheme="https://zzdkl.com.cn/tags/fish/"/>
     
   </entry>
   
   <entry>
     <title>SSL类安全问题验证</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/ssl_security_problem_slove/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/ssl_security_problem_slove/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/ssl_security_problem_slove/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/ssl_security_problem_slove/</id>
     <published>2019-08-29T01:48:26.759Z</published>
     <updated>2019-08-29T01:49:43.173Z</updated>
     
@@ -362,19 +362,19 @@
     
     </summary>
     
-      <category term="Penetration" scheme="http://blog.zzdkl.com.cn/categories/Penetration/"/>
+      <category term="Penetration" scheme="https://zzdkl.com.cn/categories/Penetration/"/>
     
-      <category term="SSL" scheme="http://blog.zzdkl.com.cn/categories/Penetration/SSL/"/>
+      <category term="SSL" scheme="https://zzdkl.com.cn/categories/Penetration/SSL/"/>
     
     
-      <category term="SSL" scheme="http://blog.zzdkl.com.cn/tags/SSL/"/>
+      <category term="SSL" scheme="https://zzdkl.com.cn/tags/SSL/"/>
     
   </entry>
   
   <entry>
     <title>sql数据库学习</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/sql_db_learning/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/sql_db_learning/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/sql_db_learning/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/sql_db_learning/</id>
     <published>2019-08-29T01:46:29.012Z</published>
     <updated>2019-08-29T01:47:40.933Z</updated>
     
@@ -386,25 +386,25 @@
     
     </summary>
     
-      <category term="Database" scheme="http://blog.zzdkl.com.cn/categories/Database/"/>
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
-      <category term="Python" scheme="http://blog.zzdkl.com.cn/categories/Python/"/>
+      <category term="Python" scheme="https://zzdkl.com.cn/categories/Python/"/>
     
-      <category term="sql" scheme="http://blog.zzdkl.com.cn/categories/Database/sql/"/>
+      <category term="sql" scheme="https://zzdkl.com.cn/categories/Database/sql/"/>
     
-      <category term="db" scheme="http://blog.zzdkl.com.cn/categories/Python/db/"/>
+      <category term="db" scheme="https://zzdkl.com.cn/categories/Python/db/"/>
     
     
-      <category term="Python" scheme="http://blog.zzdkl.com.cn/tags/Python/"/>
+      <category term="Python" scheme="https://zzdkl.com.cn/tags/Python/"/>
     
-      <category term="sql" scheme="http://blog.zzdkl.com.cn/tags/sql/"/>
+      <category term="sql" scheme="https://zzdkl.com.cn/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>Shell调优</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/shell_optimize/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/shell_optimize/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/shell_optimize/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/shell_optimize/</id>
     <published>2019-08-29T01:44:02.806Z</published>
     <updated>2019-08-29T02:46:18.694Z</updated>
     
@@ -417,21 +417,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="Shell" scheme="http://blog.zzdkl.com.cn/categories/Linux/Shell/"/>
+      <category term="Shell" scheme="https://zzdkl.com.cn/categories/Linux/Shell/"/>
     
     
-      <category term="Shell" scheme="http://blog.zzdkl.com.cn/tags/Shell/"/>
+      <category term="Shell" scheme="https://zzdkl.com.cn/tags/Shell/"/>
     
-      <category term="PS" scheme="http://blog.zzdkl.com.cn/tags/PS/"/>
+      <category term="PS" scheme="https://zzdkl.com.cn/tags/PS/"/>
     
   </entry>
   
   <entry>
     <title>Mongo搭建</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/mongo_installation/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/mongo_installation/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/mongo_installation/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/mongo_installation/</id>
     <published>2019-08-29T01:42:17.138Z</published>
     <updated>2019-08-29T01:43:34.876Z</updated>
     
@@ -443,19 +443,19 @@
     
     </summary>
     
-      <category term="Database" scheme="http://blog.zzdkl.com.cn/categories/Database/"/>
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
-      <category term="Mongo" scheme="http://blog.zzdkl.com.cn/categories/Database/Mongo/"/>
+      <category term="Mongo" scheme="https://zzdkl.com.cn/categories/Database/Mongo/"/>
     
     
-      <category term="Mongo" scheme="http://blog.zzdkl.com.cn/tags/Mongo/"/>
+      <category term="Mongo" scheme="https://zzdkl.com.cn/tags/Mongo/"/>
     
   </entry>
   
   <entry>
     <title>Linux后台终端命令</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/linux_backstage_command/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/linux_backstage_command/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/linux_backstage_command/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/linux_backstage_command/</id>
     <published>2019-08-29T01:38:27.685Z</published>
     <updated>2019-08-29T01:41:02.749Z</updated>
     
@@ -467,19 +467,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="command" scheme="http://blog.zzdkl.com.cn/categories/Linux/command/"/>
+      <category term="command" scheme="https://zzdkl.com.cn/categories/Linux/command/"/>
     
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>一些Linux命令</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/some_linux_command/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/some_linux_command/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/some_linux_command/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/some_linux_command/</id>
     <published>2019-08-29T01:35:24.408Z</published>
     <updated>2019-08-29T01:36:47.047Z</updated>
     
@@ -491,19 +491,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="command" scheme="http://blog.zzdkl.com.cn/categories/Linux/command/"/>
+      <category term="command" scheme="https://zzdkl.com.cn/categories/Linux/command/"/>
     
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/tags/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Kali(Win10) + beEF</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/kali_wsl_install_beEF/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/kali_wsl_install_beEF/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/kali_wsl_install_beEF/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/kali_wsl_install_beEF/</id>
     <published>2019-08-29T01:26:59.635Z</published>
     <updated>2019-08-29T01:31:46.316Z</updated>
     
@@ -515,27 +515,27 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="Windows" scheme="http://blog.zzdkl.com.cn/categories/Windows/"/>
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="WSL" scheme="http://blog.zzdkl.com.cn/categories/Windows/WSL/"/>
+      <category term="WSL" scheme="https://zzdkl.com.cn/categories/Windows/WSL/"/>
     
-      <category term="Kali" scheme="http://blog.zzdkl.com.cn/categories/Linux/Kali/"/>
+      <category term="Kali" scheme="https://zzdkl.com.cn/categories/Linux/Kali/"/>
     
     
-      <category term="WSL" scheme="http://blog.zzdkl.com.cn/tags/WSL/"/>
+      <category term="WSL" scheme="https://zzdkl.com.cn/tags/WSL/"/>
     
-      <category term="Kali" scheme="http://blog.zzdkl.com.cn/tags/Kali/"/>
+      <category term="Kali" scheme="https://zzdkl.com.cn/tags/Kali/"/>
     
-      <category term="beEF" scheme="http://blog.zzdkl.com.cn/tags/beEF/"/>
+      <category term="beEF" scheme="https://zzdkl.com.cn/tags/beEF/"/>
     
   </entry>
   
   <entry>
     <title>git冲突相关</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/git_conflict/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/git_conflict/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/git_conflict/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/git_conflict/</id>
     <published>2019-08-29T01:22:59.804Z</published>
     <updated>2019-08-29T01:25:19.504Z</updated>
     
@@ -548,19 +548,19 @@
     
     </summary>
     
-      <category term="git" scheme="http://blog.zzdkl.com.cn/categories/git/"/>
+      <category term="git" scheme="https://zzdkl.com.cn/categories/git/"/>
     
-      <category term="conflict" scheme="http://blog.zzdkl.com.cn/categories/git/conflict/"/>
+      <category term="conflict" scheme="https://zzdkl.com.cn/categories/git/conflict/"/>
     
     
-      <category term="git" scheme="http://blog.zzdkl.com.cn/tags/git/"/>
+      <category term="git" scheme="https://zzdkl.com.cn/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>git&amp;gitlab相关</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/git_and_gitlab/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/git_and_gitlab/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/git_and_gitlab/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/git_and_gitlab/</id>
     <published>2019-08-29T01:20:26.973Z</published>
     <updated>2019-08-29T01:21:55.627Z</updated>
     
@@ -573,21 +573,21 @@
     
     </summary>
     
-      <category term="git" scheme="http://blog.zzdkl.com.cn/categories/git/"/>
+      <category term="git" scheme="https://zzdkl.com.cn/categories/git/"/>
     
-      <category term="gitlab" scheme="http://blog.zzdkl.com.cn/categories/git/gitlab/"/>
+      <category term="gitlab" scheme="https://zzdkl.com.cn/categories/git/gitlab/"/>
     
     
-      <category term="git" scheme="http://blog.zzdkl.com.cn/tags/git/"/>
+      <category term="git" scheme="https://zzdkl.com.cn/tags/git/"/>
     
-      <category term="gitlab" scheme="http://blog.zzdkl.com.cn/tags/gitlab/"/>
+      <category term="gitlab" scheme="https://zzdkl.com.cn/tags/gitlab/"/>
     
   </entry>
   
   <entry>
     <title>excel中IP地址的处理</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/dispose_ip_in_excel/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/dispose_ip_in_excel/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/dispose_ip_in_excel/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/dispose_ip_in_excel/</id>
     <published>2019-08-29T01:09:13.381Z</published>
     <updated>2019-08-29T01:11:12.993Z</updated>
     
@@ -601,25 +601,25 @@
     
     </summary>
     
-      <category term="Office" scheme="http://blog.zzdkl.com.cn/categories/Office/"/>
+      <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/categories/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
-      <category term="excel" scheme="http://blog.zzdkl.com.cn/categories/Office/excel/"/>
+      <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
     
-      <category term="IP" scheme="http://blog.zzdkl.com.cn/categories/Network/IP/"/>
+      <category term="IP" scheme="https://zzdkl.com.cn/categories/Network/IP/"/>
     
     
-      <category term="excel" scheme="http://blog.zzdkl.com.cn/tags/excel/"/>
+      <category term="excel" scheme="https://zzdkl.com.cn/tags/excel/"/>
     
-      <category term="IP" scheme="http://blog.zzdkl.com.cn/tags/IP/"/>
+      <category term="IP" scheme="https://zzdkl.com.cn/tags/IP/"/>
     
   </entry>
   
   <entry>
     <title>excel导入数据库</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/excel_import_to_db/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/excel_import_to_db/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/excel_import_to_db/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/excel_import_to_db/</id>
     <published>2019-08-29T01:06:29.191Z</published>
     <updated>2019-08-29T01:43:08.591Z</updated>
     
@@ -632,25 +632,25 @@
     
     </summary>
     
-      <category term="Office" scheme="http://blog.zzdkl.com.cn/categories/Office/"/>
+      <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Database" scheme="http://blog.zzdkl.com.cn/categories/Database/"/>
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
-      <category term="excel" scheme="http://blog.zzdkl.com.cn/categories/Office/excel/"/>
+      <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
     
-      <category term="excel" scheme="http://blog.zzdkl.com.cn/categories/Database/excel/"/>
+      <category term="excel" scheme="https://zzdkl.com.cn/categories/Database/excel/"/>
     
     
-      <category term="excel" scheme="http://blog.zzdkl.com.cn/tags/excel/"/>
+      <category term="excel" scheme="https://zzdkl.com.cn/tags/excel/"/>
     
-      <category term="database" scheme="http://blog.zzdkl.com.cn/tags/database/"/>
+      <category term="database" scheme="https://zzdkl.com.cn/tags/database/"/>
     
   </entry>
   
   <entry>
     <title>Docker网络类</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/29/docker_network_configuration/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/29/docker_network_configuration/</id>
+    <link href="https://zzdkl.com.cn/2019/08/29/docker_network_configuration/"/>
+    <id>https://zzdkl.com.cn/2019/08/29/docker_network_configuration/</id>
     <published>2019-08-29T00:58:35.860Z</published>
     <updated>2019-08-29T02:37:01.203Z</updated>
     
@@ -667,25 +667,25 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="Docker" scheme="http://blog.zzdkl.com.cn/categories/Docker/"/>
+      <category term="Docker" scheme="https://zzdkl.com.cn/categories/Docker/"/>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/categories/Docker/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Docker/Network/"/>
     
-      <category term="Docker" scheme="http://blog.zzdkl.com.cn/categories/Linux/Docker/"/>
+      <category term="Docker" scheme="https://zzdkl.com.cn/categories/Linux/Docker/"/>
     
     
-      <category term="Docker" scheme="http://blog.zzdkl.com.cn/tags/Docker/"/>
+      <category term="Docker" scheme="https://zzdkl.com.cn/tags/Docker/"/>
     
-      <category term="Netwrok" scheme="http://blog.zzdkl.com.cn/tags/Netwrok/"/>
+      <category term="Netwrok" scheme="https://zzdkl.com.cn/tags/Netwrok/"/>
     
   </entry>
   
   <entry>
     <title>在CentOS 7上安装Nessus</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/28/Nessus_in_CentOS_installation/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/28/Nessus_in_CentOS_installation/</id>
+    <link href="https://zzdkl.com.cn/2019/08/28/Nessus_in_CentOS_installation/"/>
+    <id>https://zzdkl.com.cn/2019/08/28/Nessus_in_CentOS_installation/</id>
     <published>2019-08-28T07:44:00.699Z</published>
     <updated>2019-08-28T07:54:59.975Z</updated>
     
@@ -697,21 +697,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://blog.zzdkl.com.cn/categories/Linux/"/>
+      <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
     
-      <category term="CentOS" scheme="http://blog.zzdkl.com.cn/categories/Linux/CentOS/"/>
+      <category term="CentOS" scheme="https://zzdkl.com.cn/categories/Linux/CentOS/"/>
     
-      <category term="Software" scheme="http://blog.zzdkl.com.cn/categories/Software/"/>
+      <category term="Software" scheme="https://zzdkl.com.cn/categories/Software/"/>
     
     
-      <category term="Nessus" scheme="http://blog.zzdkl.com.cn/tags/Nessus/"/>
+      <category term="Nessus" scheme="https://zzdkl.com.cn/tags/Nessus/"/>
     
   </entry>
   
   <entry>
     <title>关于bat的一些使用</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/28/bat_usage/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/28/bat_usage/</id>
+    <link href="https://zzdkl.com.cn/2019/08/28/bat_usage/"/>
+    <id>https://zzdkl.com.cn/2019/08/28/bat_usage/</id>
     <published>2019-08-28T07:15:35.182Z</published>
     <updated>2019-08-28T07:16:42.784Z</updated>
     
@@ -723,19 +723,19 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://blog.zzdkl.com.cn/categories/Windows/"/>
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="bat" scheme="http://blog.zzdkl.com.cn/categories/Windows/bat/"/>
+      <category term="bat" scheme="https://zzdkl.com.cn/categories/Windows/bat/"/>
     
     
-      <category term="bat" scheme="http://blog.zzdkl.com.cn/tags/bat/"/>
+      <category term="bat" scheme="https://zzdkl.com.cn/tags/bat/"/>
     
   </entry>
   
   <entry>
     <title>今天我转向Firefox怀抱</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/27/about_firefox/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/27/about_firefox/</id>
+    <link href="https://zzdkl.com.cn/2019/08/27/about_firefox/"/>
+    <id>https://zzdkl.com.cn/2019/08/27/about_firefox/</id>
     <published>2019-08-27T03:43:47.175Z</published>
     <updated>2019-08-29T02:44:40.638Z</updated>
     
@@ -747,19 +747,19 @@
     
     </summary>
     
-      <category term="Browers" scheme="http://blog.zzdkl.com.cn/categories/Browers/"/>
+      <category term="Browers" scheme="https://zzdkl.com.cn/categories/Browers/"/>
     
-      <category term="Firefox" scheme="http://blog.zzdkl.com.cn/categories/Browers/Firefox/"/>
+      <category term="Firefox" scheme="https://zzdkl.com.cn/categories/Browers/Firefox/"/>
     
     
-      <category term="Firefox" scheme="http://blog.zzdkl.com.cn/tags/Firefox/"/>
+      <category term="Firefox" scheme="https://zzdkl.com.cn/tags/Firefox/"/>
     
   </entry>
   
   <entry>
     <title>宇宙最强编辑器VS Code</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/23/the_best_vscode/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/23/the_best_vscode/</id>
+    <link href="https://zzdkl.com.cn/2019/08/23/the_best_vscode/"/>
+    <id>https://zzdkl.com.cn/2019/08/23/the_best_vscode/</id>
     <published>2019-08-23T04:05:23.485Z</published>
     <updated>2019-08-29T02:42:32.547Z</updated>
     
@@ -771,17 +771,17 @@
     
     </summary>
     
-      <category term="VSCode" scheme="http://blog.zzdkl.com.cn/categories/VSCode/"/>
+      <category term="VSCode" scheme="https://zzdkl.com.cn/categories/VSCode/"/>
     
     
-      <category term="VSCode" scheme="http://blog.zzdkl.com.cn/tags/VSCode/"/>
+      <category term="VSCode" scheme="https://zzdkl.com.cn/tags/VSCode/"/>
     
   </entry>
   
   <entry>
     <title>系统备份</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/22/system_backup/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/22/system_backup/</id>
+    <link href="https://zzdkl.com.cn/2019/08/22/system_backup/"/>
+    <id>https://zzdkl.com.cn/2019/08/22/system_backup/</id>
     <published>2019-08-22T07:07:06.578Z</published>
     <updated>2019-08-22T07:12:13.931Z</updated>
     
@@ -793,23 +793,23 @@
     
     </summary>
     
-      <category term="Windows" scheme="http://blog.zzdkl.com.cn/categories/Windows/"/>
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="Software" scheme="http://blog.zzdkl.com.cn/categories/Software/"/>
+      <category term="Software" scheme="https://zzdkl.com.cn/categories/Software/"/>
     
-      <category term="BackUp" scheme="http://blog.zzdkl.com.cn/categories/Windows/BackUp/"/>
+      <category term="BackUp" scheme="https://zzdkl.com.cn/categories/Windows/BackUp/"/>
     
-      <category term="AOMEI" scheme="http://blog.zzdkl.com.cn/categories/Software/AOMEI/"/>
+      <category term="AOMEI" scheme="https://zzdkl.com.cn/categories/Software/AOMEI/"/>
     
     
-      <category term="BackUp" scheme="http://blog.zzdkl.com.cn/tags/BackUp/"/>
+      <category term="BackUp" scheme="https://zzdkl.com.cn/tags/BackUp/"/>
     
   </entry>
   
   <entry>
     <title>巨硬Win10与Office激活</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/18/MS_activate/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/18/MS_activate/</id>
+    <link href="https://zzdkl.com.cn/2019/08/18/MS_activate/"/>
+    <id>https://zzdkl.com.cn/2019/08/18/MS_activate/</id>
     <published>2019-08-18T02:21:08.194Z</published>
     <updated>2019-08-29T02:40:43.841Z</updated>
     
@@ -822,19 +822,19 @@
     
     </summary>
     
-      <category term="Others" scheme="http://blog.zzdkl.com.cn/categories/Others/"/>
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
     
     
-      <category term="Microsoft" scheme="http://blog.zzdkl.com.cn/tags/Microsoft/"/>
+      <category term="Microsoft" scheme="https://zzdkl.com.cn/tags/Microsoft/"/>
     
-      <category term="Activate" scheme="http://blog.zzdkl.com.cn/tags/Activate/"/>
+      <category term="Activate" scheme="https://zzdkl.com.cn/tags/Activate/"/>
     
   </entry>
   
   <entry>
     <title>虚拟机上网相关</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/18/network_in_VM/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/18/network_in_VM/</id>
+    <link href="https://zzdkl.com.cn/2019/08/18/network_in_VM/"/>
+    <id>https://zzdkl.com.cn/2019/08/18/network_in_VM/</id>
     <published>2019-08-18T02:21:08.191Z</published>
     <updated>2019-08-17T13:12:36.000Z</updated>
     
@@ -846,19 +846,19 @@
     
     </summary>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/categories/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
     
-      <category term="VM" scheme="http://blog.zzdkl.com.cn/tags/VM/"/>
+      <category term="VM" scheme="https://zzdkl.com.cn/tags/VM/"/>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/tags/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
   <entry>
     <title>tpot安装与介绍</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/18/tpot_installation/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/18/tpot_installation/</id>
+    <link href="https://zzdkl.com.cn/2019/08/18/tpot_installation/"/>
+    <id>https://zzdkl.com.cn/2019/08/18/tpot_installation/</id>
     <published>2019-08-18T02:21:07.953Z</published>
     <updated>2019-08-29T02:40:55.572Z</updated>
     
@@ -870,19 +870,19 @@
     
     </summary>
     
-      <category term="Others" scheme="http://blog.zzdkl.com.cn/categories/Others/"/>
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
     
     
-      <category term="tpot" scheme="http://blog.zzdkl.com.cn/tags/tpot/"/>
+      <category term="tpot" scheme="https://zzdkl.com.cn/tags/tpot/"/>
     
-      <category term="Honey Pot" scheme="http://blog.zzdkl.com.cn/tags/Honey-Pot/"/>
+      <category term="Honey Pot" scheme="https://zzdkl.com.cn/tags/Honey-Pot/"/>
     
   </entry>
   
   <entry>
     <title>代理类集合(持续更新)</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/18/proxy_in_all/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/18/proxy_in_all/</id>
+    <link href="https://zzdkl.com.cn/2019/08/18/proxy_in_all/"/>
+    <id>https://zzdkl.com.cn/2019/08/18/proxy_in_all/</id>
     <published>2019-08-18T02:21:06.700Z</published>
     <updated>2019-08-17T12:52:59.000Z</updated>
     
@@ -894,21 +894,21 @@
     
     </summary>
     
-      <category term="Network" scheme="http://blog.zzdkl.com.cn/categories/Network/"/>
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
-      <category term="Continuously Update" scheme="http://blog.zzdkl.com.cn/categories/Continuously-Update/"/>
+      <category term="Continuously Update" scheme="https://zzdkl.com.cn/categories/Continuously-Update/"/>
     
     
-      <category term="Proxy" scheme="http://blog.zzdkl.com.cn/tags/Proxy/"/>
+      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
     
-      <category term="Continuously Update" scheme="http://blog.zzdkl.com.cn/tags/Continuously-Update/"/>
+      <category term="Continuously Update" scheme="https://zzdkl.com.cn/tags/Continuously-Update/"/>
     
   </entry>
   
   <entry>
     <title>Hexo安装后续2</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/18/hexo_installation_2/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/18/hexo_installation_2/</id>
+    <link href="https://zzdkl.com.cn/2019/08/18/hexo_installation_2/"/>
+    <id>https://zzdkl.com.cn/2019/08/18/hexo_installation_2/</id>
     <published>2019-08-18T02:21:06.697Z</published>
     <updated>2019-08-29T02:41:37.649Z</updated>
     
@@ -920,17 +920,17 @@
     
     </summary>
     
-      <category term="Others" scheme="http://blog.zzdkl.com.cn/categories/Others/"/>
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
     
     
-      <category term="hexo" scheme="http://blog.zzdkl.com.cn/tags/hexo/"/>
+      <category term="hexo" scheme="https://zzdkl.com.cn/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客安装进行时</title>
-    <link href="http://blog.zzdkl.com.cn/2019/08/16/hexo_installation/"/>
-    <id>http://blog.zzdkl.com.cn/2019/08/16/hexo_installation/</id>
+    <link href="https://zzdkl.com.cn/2019/08/16/hexo_installation/"/>
+    <id>https://zzdkl.com.cn/2019/08/16/hexo_installation/</id>
     <published>2019-08-16T04:48:14.318Z</published>
     <updated>2019-08-29T02:41:50.080Z</updated>
     
@@ -942,10 +942,10 @@
     
     </summary>
     
-      <category term="Others" scheme="http://blog.zzdkl.com.cn/categories/Others/"/>
+      <category term="Others" scheme="https://zzdkl.com.cn/categories/Others/"/>
     
     
-      <category term="hexo" scheme="http://blog.zzdkl.com.cn/tags/hexo/"/>
+      <category term="hexo" scheme="https://zzdkl.com.cn/tags/hexo/"/>
     
   </entry>
   
