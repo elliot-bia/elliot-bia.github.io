@@ -110,9 +110,9 @@
       <category term="Chrome" scheme="https://zzdkl.com.cn/categories/Browers/Chrome/"/>
     
     
-      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
-    
       <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
+    
+      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
@@ -623,9 +623,9 @@
     
       <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
-    
       <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
+    
+      <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
     
       <category term="IP" scheme="https://zzdkl.com.cn/categories/Network/IP/"/>
     

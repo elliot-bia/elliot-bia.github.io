@@ -42,8 +42,8 @@
         <category>Chrome</category>
       </categories>
       <tags>
-        <tag>Network</tag>
         <tag>Proxy</tag>
+        <tag>Network</tag>
       </tags>
   </entry>
   <entry>
@@ -290,8 +290,8 @@
     <content type="text"><![CDATA[00.前言在excel中处理IP地址是很经常的事情，那么对于IP地址的处理又不似数据那样的简单，有很多小数点 这个特性就造成了IP地址处理的棘手程度。 现在我们就对excel表格中IP地址的处理进行简答的总结，处理一下 01. IP和漏洞数量计算对于脚本处理后的xlsx文件，进行处理 在插入中选择数据透视表 然后在右边手动添加如下的配置即可，注意需要去掉漏洞的空白 截图如下 ！！需要注意把紧急和高危的数据列进行置换 方法是复制数据到另一列中，然后选中列，按住shift键进行右移 02. IP地址填充0例如： 172.10.3.4 ，把它填充成 172.010.003.004 处理方法：把这个IP地址放在A列，在B列放入这个函数即可 1=TEXT(LEFT(A1,FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND( ".",A1,1)+1,FIND(".",A1,FIND(".",A1,1)+1)-FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND(".",A1,FIND(".",A1,1)+1)+1,FIND(".",A1, FIND(".",A1,FIND(".",A1,1)+1)+1)-FIND(".",A1,FIND(".",A1,1)+1)-1), "000") &amp; "." &amp; TEXT(RIGHT(A1,LEN(A1)-FIND(".",A1,FIND(".",A1,FIND( ".",A1,1)+1)+1)),"000") 截图如下 03. IP地址去掉0对于上面办法得到的IP地址，进行排序即可 可是我们最后需要的却不是 172.010.003.004 这个格式，我们就对它进行处理 首先选中数据 在数据中选分列,在第三步的目标区域选中粘贴的位置 然后对后面三列数据选择插入整列(为了方便加入小数点.) 然后再选中数据，进行定位条件（快捷键F5)，选中空值，输入小数点，然后Ctrl+Enter进行全部替换 参考链接 1F5键打开“定位”对话框，单击“定位条件”按钮，在“定位条件”对话框中选择“空值”，单击“确定”。Excel会选中区域中的所有空白单元格，在编辑栏中输入“0”，然后按Ctrl+Enter键在所有空白单元格中输入零值。 最后合并IP，使用函数=CONCATENATE(K10,L10,M10,N10,O10,P10,Q10) 参考链接 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Office</category>
-        <category>excel</category>
         <category>Network</category>
+        <category>excel</category>
         <category>IP</category>
       </categories>
       <tags>
