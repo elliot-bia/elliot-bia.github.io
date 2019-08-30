@@ -42,8 +42,8 @@
         <category>Chrome</category>
       </categories>
       <tags>
-        <tag>Proxy</tag>
         <tag>Network</tag>
+        <tag>Proxy</tag>
       </tags>
   </entry>
   <entry>
@@ -184,8 +184,8 @@
     <url>%2F2019%2F08%2F29%2Fsql_db_learning%2F</url>
     <content type="text"><![CDATA[00 前言今天任务：数据库文件gbk转utf-8码 01. 工具：Navicatnavicat官方教程 Navicat其他非官方教程 02. 操作步骤网上找了找，确实没有很好的工具进行直接转换。 只能手工操作了，思路如下： 把数据从数据库导出来 再把数据导进去就可以了 操作是不是很简单？屁了，慢慢操作吧 03. 导出数据现在要对数据库进行导出，首先要干的肯定是先备份数据 导出数据有两种操作，一种是用命令行，一种是用python 这里我们选择用python 哦吼，搞不定，放弃。先弄sql命令吧 哦吼，又搞不定，放弃，弄回python脚本，毕竟有现成的成功读取的脚本 用上之前写好的脚本，报错，报错。 算了，自己重新写一份吧python读取sqlite参考链接 淦，改了改总算好了 我们把之前的脚本进行改了改，就可以实现读取功能了: 12345678910111213141516#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,#导入模块vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#对读取的sqlite进行gbk处理res = conn.execute( r"""select * from VULNDB""").fetchone()print(res[3]) 04. 写入数据 把数据导出来之后就要进行utf-8写入了 现在尝试进行尝试写入数据后，会报错，找了一下资料，找到了解决办法写入参考链接 最终代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先# 这里应该是对数据库进行转码res = conn.execute( r"""select * from VULNDB""").fetchone()# # print(type(res.fetchone()))# pluginID, vulname, _, vul_desc, vul_solu = resprint(res)sql = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""para = resconn.execute(sql,para)conn.commit() 05. 批量读取写入接下来就是如何把这个数据库逐步读取，然后写入了 刚开始的思路是for进行迭代读取，然后发现有问题 找资料，无果 不说了，问大佬去，得到结果如下： 123451. fetchall出来的结果可迭代的2. for i in conn.execute(sql).fetchall(): conn.execute(update_sql) 当然，这样写可能导致异常 进行尝试，除了点小错误就是for i in conn.execute(sql).fetchall这里忘了加上括号，导致报错说不可迭代。大佬一语中的的指出了问题，这就是大佬啊 最后代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先sqlread = r"""select * from VULNDB"""sqlwrite = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""for i in conn.execute(sqlread).fetchall(): print(i) para = i conn.execute(sqlwrite,para)conn.commit() 还有个小知识点就是commit()函数不要写在循环里面，占用资源 06. 总结总的来说就是不断排坑的过程，但是思路要清晰，然后找找资料，遇到了关卡先思考一下，实在不行就去麻烦大佬 XD (笑) GitHub代码地址 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Python</category>
         <category>Database</category>
+        <category>Python</category>
         <category>sql</category>
         <category>db</category>
       </categories>
@@ -290,8 +290,8 @@
     <content type="text"><![CDATA[00.前言在excel中处理IP地址是很经常的事情，那么对于IP地址的处理又不似数据那样的简单，有很多小数点 这个特性就造成了IP地址处理的棘手程度。 现在我们就对excel表格中IP地址的处理进行简答的总结，处理一下 01. IP和漏洞数量计算对于脚本处理后的xlsx文件，进行处理 在插入中选择数据透视表 然后在右边手动添加如下的配置即可，注意需要去掉漏洞的空白 截图如下 ！！需要注意把紧急和高危的数据列进行置换 方法是复制数据到另一列中，然后选中列，按住shift键进行右移 02. IP地址填充0例如： 172.10.3.4 ，把它填充成 172.010.003.004 处理方法：把这个IP地址放在A列，在B列放入这个函数即可 1=TEXT(LEFT(A1,FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND( ".",A1,1)+1,FIND(".",A1,FIND(".",A1,1)+1)-FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND(".",A1,FIND(".",A1,1)+1)+1,FIND(".",A1, FIND(".",A1,FIND(".",A1,1)+1)+1)-FIND(".",A1,FIND(".",A1,1)+1)-1), "000") &amp; "." &amp; TEXT(RIGHT(A1,LEN(A1)-FIND(".",A1,FIND(".",A1,FIND( ".",A1,1)+1)+1)),"000") 截图如下 03. IP地址去掉0对于上面办法得到的IP地址，进行排序即可 可是我们最后需要的却不是 172.010.003.004 这个格式，我们就对它进行处理 首先选中数据 在数据中选分列,在第三步的目标区域选中粘贴的位置 然后对后面三列数据选择插入整列(为了方便加入小数点.) 然后再选中数据，进行定位条件（快捷键F5)，选中空值，输入小数点，然后Ctrl+Enter进行全部替换 参考链接 1F5键打开“定位”对话框，单击“定位条件”按钮，在“定位条件”对话框中选择“空值”，单击“确定”。Excel会选中区域中的所有空白单元格，在编辑栏中输入“0”，然后按Ctrl+Enter键在所有空白单元格中输入零值。 最后合并IP，使用函数=CONCATENATE(K10,L10,M10,N10,O10,P10,Q10) 参考链接 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Office</category>
-        <category>Network</category>
         <category>excel</category>
+        <category>Network</category>
         <category>IP</category>
       </categories>
       <tags>
