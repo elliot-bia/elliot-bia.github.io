@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="One Blog">
 <meta property="og:description" content="00 前言最近老是需要重新配置环境, 所以把tmux + fish + 代理的所有配置一起贴出来, 以前的文章就懒得再删除整理了.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-29T01:52:28.096Z">
+<meta property="og:updated_time" content="2019-09-01T02:02:47.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tmux+fish调优终端">
 <meta name="twitter:description" content="00 前言最近老是需要重新配置环境, 所以把tmux + fish + 代理的所有配置一起贴出来, 以前的文章就懒得再删除整理了.">
@@ -320,7 +320,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-29T09:50:16+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-29T18:48:57+08:00">
                 2019-08-29
               </time>
             
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  778
+                  904
                 </span>
               
 
@@ -401,7 +401,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  5
                 </span>
               
             </div>
@@ -439,7 +439,17 @@
 
 <p>重启tmux即可</p>
 <h1 id="03-fish安装"><a href="#03-fish安装" class="headerlink" title="03 fish安装"></a>03 fish安装</h1><p>fish安装过分辣鸡, 弃用</p>
-<h1 id="04-proxychians-设置"><a href="#04-proxychians-设置" class="headerlink" title="04 proxychians 设置"></a>04 proxychians 设置</h1><p>vim /etc/proxychains.conf</p>
+<pre><code>1. 安装fish，安装oh-my-fish  [参考链接](&lt;https://linux.cn/article-9515-1.html&gt;)  [fish最新版安装参考网页](&lt;http://fishshell.com/#platform_tabs&gt;)
+
+    <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:fish-shell/release-3</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install fish</span><br><span class="line"></span><br><span class="line">curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish</span><br></pre></td></tr></tbody></table></figure>
+
+2. 安装主题：theme-bobthefish [主题参考链接](&lt;https://www.helplib.com/GitHub/article_124955&gt;)
+
+    `omf install bobthefish`
+
+3. 进行一些设置
+
+    <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set -U theme_nerd_fonts yes</span><br><span class="line">set -U theme_color_scheme terminal-dark-white</span><br><span class="line"># Ubuntu 选择 set -U theme_color_scheme zenburn  </span><br><span class="line">set -U fish_prompt_pwd_dir_length 0</span><br></pre></td></tr></tbody></table></figure></code></pre><h1 id="04-proxychians-设置"><a href="#04-proxychians-设置" class="headerlink" title="04 proxychians 设置"></a>04 proxychians 设置</h1><p>vim /etc/proxychains.conf</p>
 <figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">socks5  <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">10808</span></span><br><span class="line">http    <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">10888</span></span><br></pre></td></tr></tbody></table></figure>
 
 <h1 id="加入代理"><a href="#加入代理" class="headerlink" title="加入代理"></a>加入代理</h1><p>vim .bashrc</p>
@@ -537,8 +547,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/29/vscode_optimize/" rel="prev" title="VSCode写Python调优">
-                VSCode写Python调优 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/29/watobo_installation/" rel="prev" title="watobo安装使用">
+                watobo安装使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -646,7 +656,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">38</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -657,7 +667,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -668,7 +678,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -769,7 +779,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">20.8k</span>
+    <span title="Site words total count">21.1k</span>
   
 </div>
 
