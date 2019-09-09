@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="git,">
+  <meta name="keywords" content="VM,Network,">
 
 
 
@@ -84,38 +84,18 @@
 
 
 
-<meta name="description" content="00 前言某日接到新任务：优化git代码提交流程，解决冲突 给出的指导方向为：个人fork项目提交后，再合并">
-<meta name="keywords" content="git">
+<meta name="description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
+<meta name="keywords" content="VM,Network">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git冲突相关">
-<meta property="og:url" content="https://zzdkl.com.cn/2019/08/29/git_conflict/index.html">
+<meta property="og:title" content="虚拟机上网相关">
+<meta property="og:url" content="https://zzdkl.com.cn/2019/08/18/network_in_VM/index.html">
 <meta property="og:site_name" content="One Blog">
-<meta property="og:description" content="00 前言某日接到新任务：优化git代码提交流程，解决冲突 给出的指导方向为：个人fork项目提交后，再合并">
+<meta property="og:description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://www.git-tower.com/learn/content/01-git/01-ebook/cn/01-command-line/05-advanced-topics/01-undoing-things/reset-concept.png">
-<meta property="og:image" content="https://www.git-tower.com/learn/content/01-git/01-ebook/cn/01-command-line/05-advanced-topics/01-undoing-things/revert-concept.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_22-50-19.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_22-50-26.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_23-45-15.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_23-18-01.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_23-25-34.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_22-58-21.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_23-15-26.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-10_23-54-06.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-11_00-13-48.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-12-10.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-19-06.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-22-53.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-26-08.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-31-23.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-32-40.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-33-53.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Snipaste_2019-06-13_23-34-29.png">
-<meta property="og:updated_time" content="2019-09-07T03:26:45.037Z">
+<meta property="og:updated_time" content="2019-08-17T13:12:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git冲突相关">
-<meta name="twitter:description" content="00 前言某日接到新任务：优化git代码提交流程，解决冲突 给出的指导方向为：个人fork项目提交后，再合并">
-<meta name="twitter:image" content="https://www.git-tower.com/learn/content/01-git/01-ebook/cn/01-command-line/05-advanced-topics/01-undoing-things/reset-concept.png">
+<meta name="twitter:title" content="虚拟机上网相关">
+<meta name="twitter:description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
 
 
 
@@ -145,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://zzdkl.com.cn/2019/08/29/git_conflict/">
+  <link rel="canonical" href="https://zzdkl.com.cn/2019/08/18/network_in_VM/">
 
 
 
 
 
-  <title>git冲突相关 | One Blog</title>
+  <title>虚拟机上网相关 | One Blog</title>
   
 
 
@@ -311,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/08/29/git_conflict/">
+    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/08/18/network_in_VM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Elliot Bia">
@@ -328,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git冲突相关</h1>
+          <h1 class="post-title" itemprop="name headline">虚拟机上网相关</h1>
         
 
         <div class="post-meta">
@@ -340,8 +320,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-29T18:48:57+08:00">
-                2019-08-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T10:21:08+08:00">
+                2019-08-18
               </time>
             
 
@@ -363,19 +343,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/conflict/" itemprop="url" rel="index">
-                    <span itemprop="name">conflict</span>
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
                   </a>
                 </span>
 
@@ -405,7 +374,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  2,020
+                  373
                 </span>
               
 
@@ -421,7 +390,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  8
+                  1
                 </span>
               
             </div>
@@ -442,101 +411,32 @@
       
 
       
-        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>某日接到新任务：优化git代码提交流程，解决冲突</p>
-<p>给出的指导方向为：个人fork项目提交后，再合并</p>
+        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究</p>
 <a id="more"></a>
 
-<h1 id="01-解决前提：撤销修改类"><a href="#01-解决前提：撤销修改类" class="headerlink" title="01 解决前提：撤销修改类"></a>01 解决前提：撤销修改类</h1><p><a href="https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/undoing-things#start" target="_blank" rel="noopener">良好的参考链接</a></p>
-<p>所有在合并的时候出现冲突(conflict)的时候，都可以使用<code>git merge --abort</code> 命令，你的合并操作就会被安全的撤销。</p>
-<h2 id="1-1-回退版本"><a href="#1-1-回退版本" class="headerlink" title="1.1 回退版本"></a>1.1 回退版本</h2><p><del>~ <code>git reset --hard HEAD</code> ~</del> 注意！<code>--hard</code> 命令会删除所有文件本地改动，并将本地副本恢复到上次提交之后的版本（HEAD）</p>
-<p><code>git reset --hard 2be18d9</code> 此命令用于重置你当前的 HEAD 分支到一个特定旧的版本（2be18d9），也被称作 “回滚（rolling back）” 到旧的版本<br><strong>注意！此命令会删除所有文件本地改动</strong><br>可替换为<code>--keep</code>本地保留更改回退到版本之后的所有改动</p>
-<p><img src="https://www.git-tower.com/learn/content/01-git/01-ebook/cn/01-command-line/05-advanced-topics/01-undoing-things/reset-concept.png" alt="重置示意图"></p>
-<h2 id="1-2-撤销已提交的改动"><a href="#1-2-撤销已提交的改动" class="headerlink" title="1.2 撤销已提交的改动"></a>1.2 撤销已提交的改动</h2><p>除了上面的<code>reset</code>命令之外，还可以使用<code>revert</code> 撤销某个之前的提交。</p>
-<p>但是这个命令并不是删除那个提交，相反的，它是恢复那个提交的改动，这只是看起来像是撤销而已。这个操作实际上会自动产生一个新的提交</p>
-<p><code>git revert 2b504be</code> 此处<code>2b504be</code>为C2的版本号,在C3处回退版本到C2，变成新版本C4</p>
-<p><img src="https://www.git-tower.com/learn/content/01-git/01-ebook/cn/01-command-line/05-advanced-topics/01-undoing-things/revert-concept.png" alt="撤销改动示意图"></p>
-<h2 id="1-3-简单退出合并"><a href="#1-3-简单退出合并" class="headerlink" title="1.3 简单退出合并"></a>1.3 简单退出合并</h2><p><code>git merge --abort</code> 来简单地退出合并,退回到commit版本</p>
-<h2 id="1-4-查看合并情况"><a href="#1-4-查看合并情况" class="headerlink" title="1.4 查看合并情况"></a>1.4 查看合并情况</h2><p>可以通过<code>git log -3 --graph --stat</code> 通过可视化查看合并与分支关系图</p>
-<h1 id="02-冲突发生的情况"><a href="#02-冲突发生的情况" class="headerlink" title="02 冲突发生的情况"></a>02 冲突发生的情况</h1><p>冲突发生的情况有以下3种</p>
-<h2 id="2-1-本地版本旧于远程版本（origin）"><a href="#2-1-本地版本旧于远程版本（origin）" class="headerlink" title="2.1 本地版本旧于远程版本（origin）"></a>2.1 本地版本旧于远程版本（origin）</h2><p>也就是远程分支比本地多出一个提交(D)，（也就是本地无commit提交，但是可以有文件改动）</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_22-50-19.png" alt="多出一个提交D"></p>
-<p>这时候直接通过<code>git pull</code> 就可以把本地master更新为远程master</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_22-50-26.png" alt="更新master"></p>
-<p>此时可以用<code>git fetch origin</code> 更新本地的远程分支（origin/master）</p>
-<p>然后使用<code>git diff master origin/master</code> 进行查看本地的master分支和本地的远程分支(origin/master)的区别</p>
-<p>命令为：</p>
-<figure class="highlight crmsh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin    <span class="comment"># 更新本地的远程分支（origin/master）</span></span><br><span class="line">git diff <span class="keyword">master</span> <span class="title">origin</span>/<span class="keyword">master</span>   <span class="title"># 比对差别</span></span><br><span class="line"><span class="title">git</span> pull    <span class="comment"># 同步</span></span><br></pre></td></tr></tbody></table></figure>
+<h1 id="01-预备知识"><a href="#01-预备知识" class="headerlink" title="01. 预备知识"></a>01. 预备知识</h1><ol>
+<li>首先参考这两个链接，很有用</li>
+</ol>
+<p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">NAT转换</a></p>
+<p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">桥接模式</a></p>
+<ol start="2">
+<li>之后就是设置IP的操作<ol>
+<li>Windows下的<code>ipconfig/release SPECIFY_NETWORK_ADAPTER(etho0;WLAN)</code> 释放指定网卡，然后重设IP</li>
+<li>Linux下设置IP地址<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__ip地址配置__</span><br><span class="line">ifconfig   	<span class="comment">//查看与配置网络状态命令</span></span><br><span class="line">ifconfig eth0 <span class="number">192.168</span><span class="number">.0</span><span class="number">.200</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>        <span class="comment">//临时设置eth0网卡的ip地址与子网掩码</span></span><br><span class="line">service network restart	<span class="comment">//重启网络服务</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>以下为<code>a/2.txt</code>本地master的2.txt文件和远程<code>b/2.txt</code>的区别，多了内容<code>+11</code></p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_23-45-15.png" alt="更新fetch和diff"></p>
-<h2 id="2-2-本地版本和远程版本均多出一个提交，但无冲突"><a href="#2-2-本地版本和远程版本均多出一个提交，但无冲突" class="headerlink" title="2.2 本地版本和远程版本均多出一个提交，但无冲突"></a>2.2 本地版本和远程版本均多出一个提交，但无冲突</h2><p>也就是从C节点克隆到本地库多出了E提交，但是在此之前有人在远程C节点后提交了D</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_23-18-01.png" alt="无冲突版本"></p>
-<p>此时可以直接<code>pull</code>而不会产生冲突，并且将本地和远程库都指向最新版本D`</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_23-25-34.png" alt="最新提交D`"></p>
-<p>此时如果你不更新本地库直接进行<code>push</code>会报以下错误提示：</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_22-58-21.png" alt="错误提示"></p>
-<p>通过<code>git status</code>可以看到本地库的状态：Your branch is ahead of ‘origin/master’ by 1 commit.</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_23-15-26.png" alt="查看status状态"></p>
-<p>命令为：</p>
-<figure class="highlight dockerfile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> SOME_DOCUMENT   <span class="comment"># 添加提交文件</span></span></span><br><span class="line">git commit -m <span class="string">'SOME_COMMENT'</span>    <span class="comment"># 添加commit提交</span></span><br><span class="line">git pull    <span class="comment"># 同步本地库到远程库</span></span><br><span class="line">git push origin master    <span class="comment"># 推送到远程库</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="2-3-最关键的来了，有冲突的时候"><a href="#2-3-最关键的来了，有冲突的时候" class="headerlink" title="2.3 最关键的来了，有冲突的时候"></a>2.3 最关键的来了，有冲突的时候</h2><p>唯一的解决办法就是查看冲突的地方，然后手工解决</p>
-<p>如下一个场景，甲A和乙B同时维护一个<code>README.md</code>表，这个表写了详情，是从后面直接添加上去的</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-10_23-54-06.png" alt="场景如下"></p>
-<p>这时候如果本地库A和本地库B都同时增加了一个<code>4,工具D</code>，这样两个已经提交的分支的相同文件相同位置的的不同操作进行了合并，就会产生冲突。</p>
-<p>这里举个例子，当本地库A新增了内容<code>4,工具D 本地库A</code>，以及本地库B在 <strong>同一行</strong> 新增了内容<code>4,工具D 本地库B</code> ,这时候产生了冲突</p>
-<p>此时进行<code>pull</code> 操作会报错：</p>
-<figure class="highlight subunit"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">error: </span>Your local changes to the following files would be overwritten by merge:</span><br><span class="line">        README.md</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line">Updating 9b5e3f2..ba0e98c</span><br></pre></td></tr></tbody></table></figure>
-
-<p>此时最好的操作就是通过<code>diff</code>或者<code>status</code>命令查看冲突，并手动解决</p>
-<p>命令为：</p>
-<figure class="highlight crmsh"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin    <span class="comment"># 更新本地的远程origin分支</span></span><br><span class="line"></span><br><span class="line">git add .   <span class="comment"># 添加提交文件</span></span><br><span class="line">git commit -m 'SOME_COMMENT'    <span class="comment"># 添加commit提交</span></span><br><span class="line">git diff <span class="keyword">master</span> <span class="title">origin</span>/<span class="keyword">master</span>   <span class="title"># 查看本地master</span>分支和远程<span class="literal">master</span>分支的区别</span><br><span class="line"></span><br><span class="line"><span class="comment"># 手动解决冲突</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>效果图如下：</p>
-<p>查看差别<br><img src="/upload_image/2019/06/Snipaste_2019-06-11_00-13-48.png" alt="查看差别"></p>
-<p>此时需要解决冲突</p>
-<h1 id="03-软件设置"><a href="#03-软件设置" class="headerlink" title="03 软件设置"></a>03 软件设置</h1><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344" target="_blank" rel="noopener">推荐参考链接</a></p>
-<p>那么如何解决冲突？</p>
-<p>打开一个比较原始的文件编辑器来清理这些冲突看起来是可行的，但是这样并不简单。使用一个专门的合并工具可以使这个操作变得更容易</p>
-<h2 id="3-1-diffmerge"><a href="#3-1-diffmerge" class="headerlink" title="3.1 diffmerge"></a>3.1 diffmerge</h2><p>我们使用<code>diffmerge</code>进行可视化比对  <a href="https://sourcegear.com/diffmerge/downloads.php" target="_blank" rel="noopener">下载地址</a></p>
-<p>然后进行一些设置<a href="https://www.bbsmax.com/A/MyJxag825n/" target="_blank" rel="noopener">设置链接</a>：</p>
-<p>1，首先将diffmerge目录加入环境变量<br>2，复制sgdm.exe文件复制一份，名字改成diffmerge.exe<br>3，输入以下代码：  </p>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">git config --global diff.tool diffmerge</span><br><span class="line">git config --global difftool.diffmerge.cmd 'sgdm "$LOCAL" "$REMOTE"'</span><br><span class="line">git config --global merge.tool diffmerge</span><br><span class="line">git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'</span><br><span class="line">git config --global mergetool.diffmerge.trustExitCode true</span><br><span class="line">git config --global mergetool.keepBackup false</span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用<code>git mergetool</code>即可打开diffmerge工具</p>
-<hr>
-<p>坑点1：编码问题<br>使用默认的编码打开会出现编码问题，设置成 <strong>UTF-8</strong> 即可<br><a href="https://sourcegear.com/diffmerge/webhelp/sec__rule__dialog__encodings.html" target="_blank" rel="noopener">参考设置链接</a></p>
-<hr>
-<h1 id="4-解决冲突"><a href="#4-解决冲突" class="headerlink" title="4 解决冲突"></a>4 解决冲突</h1><p>现在我们尝试进行冲突合并</p>
-<h2 id="4-1-设置冲突"><a href="#4-1-设置冲突" class="headerlink" title="4.1 设置冲突"></a>4.1 设置冲突</h2><p>首先设置冲突，在<code>README.md</code>的第一行改一改，让这个文件产生冲突</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-12-10.png" alt="冲突文件"></p>
-<h2 id="4-2-查看冲突"><a href="#4-2-查看冲突" class="headerlink" title="4.2 查看冲突"></a>4.2 查看冲突</h2><p>首先提交(commit)一下各个分支</p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git add .       <span class="comment"># 添加摁键</span></span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">'SOME_COMMENT'</span>    <span class="comment"># Master提交</span></span><br><span class="line">git checkout ttt        <span class="comment"># 切换分支</span></span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">'SOME_COMMENT'</span>    <span class="comment"># ttt分支提交</span></span><br><span class="line">git checkout <span class="keyword">master</span>        <span class="comment"># 切换回master分支</span></span><br><span class="line">git <span class="keyword">merge</span> ttt   <span class="comment"># 合并分支</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这时候就会出现冲突了，截图如下：</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-19-06.png" alt="冲突截图"></p>
-<h2 id="4-3-工具使用"><a href="#4-3-工具使用" class="headerlink" title="4.3 工具使用"></a>4.3 工具使用</h2><p>到了这一步我们就使用<code>git mergetool</code>进入冲突解决界面，这里可以看到说有一个冲突</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-22-53.png" alt="冲突解决界面"></p>
-<p>我们可以知道本地有三个界面：一个Local，一个Base和一个Remote</p>
-<p>其中Local是当前分支（master），Remote是合并分支（ttt），而中间Base是可以修改的地方，并且是修改后最终的版本</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-26-08.png" alt="界面对比"></p>
-<h2 id="4-4-修改后续"><a href="#4-4-修改后续" class="headerlink" title="4.4 修改后续"></a>4.4 修改后续</h2><p>我们对文件进行修改后，直接关闭窗口，会提示是否保存，点YES</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-31-23.png" alt="退出界面"></p>
-<h2 id="4-5-提交"><a href="#4-5-提交" class="headerlink" title="4.5 提交"></a>4.5 提交</h2><p>我们保存后，mergetool会自动帮我们add，我们直接加个commit 然后merge就可以了</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-32-40.png" alt="结束界面"></p>
-<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">commit</span> -m <span class="string">'SOME_COMMENT'</span>    <span class="comment"># 跳过了add 步骤，可以直接commit</span></span><br><span class="line">git <span class="keyword">merge</span> ttt           <span class="comment"># 合并分支</span></span><br><span class="line">git push origin <span class="keyword">master</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后我们查看一下是否更改成功</p>
-<p><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-33-53.png" alt="master分支"><br><img src="/upload_image/2019/06/Snipaste_2019-06-13_23-34-29.png" alt="ttt分支"></p>
-<h1 id="05-实际应用"><a href="#05-实际应用" class="headerlink" title="05 实际应用"></a>05 实际应用</h1><p>上面说了这么多，实际应用应该怎么样呢？</p>
-<p><strong>通过新建分支进行merge到本地master，然后再push到远程origin是比较好的方法</strong></p>
-<p>保持本地的master分支和远程的origin分支一致是比较好的选择</p>
-<p>解决冲突，这里解决冲突比较好的办法是修改NEW_BRANCH_NAME分支，而不是操作本地master分支</p>
-<p>解决完冲突后，就可以把NEW_BRANCH_NAME分支合并到master分支</p>
-<p>具体命令为：</p>
-<figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">branch </span>NEW_BRANCH_NAME  <span class="comment"># 新建一个名为NEW_BRANCH_NAME的分支</span></span><br><span class="line">git checkout NEW_BRANCH_NAME    <span class="comment">#  切换到NEW_BRANCH_NAME分支</span></span><br><span class="line">git <span class="keyword">add </span>.   <span class="comment"># 添加文件</span></span><br><span class="line">git commit -m <span class="string">'SOME_COMMENT'</span>    <span class="comment"># 提交一个节点</span></span><br><span class="line">git checkout master     <span class="comment"># 切换回master分支</span></span><br><span class="line">git pull       <span class="comment"># 更新本地分支</span></span><br><span class="line">git merge NEW_BRANCH_NAME       <span class="comment"># 合并分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 此处有可能遇到冲突</span></span><br><span class="line"></span><br><span class="line">git push <span class="keyword">origin </span>NEW_BRANCH_NAME          <span class="comment"># 方法1：推送NEW_BRANCH_NAME到远程</span></span><br><span class="line">git push <span class="keyword">origin </span>master                   <span class="comment"># 方法2：推送master到远程</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git <span class="keyword">diff </span>NEW_BRANCH_NAME <span class="keyword">origin/msater </span>  <span class="comment"># 查看本地NEW_BRANCH_NAME分支和远程master分支的区别</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h1 id="06-遇到冲突了怎么办？"><a href="#06-遇到冲突了怎么办？" class="headerlink" title="06 遇到冲突了怎么办？"></a>06 遇到冲突了怎么办？</h1><p>方法1： 把本地的分支推送到远程后联系管理员帮助进行解决<br>方法2： 按照上面的方法进行自行解决</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="02-宿主机通过虚拟机上网-桥接"><a href="#02-宿主机通过虚拟机上网-桥接" class="headerlink" title="02. 宿主机通过虚拟机上网(桥接)"></a>02. 宿主机通过虚拟机上网(桥接)</h1><p>通过参考链接的网络拓扑图我们可以清楚VMWare软件的网卡配置原理</p>
+<p>首先，让虚拟机获得IP，测试能否上网</p>
+<p>第二，释放掉宿主机IP，设置新IP，并设置虚拟机IP为网关地址</p>
+<p>进行测试</p>
+<h1 id="03-宿主机通过虚拟机上网-NAT"><a href="#03-宿主机通过虚拟机上网-NAT" class="headerlink" title="03. 宿主机通过虚拟机上网(NAT)"></a>03. 宿主机通过虚拟机上网(NAT)</h1><p>这个就是 <strong>难点</strong> 了.23333,其实如果能看懂网络拓扑图，问题也不难</p>
+<p>最重要的点就是：如何通过VMnet8上网而不是宿主机的物理网卡，于此同时又不停用宿主机物理网卡(因为虚拟机出口网关要用)</p>
+<p>这样就显得有点 <strong>没事找事干</strong> 了。</p>
+<p>这里没有其他特别好的办法，也就VPN了</p>
+<h1 id="04-总结"><a href="#04-总结" class="headerlink" title="04. 总结"></a>04. 总结</h1><p>没事瞎折腾找资料写着玩</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -585,7 +485,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://zzdkl.com.cn/2019/08/29/git_conflict/" title="git冲突相关">https://zzdkl.com.cn/2019/08/29/git_conflict/</a>
+    <a href="https://zzdkl.com.cn/2019/08/18/network_in_VM/" title="虚拟机上网相关">https://zzdkl.com.cn/2019/08/18/network_in_VM/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -600,7 +500,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/VM/" rel="tag"><i class="fa fa-tag"></i> VM</a>
+          
+            <a href="/tags/Network/" rel="tag"><i class="fa fa-tag"></i> Network</a>
           
         </div>
       
@@ -613,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/29/git_and_gitlab/" rel="next" title="git&gitlab相关">
-                <i class="fa fa-chevron-left"></i> git&gitlab相关
+              <a href="/2019/08/18/tpot_installation/" rel="next" title="tpot安装与介绍">
+                <i class="fa fa-chevron-left"></i> tpot安装与介绍
               </a>
             
           </div>
@@ -623,8 +525,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/29/kali_wsl_install_beEF/" rel="prev" title="Kali(Win10) + beEF">
-                Kali(Win10) + beEF <i class="fa fa-chevron-right"></i>
+              <a href="/2019/08/18/MS_activate/" rel="prev" title="巨硬Win10与Office激活">
+                巨硬Win10与Office激活 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -732,7 +634,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -743,7 +645,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -754,7 +656,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -814,7 +716,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-解决前提：撤销修改类"><span class="nav-text">01 解决前提：撤销修改类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-回退版本"><span class="nav-text">1.1 回退版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-撤销已提交的改动"><span class="nav-text">1.2 撤销已提交的改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-简单退出合并"><span class="nav-text">1.3 简单退出合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-查看合并情况"><span class="nav-text">1.4 查看合并情况</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-冲突发生的情况"><span class="nav-text">02 冲突发生的情况</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-本地版本旧于远程版本（origin）"><span class="nav-text">2.1 本地版本旧于远程版本（origin）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-本地版本和远程版本均多出一个提交，但无冲突"><span class="nav-text">2.2 本地版本和远程版本均多出一个提交，但无冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-最关键的来了，有冲突的时候"><span class="nav-text">2.3 最关键的来了，有冲突的时候</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-软件设置"><span class="nav-text">03 软件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-diffmerge"><span class="nav-text">3.1 diffmerge</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-解决冲突"><span class="nav-text">4 解决冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-设置冲突"><span class="nav-text">4.1 设置冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-查看冲突"><span class="nav-text">4.2 查看冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-工具使用"><span class="nav-text">4.3 工具使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-修改后续"><span class="nav-text">4.4 修改后续</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-提交"><span class="nav-text">4.5 提交</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#05-实际应用"><span class="nav-text">05 实际应用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#06-遇到冲突了怎么办？"><span class="nav-text">06 遇到冲突了怎么办？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-预备知识"><span class="nav-text">01. 预备知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-宿主机通过虚拟机上网-桥接"><span class="nav-text">02. 宿主机通过虚拟机上网(桥接)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-宿主机通过虚拟机上网-NAT"><span class="nav-text">03. 宿主机通过虚拟机上网(NAT)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-总结"><span class="nav-text">04. 总结</span></a></li></ol></div>
             
 
           </div>
