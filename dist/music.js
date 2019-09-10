@@ -64,6 +64,12 @@ const ap = new APlayer({
             artist: '李健',
             url: '/music/梦一场.mp3',
             cover: '//y.gtimg.cn/music/photo_new/T002R300x300M000001HDJU02YJuNQ.jpg',
+        },
+        {
+            name: "一千年以后",
+            artist: '林俊杰',
+            url: 'http://music.163.com/song/media/outer/url?id=108886.mp3',
+            cover: 'http://p2.music.126.net/57FJ7Atz472kAGrDFUaYxQ==/109951164155882907.jpg',
         }
         
     ]
