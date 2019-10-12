@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Git删除历史文件]]></title>
-    <url>%2F2019%2F09%2F10%2Fgit_del_file%2F</url>
-    <content type="text"><![CDATA[00 前言对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件有两个办法进行处理: 使用filter-branch 使用BFG 或者删除分支/仓库 也可以 第一种方法过于复杂, 这里推荐第二种 01 文档首先上来就是官方文档这里再提一句: 阅读官方文档的能力很重要这也是我以后需要加强的地方, 不管是中英文档 然后上来就是中文文档 02 使用参考文档就行, 这里就把执行过的命令copy一下 1234567git clone --mirror xxx.git # 这里使用mirrorjava -jar xxx\bfg.jar --delete-folders 文档收集 --delete-files 文档收集 --no-blob-protection xxx.git # 这里删除了文件夹git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive # 这里整理空间git push # 推送, 记得关闭仓库保护 需要注意的无非就是mirror, 删除命令和push的时候需要关闭保护mirror应该无影响(未测)删除命令可更改(看需求)push需要关闭保护 03 后记遇到这些棘手问题, 一般都是解决了就懒得写文档了要强迫一下自己养成记录的文档才行了 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <title><![CDATA[把Windows密码dump下来]]></title>
+    <url>%2F2019%2F10%2F11%2F01_dump_win_pwd%2F</url>
+    <content type="text"><![CDATA[00 前言把Windows密码dump下来, 使用以下工具:mimikatzpwdump7 01 使用方法win7/10好说, 直接dump或者使用mimikatz即可 参考链接 02 本地dump运行mimikatz, 管理员权限, 执行以下命令即可 12privilege::debugsekurlsa::logonpasswords 03 离线dump渗透的时候用procdump, 如果有机会弄到lsass.exe, 右键创建存储文件即可使用procdump命令:xxx\procdump.exe -accepteula -ma lsass.exe xxx\lsass.dmp然后把dmp文件下载下来本地跑mimikatz即可 04 失效解决方法微软打了补丁kb2871997，通过禁用Wdigest Auth来强制系统内存不保存明文口令参考链接 使用命令修改注册表:reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1 /f 然后注销或者重启即可 以下为正常注册表, 没有UseLogonCredential项 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Git</category>
-        <category>Del</category>
+        <category>Sec</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>Microsoft</tag>
+        <tag>Sec</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git删除历史文件]]></title>
+    <url>%2F2019%2F09%2F11%2Fgit_del_file%2F</url>
+    <content type="text"><![CDATA[00 前言对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件有两个办法进行处理: 使用filter-branch 使用BFG 或者删除分支/仓库 也可以 第一种方法过于复杂, 这里推荐第二种 01 文档首先上来就是官方文档这里再提一句: 阅读官方文档的能力很重要这也是我以后需要加强的地方, 不管是中英文档 然后上来就是中文文档 02 使用参考文档就行, 这里就把执行过的命令copy一下 1234567git clone --mirror xxx.git # 这里使用mirrorjava -jar xxx\bfg.jar --delete-folders 文档收集 --delete-files 文档收集 --no-blob-protection xxx.git # 这里删除了文件夹git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive # 这里整理空间git push # 推送, 记得关闭仓库保护 需要注意的无非就是mirror, 删除命令和push的时候需要关闭保护mirror应该无影响(未测)删除命令可更改(看需求)push需要关闭保护 03 后记遇到这些棘手问题, 一般都是解决了就懒得写文档了要强迫一下自己养成记录的文档才行了 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>git</category>
+        <category>del</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git冲突相关]]></title>
+    <url>%2F2019%2F09%2F09%2Fgit_conflict%2F</url>
+    <content type="text"><![CDATA[00 前言某日接到新任务：优化git代码提交流程，解决冲突 给出的指导方向为：个人fork项目提交后，再合并 01 解决前提：撤销修改类良好的参考链接 所有在合并的时候出现冲突(conflict)的时候，都可以使用git merge --abort 命令，你的合并操作就会被安全的撤销。 1.1 回退版本~ git reset --hard HEAD ~ 注意！--hard 命令会删除所有文件本地改动，并将本地副本恢复到上次提交之后的版本（HEAD） git reset --hard 2be18d9 此命令用于重置你当前的 HEAD 分支到一个特定旧的版本（2be18d9），也被称作 “回滚（rolling back）” 到旧的版本注意！此命令会删除所有文件本地改动可替换为--keep本地保留更改回退到版本之后的所有改动 1.2 撤销已提交的改动除了上面的reset命令之外，还可以使用revert 撤销某个之前的提交。 但是这个命令并不是删除那个提交，相反的，它是恢复那个提交的改动，这只是看起来像是撤销而已。这个操作实际上会自动产生一个新的提交 git revert 2b504be 此处2b504be为C2的版本号,在C3处回退版本到C2，变成新版本C4 1.3 简单退出合并git merge --abort 来简单地退出合并,退回到commit版本 1.4 查看合并情况可以通过git log -3 --graph --stat 通过可视化查看合并与分支关系图 02 冲突发生的情况冲突发生的情况有以下3种 2.1 本地版本旧于远程版本（origin）也就是远程分支比本地多出一个提交(D)，（也就是本地无commit提交，但是可以有文件改动） 这时候直接通过git pull 就可以把本地master更新为远程master 此时可以用git fetch origin 更新本地的远程分支（origin/master） 然后使用git diff master origin/master 进行查看本地的master分支和本地的远程分支(origin/master)的区别 命令为： 123git fetch origin # 更新本地的远程分支（origin/master）git diff master origin/master # 比对差别git pull # 同步 以下为a/2.txt本地master的2.txt文件和远程b/2.txt的区别，多了内容+11 2.2 本地版本和远程版本均多出一个提交，但无冲突也就是从C节点克隆到本地库多出了E提交，但是在此之前有人在远程C节点后提交了D 此时可以直接pull而不会产生冲突，并且将本地和远程库都指向最新版本D` 此时如果你不更新本地库直接进行push会报以下错误提示： 通过git status可以看到本地库的状态：Your branch is ahead of ‘origin/master’ by 1 commit. 命令为： 1234git add SOME_DOCUMENT # 添加提交文件git commit -m 'SOME_COMMENT' # 添加commit提交git pull # 同步本地库到远程库git push origin master # 推送到远程库 2.3 最关键的来了，有冲突的时候唯一的解决办法就是查看冲突的地方，然后手工解决 如下一个场景，甲A和乙B同时维护一个README.md表，这个表写了详情，是从后面直接添加上去的 这时候如果本地库A和本地库B都同时增加了一个4,工具D，这样两个已经提交的分支的相同文件相同位置的的不同操作进行了合并，就会产生冲突。 这里举个例子，当本地库A新增了内容4,工具D 本地库A，以及本地库B在 同一行 新增了内容4,工具D 本地库B ,这时候产生了冲突 此时进行pull 操作会报错： 12345error: Your local changes to the following files would be overwritten by merge: README.mdPlease commit your changes or stash them before you merge.AbortingUpdating 9b5e3f2..ba0e98c 此时最好的操作就是通过diff或者status命令查看冲突，并手动解决 命令为： 1234567git fetch origin # 更新本地的远程origin分支git add . # 添加提交文件git commit -m 'SOME_COMMENT' # 添加commit提交git diff master origin/master # 查看本地master分支和远程master分支的区别# 手动解决冲突 效果图如下： 查看差别 此时需要解决冲突 03 软件设置推荐参考链接 那么如何解决冲突？ 打开一个比较原始的文件编辑器来清理这些冲突看起来是可行的，但是这样并不简单。使用一个专门的合并工具可以使这个操作变得更容易 3.1 diffmerge我们使用diffmerge进行可视化比对 下载地址 然后进行一些设置设置链接： 1，首先将diffmerge目录加入环境变量2，复制sgdm.exe文件复制一份，名字改成diffmerge.exe3，输入以下代码： 12345678git config --global diff.tool diffmergegit config --global difftool.diffmerge.cmd 'sgdm "$LOCAL" "$REMOTE"'git config --global merge.tool diffmergegit config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'git config --global mergetool.diffmerge.trustExitCode truegit config --global mergetool.keepBackup false 使用git mergetool即可打开diffmerge工具 坑点1：编码问题使用默认的编码打开会出现编码问题，设置成 UTF-8 即可参考设置链接 4 解决冲突现在我们尝试进行冲突合并 4.1 设置冲突首先设置冲突，在README.md的第一行改一改，让这个文件产生冲突 4.2 查看冲突首先提交(commit)一下各个分支 1234567git add . # 添加摁键git commit -m 'SOME_COMMENT' # Master提交git checkout ttt # 切换分支git commit -m 'SOME_COMMENT' # ttt分支提交git checkout master # 切换回master分支git merge ttt # 合并分支 这时候就会出现冲突了，截图如下： 4.3 工具使用到了这一步我们就使用git mergetool进入冲突解决界面，这里可以看到说有一个冲突 我们可以知道本地有三个界面：一个Local，一个Base和一个Remote 其中Local是当前分支（master），Remote是合并分支（ttt），而中间Base是可以修改的地方，并且是修改后最终的版本 4.4 修改后续我们对文件进行修改后，直接关闭窗口，会提示是否保存，点YES 4.5 提交我们保存后，mergetool会自动帮我们add，我们直接加个commit 然后merge就可以了 123git commit -m 'SOME_COMMENT' # 跳过了add 步骤，可以直接commitgit merge ttt # 合并分支git push origin master 然后我们查看一下是否更改成功 05 实际应用上面说了这么多，实际应用应该怎么样呢？ 通过新建分支进行merge到本地master，然后再push到远程origin是比较好的方法 保持本地的master分支和远程的origin分支一致是比较好的选择 解决冲突，这里解决冲突比较好的办法是修改NEW_BRANCH_NAME分支，而不是操作本地master分支 解决完冲突后，就可以把NEW_BRANCH_NAME分支合并到master分支 具体命令为： 123456789101112131415git branch NEW_BRANCH_NAME # 新建一个名为NEW_BRANCH_NAME的分支git checkout NEW_BRANCH_NAME # 切换到NEW_BRANCH_NAME分支git add . # 添加文件git commit -m 'SOME_COMMENT' # 提交一个节点git checkout master # 切换回master分支git pull # 更新本地分支git merge NEW_BRANCH_NAME # 合并分支# 此处有可能遇到冲突git push origin NEW_BRANCH_NAME # 方法1：推送NEW_BRANCH_NAME到远程git push origin master # 方法2：推送master到远程git diff NEW_BRANCH_NAME origin/msater # 查看本地NEW_BRANCH_NAME分支和远程master分支的区别 06 遇到冲突了怎么办？方法1： 把本地的分支推送到远程后联系管理员帮助进行解决方法2： 按照上面的方法进行自行解决 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>git</category>
+        <category>conflict</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git&gitlab相关]]></title>
+    <url>%2F2019%2F09%2F09%2Fgit_and_gitlab%2F</url>
+    <content type="text"><![CDATA[00 前言近日接到新任务：搭建本地git 使用到gitlab、docker安装。难度略大 01 gitlab进行docker安装安装参考链接 安装好以后，会显示如下图 接下来访问http://ip即可访问控制台 02 git知识点 git 的操作流程 什么是分支（branch），什么是合并分支（merge bracnh） git 拉取和推送代码 git 的设置（代理，SSL证书） 2.1 Git的配置命令git config 配置文件，不写级别，默认是配置仓库级 系统级文件 $(prefix)/etc/gitconfig git config –system 用来指定读写系统级文件。初始不存在，若不存在则无影响。 用户级文件 ~/.gitconfig git config –global 指定只操作用户级文件。初始不存在，若不存在则无影响。 Repository 级文件 .git/config git config –local 对写操作，则只写入 Repository 级文件（默认行为）；对读操作，则只从 Repository 级文件读。 2.2 Git参考资料入门推荐阅读 分支知识参考链接 代理参考链接 SSL类自签名证书解决办法： 来自大佬的办法 忽略SSL证书错误的方法 env GIT_SSL_NO_VERIFY=true git clone https://xxx-xxx/sectools.git #忽略SSL证书确认进行clone项目 cd sectools/ git config http.sslVerify "false" #设置该项目忽略SSL证书错误自行百度，不过多说明 2.3 上Git常用命令速查表 03 gitlab操作使用参考链接 首先需要了解的知识点： 3.1 用户与组：涉及到权限控制 Guest(匿名用户) - 创建项目、写留言薄 Reporter（报告人）- 创建项目、写留言薄、 拉项目、下载项目、创建代码片段 Developer（开发者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki Master（管理者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子 Owner（所有者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子、开关公有模式、将项目转移到另一个名称空间、删除项目 04 git 常用命令4.1 账号类git config –system –unset credential.helper #删除所有已添加的账号 git config –global credential.helper store #命令实现保存用户名和密码不用再输入 git config user.name ‘github用户名’ #添加用户 git config user.email ‘邮箱’ 4.2 pull request的git命令如何将自己的分支推送到master分支？ —-敲里嘛，搞了一晚上没搞定，不弄了，反正只能web端进行发起merge request— document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>git</category>
+        <category>gitlab</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>gitlab</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[0708复现]]></title>
-    <url>%2F2019%2F09%2F08%2F0708_recurrence%2F</url>
+    <url>%2F2019%2F09%2F09%2F0708_recurrence%2F</url>
     <content type="text"><![CDATA[00 前言0708复现, 冲! 01 环境Kali - MSFWin7 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Windows</category>
@@ -26,7 +64,7 @@
   </entry>
   <entry>
     <title><![CDATA[AppScan报告处理脚本]]></title>
-    <url>%2F2019%2F09%2F07%2FAppScan%2F</url>
+    <url>%2F2019%2F09%2F09%2FAppScan%2F</url>
     <content type="text"><![CDATA[00 前言最近独立开发了AppScan报告处理脚本, 将实现以下功能: 自动化处理扫描结果 自动化处理扫描任务 01 后续改进计划目前脚本还是比较粗糙, 仅完成了基本操作后续改进计划有: 批量处理结果(难易程度: 3) 批量进行扫描(难易程度: 2) 批量进行扫描并自动进行结果处理(难易程度: 7) 去除数据库依赖, 仅使用HTML文档内容(难易程度: 6) 02 任务安排按照计划顺序进行, 预计前3计划能在9月底完成 待更新… document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Sec</category>
@@ -39,66 +77,26 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[tmux+fish调优终端]]></title>
+    <url>%2F2019%2F09%2F02%2Ftmux_and_fish%2F</url>
+    <content type="text"><![CDATA[00 前言最近老是需要重新配置环境, 所以把tmux + fish + 代理的所有配置一起贴出来, 以前的文章就懒得再删除整理了. 01 tmux安装可以使用aptitude show tmux 或者 tmux -V查看tmux 的版本版本需要大于2.1CnetOS最新版Ubuntu最新版 02 tmux设置首先设置PS1 1PS1=' \n\[\033[37m\][\[\033[m\]\[\033[1;36m\]\t\[\033[m\] - \e[1;32m\]\u\[\e[m\]\[\e[1;33m\]@\[\e[m\]\[\e[35m\]\H\[\e[m\] \[\e[4;37m\]`pwd`\[\e[m\]\[\033[37m\]]\[\033[m\]\n\[\e[36m\]\$ =&gt; \[\e[m\] ' 可以使用以下方法 1234cd ~git clone https://github.com/****/.tmux.gitln -s -f .tmux/.tmux.confcp .tmux/.tmux.conf.local . 优化 vim .tmux.conf 12unbind %bind | splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录 或者自定义: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465# Use something easier to type as the prefix.set -g prefix C-aunbind C-bbind C-a send-prefix# 窗口计数从1开始，方便切换set -g base-index 1setw -g pane-base-index 1# 启用和关闭status barbind S set status onbind D set status off# 消息背景色# set -g message-bg whiteset -g mode-keys vi# 关闭自动重命名窗口setw -g allow-rename offsetw -g automatic-rename off# bind a reload keybind r source-file ~/.tmux.conf \; display-message "Config reloaded..."# I personally rebind the keys so "|" splits the current window vertically, and "-" splits it horizontally. Not the easiest things to type, though easy to remember.bind | split-window -hbind _ split-window -v# fixes the delay problemset -sg escape-time 0# 面板切换bind-key k select-pane -Ubind-key j select-pane -Dbind-key h select-pane -Lbind-key l select-pane -R# 面板大小调整bind -r ^k resizep -U 10bind -r ^j resizep -D 10bind -r ^h resizep -L 10bind -r ^l resizep -R 10# 状态栏# 颜色set -g status-bg blackset -g status-fg white# 对齐方式set-option -g status-justify centre# 左下角set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'set-option -g status-left-length 20# 窗口列表set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=grey,dim]'set-window-option -g window-status-current-format '#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]'# 右下角set -g status-right '#[fg=green][#[fg=cyan]%H:%M#[fg=green]]'# 开启鼠标set-option -g mouse on 重启tmux即可 03 fish安装fish安装过分辣鸡, 弃用 1. 安装fish，安装oh-my-fish [参考链接](&lt;https://linux.cn/article-9515-1.html&gt;) [fish最新版安装参考网页](&lt;http://fishshell.com/#platform_tabs&gt;) 12345sudo apt-add-repository ppa:fish-shell/release-3sudo apt-get updatesudo apt-get install fishcurl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish 2. 安装主题：theme-bobthefish [主题参考链接](&lt;https://www.helplib.com/GitHub/article_124955&gt;) `omf install bobthefish` 3. 进行一些设置 1234set -U theme_nerd_fonts yesset -U theme_color_scheme terminal-dark-white# Ubuntu 选择 set -U theme_color_scheme zenburn set -U fish_prompt_pwd_dir_length 004 proxychians 设置vim /etc/proxychains.conf 12socks5 127.0.0.1 10808http 127.0.0.1 10888 加入代理vim .bashrc 12345678910complete -c proxychainsalias setproxysocks5='export ALL_PROXY=socks5h://127.0.0.1:10808'alias unsetproxy='unset ALL_PROXY'alias setproxyhttp='export ALL_PROXY=http://127.0.0.1:10888' ##v2ray和curl会有socks5的冲突,从网上找到的参考链接里可以发现，我们加上socks5h就可以了PS1=' \n\[\033[37m\][\[\033[m\]\[\033[1;36m\]\t\[\033[m\] - \e[1;32m\]\u\[\e[m\]\[\e[1;33m\]@\[\e[m\]\[\e[35m\]\H\[\e[m\] \[\e[4;37m\]`pwd`\[\e[m\]\[\033[37m\]]\[\033[m\]\n\[\e[36m\]\$ =&gt; \[\e[m\] 'source .bashrc 官方源123#官方源deb http://http.kali.org/kali kali-rolling main non-free contribdeb-src http://http.kali.org/kali kali-rolling main non-free contrib document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>tmux</tag>
+        <tag>fish</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[测试用]]></title>
     <url>%2F2019%2F08%2F30%2Ftest%2F</url>
     <content type="text"><![CDATA[00 前言test document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Others</category>
       </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Shell调优]]></title>
-    <url>%2F2019%2F08%2F29%2Fshell_optimize%2F</url>
-    <content type="text"><![CDATA[00 前言今天来折腾一下最后的shell调优，参考以前的fish安装和tmux设置 今天折腾的就将会是最终的shell界面了 01. 设置自启和默认shell这里我们设置一下默认shell是fish，然后默认打开tmux 01. 默认打开shell为oh-my-fish参考链接：不要把fish设置成默认fish from Arch Linux 在.bashrc最后加入exec fish就可以了 如果你想进入bash而不是fish，使用命令 bash --norc !!!下面的操作过于危险，我们选择上面更好的 设置fish为默认shell参考链接 123456789101112如何把 fish 设置为我默认的 shell?添加 Fish 到 /etc/shells:echo "/usr/local/bin/fish" | sudo tee -a /etc/shells切换并保存默认 shell:chsh -s /usr/local/bin/fish切换之前的 shell:一般来说是 /bin/bash、/bin/tcsh 或者 /bin/zsh.chsh -s /bin/bash上面是参考答案，首先找出fish这个shell在哪里 whereis fish 我的是在/usr/bin/fish上，更改后重连即可 02. 终端默认开启tmux更改 .bashrc 12345678if [[ -z "$TMUX" ]] ;then ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session if [[ -z "$ID" ]] ;then # if not available create a new one tmux new-session else tmux attach-session -t "$ID" # if available attach to it fifi 参考链接这里面的每次启动shell时连接上之前的tmux 坑点血淋淋的教训，谨记谨记 不要把fish设置成默认shell，很麻烦，在.bashrc里设置自启就好，需要bash的时候就bash -norc即可，非常方便 把tmux的.bashrc设置放在fish前面，顺序不要搞错，不然就没有想要的效果 最后结果如下： document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>Shell</category>
-      </categories>
-      <tags>
-        <tag>Shell</tag>
-        <tag>PS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[SwitchyOmega]]></title>
-    <url>%2F2019%2F08%2F29%2FswitchOmege%2F</url>
-    <content type="text"><![CDATA[00 前言强烈推荐SwitchyOmega！ 插件SwitchyOmega在Chrome和Firefox上都有，强烈推荐需要“文明#PC#上网”的朋友！ 首先推荐阅读链接：简单配置 配置上图，主要有两个配置 2. 对于PAC没有涉及到的网站，手工进行添加即可 然后在配置文件中就可以看到添加的文件了，我把配置放上来 我把网址参数发上来 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 参考网站2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Browers</category>
-        <category>Network</category>
-        <category>SwitchyOmega</category>
-        <category>Chrome</category>
-      </categories>
-      <tags>
-        <tag>Network</tag>
-        <tag>Proxy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[VSCode写Python调优]]></title>
-    <url>%2F2019%2F08%2F29%2Fvscode_optimize%2F</url>
-    <content type="text"><![CDATA[00 前言VS Code天下第一, 现在说一下VS Code写python的时候一些调优 01 代码错误提示和补全首先在settings.json中加入python.linting.enabled为true截图如下: 然后直接在设置首选项搜索flake8, autopep8全部勾选上 02 函数提示Emmm, 暂未发现, 先保存一下, 后续补充 03 快捷键大全官方文档GitHub中文版 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>VSCode</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Docker网络类]]></title>
-    <url>%2F2019%2F08%2F29%2Fdocker_network_configuration%2F</url>
-    <content type="text"><![CDATA[00 前言今天任务： 提高安全性，使用容器网络连接不同容器 连接使用固定ip，以防容器重启后地址改变 研究容器网络链接如何实现 01 实现方式 : Docker容器访问与互联 （端口映射）过时资料 推荐参考链接 –name –hostname参数 首先设置各个容器的名称，使用–name参数 -p 和 -P 的区别就是一个指定端口，一个随机端口 删除所有容器（不兼容fish）： docker rm $(docker ps -a -q) 列出所有容器的IP地址： 1docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq) 02 容器间通信 （容器互联）已不支持–link参数 ~ –link :alias ~ ~ 参考连接 ~ 继续更新，两班倒的生活真是要人命 03 进阶结果 （hostname直接访问）居然找的是过时的4年前的资料。。。 一口老血吐出来，经过大佬指点，直接使用hostname访问即可 --name和--hostname有什么区别？ name只是容器名字，用来容器操作 hostname为容器主机名字，可以用来网络查找，类似于域名，但却缺少DNS过程，详细DNS过程以后再详细研究（应该涉及到跨主机容器通信） 这里有个疑问点：使用hostname访问需不需要创建网络？ 不行，指定IP的话就必须要创建一个网络 不指定IP的话，–add-host参数又好像不太可用所以还是创建一个网络最保险 04 网络设置创建网络 docker network create -d bridge my-bridge-network 删除网络 docker network rm my-bridge-network 设置子网 docker network create --subnet=172.18.0.0/16 mynetwork 12345678docker network所有子命令如下：docker network createdocker network connectdocker network lsdocker network rmdocker network disconnectdocker network inspect 创建网络参考链接1创建网络参考链接2_推荐链接 05 –expose参数EXPOSE 仅仅是声明容器打算使用什么端口而已，并不会自动在宿主进行端口映射只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务 用法 ： --expose 3389 expose优秀参考链接 06 最后结果最后结果为： 创建一个网络，分配子网 docker network create --subnet=172.18.0.0/16 mynetwork 创建容器时，使用--ip指定IP 使用expose避免暴露端口到主机 添加name和hostname 使用--add-host把容器加进host表 --add-host NAME:IP 最后结果命令为： 123docker network create --subnet=172.18.0.0/16 GitHub_NetWork # 创建网络docker run -itd --expose 27017 --name mongo_name --hostname mongo --network test_network --ip 172.18.0.2 --add-host hawkeye:172.18.0.3 -v $PWD/db:/data/db mongo # 创建容器docker run -tid -p 8004:80 --name hawkeye_name --hostname hawkeye --network test_network --ip 172.18.0.3 --add-host mongo:172.18.0.2 -e MONGODB_URI=mongodb://mongo:27017 daocloud.io/0xbug/hawkeye # 创建容器2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Linux</category>
-        <category>Docker</category>
-        <category>Network</category>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Netwrok</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[MarkDown跳转]]></title>
@@ -121,6 +119,21 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SwitchyOmega]]></title>
+    <url>%2F2019%2F08%2F29%2FswitchOmege%2F</url>
+    <content type="text"><![CDATA[00 前言强烈推荐SwitchyOmega！ 插件SwitchyOmega在Chrome和Firefox上都有，强烈推荐需要“文明#PC#上网”的朋友！ 首先推荐阅读链接：简单配置 配置上图，主要有两个配置 2. 对于PAC没有涉及到的网站，手工进行添加即可 然后在配置文件中就可以看到添加的文件了，我把配置放上来 我把网址参数发上来 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 参考网站2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Browers</category>
+        <category>Network</category>
+        <category>SwitchyOmega</category>
+        <category>Chrome</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
+        <tag>Proxy</tag>
       </tags>
   </entry>
   <entry>
@@ -220,17 +233,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[tmux+fish调优终端]]></title>
-    <url>%2F2019%2F08%2F29%2Ftmux_and_fish%2F</url>
-    <content type="text"><![CDATA[00 前言最近老是需要重新配置环境, 所以把tmux + fish + 代理的所有配置一起贴出来, 以前的文章就懒得再删除整理了. 01 tmux安装可以使用aptitude show tmux 或者 tmux -V查看tmux 的版本版本需要大于2.1CnetOS最新版Ubuntu最新版 02 tmux设置首先设置PS1 1PS1=' \n\[\033[37m\][\[\033[m\]\[\033[1;36m\]\t\[\033[m\] - \e[1;32m\]\u\[\e[m\]\[\e[1;33m\]@\[\e[m\]\[\e[35m\]\H\[\e[m\] \[\e[4;37m\]`pwd`\[\e[m\]\[\033[37m\]]\[\033[m\]\n\[\e[36m\]\$ =&gt; \[\e[m\] ' 可以使用以下方法 1234cd ~git clone https://github.com/****/.tmux.gitln -s -f .tmux/.tmux.confcp .tmux/.tmux.conf.local . 优化 vim .tmux.conf 12unbind %bind | splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录 或者自定义: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465# Use something easier to type as the prefix.set -g prefix C-aunbind C-bbind C-a send-prefix# 窗口计数从1开始，方便切换set -g base-index 1setw -g pane-base-index 1# 启用和关闭status barbind S set status onbind D set status off# 消息背景色# set -g message-bg whiteset -g mode-keys vi# 关闭自动重命名窗口setw -g allow-rename offsetw -g automatic-rename off# bind a reload keybind r source-file ~/.tmux.conf \; display-message "Config reloaded..."# I personally rebind the keys so "|" splits the current window vertically, and "-" splits it horizontally. Not the easiest things to type, though easy to remember.bind | split-window -hbind _ split-window -v# fixes the delay problemset -sg escape-time 0# 面板切换bind-key k select-pane -Ubind-key j select-pane -Dbind-key h select-pane -Lbind-key l select-pane -R# 面板大小调整bind -r ^k resizep -U 10bind -r ^j resizep -D 10bind -r ^h resizep -L 10bind -r ^l resizep -R 10# 状态栏# 颜色set -g status-bg blackset -g status-fg white# 对齐方式set-option -g status-justify centre# 左下角set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'set-option -g status-left-length 20# 窗口列表set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=grey,dim]'set-window-option -g window-status-current-format '#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]'# 右下角set -g status-right '#[fg=green][#[fg=cyan]%H:%M#[fg=green]]'# 开启鼠标set-option -g mouse on 重启tmux即可 03 fish安装fish安装过分辣鸡, 弃用 1. 安装fish，安装oh-my-fish [参考链接](&lt;https://linux.cn/article-9515-1.html&gt;) [fish最新版安装参考网页](&lt;http://fishshell.com/#platform_tabs&gt;) 12345sudo apt-add-repository ppa:fish-shell/release-3sudo apt-get updatesudo apt-get install fishcurl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish 2. 安装主题：theme-bobthefish [主题参考链接](&lt;https://www.helplib.com/GitHub/article_124955&gt;) `omf install bobthefish` 3. 进行一些设置 1234set -U theme_nerd_fonts yesset -U theme_color_scheme terminal-dark-white# Ubuntu 选择 set -U theme_color_scheme zenburn set -U fish_prompt_pwd_dir_length 004 proxychians 设置vim /etc/proxychains.conf 12socks5 127.0.0.1 10808http 127.0.0.1 10888 加入代理vim .bashrc 12345678910complete -c proxychainsalias setproxysocks5='export ALL_PROXY=socks5h://127.0.0.1:10808'alias unsetproxy='unset ALL_PROXY'alias setproxyhttp='export ALL_PROXY=http://127.0.0.1:10888' ##v2ray和curl会有socks5的冲突,从网上找到的参考链接里可以发现，我们加上socks5h就可以了PS1=' \n\[\033[37m\][\[\033[m\]\[\033[1;36m\]\t\[\033[m\] - \e[1;32m\]\u\[\e[m\]\[\e[1;33m\]@\[\e[m\]\[\e[35m\]\H\[\e[m\] \[\e[4;37m\]`pwd`\[\e[m\]\[\033[37m\]]\[\033[m\]\n\[\e[36m\]\$ =&gt; \[\e[m\] 'source .bashrc 官方源123#官方源deb http://http.kali.org/kali kali-rolling main non-free contribdeb-src http://http.kali.org/kali kali-rolling main non-free contrib document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <title><![CDATA[VSCode写Python调优]]></title>
+    <url>%2F2019%2F08%2F29%2Fvscode_optimize%2F</url>
+    <content type="text"><![CDATA[00 前言VS Code天下第一, 现在说一下VS Code写python的时候一些调优 01 代码错误提示和补全首先在settings.json中加入python.linting.enabled为true截图如下: 然后直接在设置首选项搜索flake8, autopep8全部勾选上 02 函数提示Emmm, 暂未发现, 先保存一下, 后续补充 03 快捷键大全官方文档GitHub中文版 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Linux</category>
-        <category>Shell</category>
+        <category>VSCode</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-        <tag>tmux</tag>
-        <tag>fish</tag>
+        <tag>VSCode</tag>
       </tags>
   </entry>
   <entry>
@@ -250,14 +260,27 @@
     <url>%2F2019%2F08%2F29%2Fsql_db_learning%2F</url>
     <content type="text"><![CDATA[00 前言今天任务：数据库文件gbk转utf-8码 01. 工具：Navicatnavicat官方教程 Navicat其他非官方教程 02. 操作步骤网上找了找，确实没有很好的工具进行直接转换。 只能手工操作了，思路如下： 把数据从数据库导出来 再把数据导进去就可以了 操作是不是很简单？屁了，慢慢操作吧 03. 导出数据现在要对数据库进行导出，首先要干的肯定是先备份数据 导出数据有两种操作，一种是用命令行，一种是用python 这里我们选择用python 哦吼，搞不定，放弃。先弄sql命令吧 哦吼，又搞不定，放弃，弄回python脚本，毕竟有现成的成功读取的脚本 用上之前写好的脚本，报错，报错。 算了，自己重新写一份吧python读取sqlite参考链接 淦，改了改总算好了 我们把之前的脚本进行改了改，就可以实现读取功能了: 12345678910111213141516#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,#导入模块vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#对读取的sqlite进行gbk处理res = conn.execute( r"""select * from VULNDB""").fetchone()print(res[3]) 04. 写入数据 把数据导出来之后就要进行utf-8写入了 现在尝试进行尝试写入数据后，会报错，找了一下资料，找到了解决办法写入参考链接 最终代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先# 这里应该是对数据库进行转码res = conn.execute( r"""select * from VULNDB""").fetchone()# # print(type(res.fetchone()))# pluginID, vulname, _, vul_desc, vul_solu = resprint(res)sql = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""para = resconn.execute(sql,para)conn.commit() 05. 批量读取写入接下来就是如何把这个数据库逐步读取，然后写入了 刚开始的思路是for进行迭代读取，然后发现有问题 找资料，无果 不说了，问大佬去，得到结果如下： 123451. fetchall出来的结果可迭代的2. for i in conn.execute(sql).fetchall(): conn.execute(update_sql) 当然，这样写可能导致异常 进行尝试，除了点小错误就是for i in conn.execute(sql).fetchall这里忘了加上括号，导致报错说不可迭代。大佬一语中的的指出了问题，这就是大佬啊 最后代码如下： 123456789101112131415161718192021222324252627#!/usr/bin/env python3# -*- coding:utf-8 -*-import sqlite3,os#导入模块# os.system('CHCP 65001')vulnDB = 'vuln.db'conn = sqlite3.connect(vulnDB)#读取文件conn.text_factory = lambda x: str(x, 'gbk', 'ignore')#不太清楚是啥。加进去先sqlread = r"""select * from VULNDB"""sqlwrite = r"""insert into VULNDB1 (Plugin_ID,NAME,Risk,Description,Solution) values(?,?,?,?,?)"""for i in conn.execute(sqlread).fetchall(): print(i) para = i conn.execute(sqlwrite,para)conn.commit() 还有个小知识点就是commit()函数不要写在循环里面，占用资源 06. 总结总的来说就是不断排坑的过程，但是思路要清晰，然后找找资料，遇到了关卡先思考一下，实在不行就去麻烦大佬 XD (笑) GitHub代码地址 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Database</category>
         <category>Python</category>
+        <category>Database</category>
         <category>sql</category>
         <category>db</category>
       </categories>
       <tags>
         <tag>Python</tag>
         <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Shell调优]]></title>
+    <url>%2F2019%2F08%2F29%2Fshell_optimize%2F</url>
+    <content type="text"><![CDATA[00 前言今天来折腾一下最后的shell调优，参考以前的fish安装和tmux设置 今天折腾的就将会是最终的shell界面了 01. 设置自启和默认shell这里我们设置一下默认shell是fish，然后默认打开tmux 01. 默认打开shell为oh-my-fish参考链接：不要把fish设置成默认fish from Arch Linux 在.bashrc最后加入exec fish就可以了 如果你想进入bash而不是fish，使用命令 bash --norc !!!下面的操作过于危险，我们选择上面更好的 设置fish为默认shell参考链接 123456789101112如何把 fish 设置为我默认的 shell?添加 Fish 到 /etc/shells:echo "/usr/local/bin/fish" | sudo tee -a /etc/shells切换并保存默认 shell:chsh -s /usr/local/bin/fish切换之前的 shell:一般来说是 /bin/bash、/bin/tcsh 或者 /bin/zsh.chsh -s /bin/bash上面是参考答案，首先找出fish这个shell在哪里 whereis fish 我的是在/usr/bin/fish上，更改后重连即可 02. 终端默认开启tmux更改 .bashrc 12345678if [[ -z "$TMUX" ]] ;then ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session if [[ -z "$ID" ]] ;then # if not available create a new one tmux new-session else tmux attach-session -t "$ID" # if available attach to it fifi 参考链接这里面的每次启动shell时连接上之前的tmux 坑点血淋淋的教训，谨记谨记 不要把fish设置成默认shell，很麻烦，在.bashrc里设置自启就好，需要bash的时候就bash -norc即可，非常方便 把tmux的.bashrc设置放在fish前面，顺序不要搞错，不然就没有想要的效果 最后结果如下： document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Shell</category>
+      </categories>
+      <tags>
+        <tag>Shell</tag>
+        <tag>PS</tag>
       </tags>
   </entry>
   <entry>
@@ -270,21 +293,6 @@
       </categories>
       <tags>
         <tag>Mongo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[excel导入数据库]]></title>
-    <url>%2F2019%2F08%2F29%2Fexcel_import_to_db%2F</url>
-    <content type="text"><![CDATA[00 前言今日任务：查找出excel表中的Plugin_ID,然后进行导入数据库 所用工具：sqlite stdio 01 查找Plugin_ID人工太慢了，学好python的重要性又多了一步。人生苦短，我学python 首先我参考excel表中的vlookup函数，vlookup()参考资料 坑点来了：vlookup()不支持255个字符以上的查询。。office官方参考链接 找了找资料，换成了loopup()函数，还是不行，网上找了找资料，发现这样是可以的 =LOOKUP(1,0/(J1:J10=值),N1:N10) 前一个J列为匹配的列，这里为description，N列为匹配显示的列，这里为plugin_ID 经过处理后，需 另存为csv文件 最终结果如下 02 导入数据库通过excel导入数据库 用sqlite工具即可，这里选择sqlite studio和navicat premium为例 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Office</category>
-        <category>Database</category>
-        <category>excel</category>
-        <category>excel</category>
-      </categories>
-      <tags>
-        <tag>excel</tag>
-        <tag>database</tag>
       </tags>
   </entry>
   <entry>
@@ -328,31 +336,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[git冲突相关]]></title>
-    <url>%2F2019%2F08%2F29%2Fgit_conflict%2F</url>
-    <content type="text"><![CDATA[00 前言某日接到新任务：优化git代码提交流程，解决冲突 给出的指导方向为：个人fork项目提交后，再合并 01 解决前提：撤销修改类良好的参考链接 所有在合并的时候出现冲突(conflict)的时候，都可以使用git merge --abort 命令，你的合并操作就会被安全的撤销。 1.1 回退版本~ git reset --hard HEAD ~ 注意！--hard 命令会删除所有文件本地改动，并将本地副本恢复到上次提交之后的版本（HEAD） git reset --hard 2be18d9 此命令用于重置你当前的 HEAD 分支到一个特定旧的版本（2be18d9），也被称作 “回滚（rolling back）” 到旧的版本注意！此命令会删除所有文件本地改动可替换为--keep本地保留更改回退到版本之后的所有改动 1.2 撤销已提交的改动除了上面的reset命令之外，还可以使用revert 撤销某个之前的提交。 但是这个命令并不是删除那个提交，相反的，它是恢复那个提交的改动，这只是看起来像是撤销而已。这个操作实际上会自动产生一个新的提交 git revert 2b504be 此处2b504be为C2的版本号,在C3处回退版本到C2，变成新版本C4 1.3 简单退出合并git merge --abort 来简单地退出合并,退回到commit版本 1.4 查看合并情况可以通过git log -3 --graph --stat 通过可视化查看合并与分支关系图 02 冲突发生的情况冲突发生的情况有以下3种 2.1 本地版本旧于远程版本（origin）也就是远程分支比本地多出一个提交(D)，（也就是本地无commit提交，但是可以有文件改动） 这时候直接通过git pull 就可以把本地master更新为远程master 此时可以用git fetch origin 更新本地的远程分支（origin/master） 然后使用git diff master origin/master 进行查看本地的master分支和本地的远程分支(origin/master)的区别 命令为： 123git fetch origin # 更新本地的远程分支（origin/master）git diff master origin/master # 比对差别git pull # 同步 以下为a/2.txt本地master的2.txt文件和远程b/2.txt的区别，多了内容+11 2.2 本地版本和远程版本均多出一个提交，但无冲突也就是从C节点克隆到本地库多出了E提交，但是在此之前有人在远程C节点后提交了D 此时可以直接pull而不会产生冲突，并且将本地和远程库都指向最新版本D` 此时如果你不更新本地库直接进行push会报以下错误提示： 通过git status可以看到本地库的状态：Your branch is ahead of ‘origin/master’ by 1 commit. 命令为： 1234git add SOME_DOCUMENT # 添加提交文件git commit -m 'SOME_COMMENT' # 添加commit提交git pull # 同步本地库到远程库git push origin master # 推送到远程库 2.3 最关键的来了，有冲突的时候唯一的解决办法就是查看冲突的地方，然后手工解决 如下一个场景，甲A和乙B同时维护一个README.md表，这个表写了详情，是从后面直接添加上去的 这时候如果本地库A和本地库B都同时增加了一个4,工具D，这样两个已经提交的分支的相同文件相同位置的的不同操作进行了合并，就会产生冲突。 这里举个例子，当本地库A新增了内容4,工具D 本地库A，以及本地库B在 同一行 新增了内容4,工具D 本地库B ,这时候产生了冲突 此时进行pull 操作会报错： 12345error: Your local changes to the following files would be overwritten by merge: README.mdPlease commit your changes or stash them before you merge.AbortingUpdating 9b5e3f2..ba0e98c 此时最好的操作就是通过diff或者status命令查看冲突，并手动解决 命令为： 1234567git fetch origin # 更新本地的远程origin分支git add . # 添加提交文件git commit -m 'SOME_COMMENT' # 添加commit提交git diff master origin/master # 查看本地master分支和远程master分支的区别# 手动解决冲突 效果图如下： 查看差别 此时需要解决冲突 03 软件设置推荐参考链接 那么如何解决冲突？ 打开一个比较原始的文件编辑器来清理这些冲突看起来是可行的，但是这样并不简单。使用一个专门的合并工具可以使这个操作变得更容易 3.1 diffmerge我们使用diffmerge进行可视化比对 下载地址 然后进行一些设置设置链接： 1，首先将diffmerge目录加入环境变量2，复制sgdm.exe文件复制一份，名字改成diffmerge.exe3，输入以下代码： 12345678git config --global diff.tool diffmergegit config --global difftool.diffmerge.cmd 'sgdm "$LOCAL" "$REMOTE"'git config --global merge.tool diffmergegit config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$(if test -f "$BASE"; then echo "$BASE"; else echo "$LOCAL"; fi)" "$REMOTE"'git config --global mergetool.diffmerge.trustExitCode truegit config --global mergetool.keepBackup false 使用git mergetool即可打开diffmerge工具 坑点1：编码问题使用默认的编码打开会出现编码问题，设置成 UTF-8 即可参考设置链接 4 解决冲突现在我们尝试进行冲突合并 4.1 设置冲突首先设置冲突，在README.md的第一行改一改，让这个文件产生冲突 4.2 查看冲突首先提交(commit)一下各个分支 1234567git add . # 添加摁键git commit -m 'SOME_COMMENT' # Master提交git checkout ttt # 切换分支git commit -m 'SOME_COMMENT' # ttt分支提交git checkout master # 切换回master分支git merge ttt # 合并分支 这时候就会出现冲突了，截图如下： 4.3 工具使用到了这一步我们就使用git mergetool进入冲突解决界面，这里可以看到说有一个冲突 我们可以知道本地有三个界面：一个Local，一个Base和一个Remote 其中Local是当前分支（master），Remote是合并分支（ttt），而中间Base是可以修改的地方，并且是修改后最终的版本 4.4 修改后续我们对文件进行修改后，直接关闭窗口，会提示是否保存，点YES 4.5 提交我们保存后，mergetool会自动帮我们add，我们直接加个commit 然后merge就可以了 123git commit -m 'SOME_COMMENT' # 跳过了add 步骤，可以直接commitgit merge ttt # 合并分支git push origin master 然后我们查看一下是否更改成功 05 实际应用上面说了这么多，实际应用应该怎么样呢？ 通过新建分支进行merge到本地master，然后再push到远程origin是比较好的方法 保持本地的master分支和远程的origin分支一致是比较好的选择 解决冲突，这里解决冲突比较好的办法是修改NEW_BRANCH_NAME分支，而不是操作本地master分支 解决完冲突后，就可以把NEW_BRANCH_NAME分支合并到master分支 具体命令为： 123456789101112131415git branch NEW_BRANCH_NAME # 新建一个名为NEW_BRANCH_NAME的分支git checkout NEW_BRANCH_NAME # 切换到NEW_BRANCH_NAME分支git add . # 添加文件git commit -m 'SOME_COMMENT' # 提交一个节点git checkout master # 切换回master分支git pull # 更新本地分支git merge NEW_BRANCH_NAME # 合并分支# 此处有可能遇到冲突git push origin NEW_BRANCH_NAME # 方法1：推送NEW_BRANCH_NAME到远程git push origin master # 方法2：推送master到远程git diff NEW_BRANCH_NAME origin/msater # 查看本地NEW_BRANCH_NAME分支和远程master分支的区别 06 遇到冲突了怎么办？方法1： 把本地的分支推送到远程后联系管理员帮助进行解决方法2： 按照上面的方法进行自行解决 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Git</category>
-        <category>conflict</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[git&gitlab相关]]></title>
-    <url>%2F2019%2F08%2F29%2Fgit_and_gitlab%2F</url>
-    <content type="text"><![CDATA[00 前言近日接到新任务：搭建本地git 使用到gitlab、docker安装。难度略大 01 gitlab进行docker安装安装参考链接 安装好以后，会显示如下图 接下来访问http://ip即可访问控制台 02 git知识点 git 的操作流程 什么是分支（branch），什么是合并分支（merge bracnh） git 拉取和推送代码 git 的设置（代理，SSL证书） 2.1 Git的配置命令git config 配置文件，不写级别，默认是配置仓库级 系统级文件 $(prefix)/etc/gitconfig git config –system 用来指定读写系统级文件。初始不存在，若不存在则无影响。 用户级文件 ~/.gitconfig git config –global 指定只操作用户级文件。初始不存在，若不存在则无影响。 Repository 级文件 .git/config git config –local 对写操作，则只写入 Repository 级文件（默认行为）；对读操作，则只从 Repository 级文件读。 2.2 Git参考资料入门推荐阅读 分支知识参考链接 代理参考链接 SSL类自签名证书解决办法： 来自大佬的办法 忽略SSL证书错误的方法 env GIT_SSL_NO_VERIFY=true git clone https://xxx-xxx/sectools.git #忽略SSL证书确认进行clone项目 cd sectools/ git config http.sslVerify "false" #设置该项目忽略SSL证书错误自行百度，不过多说明 2.3 上Git常用命令速查表 03 gitlab操作使用参考链接 首先需要了解的知识点： 3.1 用户与组：涉及到权限控制 Guest(匿名用户) - 创建项目、写留言薄 Reporter（报告人）- 创建项目、写留言薄、 拉项目、下载项目、创建代码片段 Developer（开发者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki Master（管理者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子 Owner（所有者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子、开关公有模式、将项目转移到另一个名称空间、删除项目 04 git 常用命令4.1 账号类git config –system –unset credential.helper #删除所有已添加的账号 git config –global credential.helper store #命令实现保存用户名和密码不用再输入 git config user.name ‘github用户名’ #添加用户 git config user.email ‘邮箱’ 4.2 pull request的git命令如何将自己的分支推送到master分支？ —-敲里嘛，搞了一晚上没搞定，不弄了，反正只能web端进行发起merge request— document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
-      <categories>
-        <category>Git</category>
-        <category>gitlab</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>gitlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[excel中IP地址的处理]]></title>
     <url>%2F2019%2F08%2F29%2Fdispose_ip_in_excel%2F</url>
     <content type="text"><![CDATA[00.前言在excel中处理IP地址是很经常的事情，那么对于IP地址的处理又不似数据那样的简单，有很多小数点 这个特性就造成了IP地址处理的棘手程度。 现在我们就对excel表格中IP地址的处理进行简答的总结，处理一下 01. IP和漏洞数量计算对于脚本处理后的xlsx文件，进行处理 在插入中选择数据透视表 然后在右边手动添加如下的配置即可，注意需要去掉漏洞的空白 截图如下 ！！需要注意把紧急和高危的数据列进行置换 方法是复制数据到另一列中，然后选中列，按住shift键进行右移 02. IP地址填充0例如： 172.10.3.4 ，把它填充成 172.010.003.004 处理方法：把这个IP地址放在A列，在B列放入这个函数即可 1=TEXT(LEFT(A1,FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND( ".",A1,1)+1,FIND(".",A1,FIND(".",A1,1)+1)-FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND(".",A1,FIND(".",A1,1)+1)+1,FIND(".",A1, FIND(".",A1,FIND(".",A1,1)+1)+1)-FIND(".",A1,FIND(".",A1,1)+1)-1), "000") &amp; "." &amp; TEXT(RIGHT(A1,LEN(A1)-FIND(".",A1,FIND(".",A1,FIND( ".",A1,1)+1)+1)),"000") 截图如下 03. IP地址去掉0对于上面办法得到的IP地址，进行排序即可 可是我们最后需要的却不是 172.010.003.004 这个格式，我们就对它进行处理 首先选中数据 在数据中选分列,在第三步的目标区域选中粘贴的位置 然后对后面三列数据选择插入整列(为了方便加入小数点.) 然后再选中数据，进行定位条件（快捷键F5)，选中空值，输入小数点，然后Ctrl+Enter进行全部替换 参考链接 1F5键打开“定位”对话框，单击“定位条件”按钮，在“定位条件”对话框中选择“空值”，单击“确定”。Excel会选中区域中的所有空白单元格，在编辑栏中输入“0”，然后按Ctrl+Enter键在所有空白单元格中输入零值。 最后合并IP，使用函数=CONCATENATE(K10,L10,M10,N10,O10,P10,Q10) 参考链接 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
@@ -365,6 +348,36 @@
       <tags>
         <tag>excel</tag>
         <tag>IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[excel导入数据库]]></title>
+    <url>%2F2019%2F08%2F29%2Fexcel_import_to_db%2F</url>
+    <content type="text"><![CDATA[00 前言今日任务：查找出excel表中的Plugin_ID,然后进行导入数据库 所用工具：sqlite stdio 01 查找Plugin_ID人工太慢了，学好python的重要性又多了一步。人生苦短，我学python 首先我参考excel表中的vlookup函数，vlookup()参考资料 坑点来了：vlookup()不支持255个字符以上的查询。。office官方参考链接 找了找资料，换成了loopup()函数，还是不行，网上找了找资料，发现这样是可以的 =LOOKUP(1,0/(J1:J10=值),N1:N10) 前一个J列为匹配的列，这里为description，N列为匹配显示的列，这里为plugin_ID 经过处理后，需 另存为csv文件 最终结果如下 02 导入数据库通过excel导入数据库 用sqlite工具即可，这里选择sqlite studio和navicat premium为例 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Office</category>
+        <category>Database</category>
+        <category>excel</category>
+        <category>excel</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+        <tag>database</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker网络类]]></title>
+    <url>%2F2019%2F08%2F29%2Fdocker_network_configuration%2F</url>
+    <content type="text"><![CDATA[00 前言今天任务： 提高安全性，使用容器网络连接不同容器 连接使用固定ip，以防容器重启后地址改变 研究容器网络链接如何实现 01 实现方式 : Docker容器访问与互联 （端口映射）过时资料 推荐参考链接 –name –hostname参数 首先设置各个容器的名称，使用–name参数 -p 和 -P 的区别就是一个指定端口，一个随机端口 删除所有容器（不兼容fish）： docker rm $(docker ps -a -q) 列出所有容器的IP地址： 1docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq) 02 容器间通信 （容器互联）已不支持–link参数 ~ –link :alias ~ ~ 参考连接 ~ 继续更新，两班倒的生活真是要人命 03 进阶结果 （hostname直接访问）居然找的是过时的4年前的资料。。。 一口老血吐出来，经过大佬指点，直接使用hostname访问即可 --name和--hostname有什么区别？ name只是容器名字，用来容器操作 hostname为容器主机名字，可以用来网络查找，类似于域名，但却缺少DNS过程，详细DNS过程以后再详细研究（应该涉及到跨主机容器通信） 这里有个疑问点：使用hostname访问需不需要创建网络？ 不行，指定IP的话就必须要创建一个网络 不指定IP的话，–add-host参数又好像不太可用所以还是创建一个网络最保险 04 网络设置创建网络 docker network create -d bridge my-bridge-network 删除网络 docker network rm my-bridge-network 设置子网 docker network create --subnet=172.18.0.0/16 mynetwork 12345678docker network所有子命令如下：docker network createdocker network connectdocker network lsdocker network rmdocker network disconnectdocker network inspect 创建网络参考链接1创建网络参考链接2_推荐链接 05 –expose参数EXPOSE 仅仅是声明容器打算使用什么端口而已，并不会自动在宿主进行端口映射只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务 用法 ： --expose 3389 expose优秀参考链接 06 最后结果最后结果为： 创建一个网络，分配子网 docker network create --subnet=172.18.0.0/16 mynetwork 创建容器时，使用--ip指定IP 使用expose避免暴露端口到主机 添加name和hostname 使用--add-host把容器加进host表 --add-host NAME:IP 最后结果命令为： 123docker network create --subnet=172.18.0.0/16 GitHub_NetWork # 创建网络docker run -itd --expose 27017 --name mongo_name --hostname mongo --network test_network --ip 172.18.0.2 --add-host hawkeye:172.18.0.3 -v $PWD/db:/data/db mongo # 创建容器docker run -tid -p 8004:80 --name hawkeye_name --hostname hawkeye --network test_network --ip 172.18.0.3 --add-host mongo:172.18.0.2 -e MONGODB_URI=mongodb://mongo:27017 daocloud.io/0xbug/hawkeye # 创建容器2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Linux</category>
+        <category>Docker</category>
+        <category>Network</category>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Netwrok</tag>
       </tags>
   </entry>
   <entry>
@@ -431,7 +444,7 @@
   </entry>
   <entry>
     <title><![CDATA[巨硬Win10与Office激活]]></title>
-    <url>%2F2019%2F08%2F17%2FMS_activate%2F</url>
+    <url>%2F2019%2F08%2F18%2FMS_activate%2F</url>
     <content type="text"><![CDATA[00 前言闲来无事，刚好遇到了激活类的问题，以及群里有人问到了，就写一下微软激活类的文章吧。 由于激活类存在时效性，因此不会对此文章进行更新，能用一天是一天，实在不行用报毒的KMS搞他一波 01 激活WindowsWindows版本有几类，具体哪几类自己百度，我只推荐专业版和企业长期支持版LTSB Windows专业版激活步骤 1234567slmgr.vbs /upkslmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GXslmgr /skms zh.us.toslmgr /ato 用管理员权限打开的CMD或者PowerShell都可以 家庭版可用密钥 ： PPBK3-M92CH-MRR9X-34Y9P-7CH2F 02 激活officeoffice同样有很多版本，我只安装需要的Word,Excel,PowerPoint这三件套，在安装的时候选择自定义选项把其他的插件取消勾选就好，具体有机会再演示 激活步骤如下： 1234cd C:\Program Files\Microsoft Office\Office16cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99cscript ospp.vbs /sethst:kms.03k.orgcscript ospp.vbs /act 操作步骤同Windows激活，第一条命令是打开office安装目录，详细可参考参考链接1 : ospp.vbs在哪里？ 附上可能用得到的密钥 ： 1234567Office Professional Plus 2016：XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99Office Standard 2016：JNRGM-WHDWX-FJJG3-K47QV-DRTFMProject Professional 2016：YG9NW-3K39V-2T3HJ-93F3Q-G83KTProject Standard 2016：GNFHQ-F6YQM-KQDGJ-327XX-KQBVC document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Others</category>
@@ -443,7 +456,7 @@
   </entry>
   <entry>
     <title><![CDATA[虚拟机上网相关]]></title>
-    <url>%2F2019%2F08%2F17%2Fnetwork_in_VM%2F</url>
+    <url>%2F2019%2F08%2F18%2Fnetwork_in_VM%2F</url>
     <content type="text"><![CDATA[00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究 01. 预备知识 首先参考这两个链接，很有用 NAT转换 桥接模式 之后就是设置IP的操作 Windows下的ipconfig/release SPECIFY_NETWORK_ADAPTER(etho0;WLAN) 释放指定网卡，然后重设IP Linux下设置IP地址1234__ip地址配置__ifconfig //查看与配置网络状态命令ifconfig eth0 192.168.0.200 netmask 255.255.255.0 //临时设置eth0网卡的ip地址与子网掩码service network restart //重启网络服务 02. 宿主机通过虚拟机上网(桥接)通过参考链接的网络拓扑图我们可以清楚VMWare软件的网卡配置原理 首先，让虚拟机获得IP，测试能否上网 第二，释放掉宿主机IP，设置新IP，并设置虚拟机IP为网关地址 进行测试 03. 宿主机通过虚拟机上网(NAT)这个就是 难点 了.23333,其实如果能看懂网络拓扑图，问题也不难 最重要的点就是：如何通过VMnet8上网而不是宿主机的物理网卡，于此同时又不停用宿主机物理网卡(因为虚拟机出口网关要用) 这样就显得有点 没事找事干 了。 这里没有其他特别好的办法，也就VPN了 04. 总结没事瞎折腾找资料写着玩 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Network</category>
@@ -455,7 +468,7 @@
   </entry>
   <entry>
     <title><![CDATA[tpot安装与介绍]]></title>
-    <url>%2F2019%2F08%2F17%2Ftpot_installation%2F</url>
+    <url>%2F2019%2F08%2F18%2Ftpot_installation%2F</url>
     <content type="text"><![CDATA[00 前言某日接到一个任务, 搞定一个蜜罐: tpot让我一个菜鸡来干这个, 心虚的很 今日份的任务有两个:第一个是如何搭建第二个是简单使用办法 所有的问题解决最好办法就是参考官方文档. 01 搭建前言官方搭建文档-英官当搭建文档-视频-旧-16.0这里提一句, 版本号是按照年份进行命令的, [官方博客]在这(http://dtag-dev-sec.github.io/) 安装方式有三种: ISO镜像安装 从Linux系统中直接安装 自己创建ISO镜像 问题不大, 网络上基本都在推荐第二种方法, 因为说可以手动进行调整…个人认为太麻烦. 我认为第一种方法最合适, 因为不用系统啥balabala的弄, 省心. 闲话少说, 开干 02 搭建实操安装条件: 稳定的DHCP网络这里稳定就不说了, 下载的东西还挺大的, 具体就不知道了, 从33M的iso文件到8G多大的虚拟硬盘, 从防火墙看下载了2G左右的文件DHCP, 我这里跳过了静态IP的配置, 可能这里会是一个坑点, 晚点再解决, 这里先占个位(官方文档要求DHCP) 下载官方ISO文件, 19.03链接在这(github下载) 安装, 对硬件要求略高, 这里贴出配置要求: 6-8 GB RAM (less RAM is possible but might introduce swapping) 128 GB SSD (smaller is possible but limits the capacity of storing events) Network via DHCP A working, non-proxied, internet connection 贴一下我的配置 接下来就是毫无难度的安装了, 然后设置密码, 设置web端账号和密码, 两个安装参考链接, 里面还包含了一些介绍, 推荐阅读 我这边2M/s的小水管大概2个小时完成安装 安装好以后有两个界面: 1, web管理界面: 64297 和 2, 主机管理界面: 64294, 均用https访问 安装好后界面如下:VM界面web管理界面, 端口64297(填web账号密码)主机管理界面, 端口64294(填主机账号密码) 03 介绍安装到此就告一段落, 接下来看一下这玩意怎么用 Dashboard这里有很多现成可用的大版, 各种高大上, 分别对应各个蜜罐的视图 adbhoney, ciscoasa, conpot, cowrie, dionaea, elasticpot, glastopf, glutton, heralding, honeypy, honeytrap, mailoney, medpot, rdpy, snare, tanner 上面各个蜜罐的介绍就看官方文档吧 实用工具在界面上方会有5个工具 分别对应:Furthermore we use the following tools Cockpit for a lightweight, webui for docker, os, real-time performance monitoring and web terminal. Cyberchef a web app for encryption, encoding, compression and data analysis. ELK stack to beautifully visualize all the events captured by T-Pot. Elasticsearch Head a web front end for browsing and interacting with an Elastic Search cluster. Spiderfoot a open source intelligence automation tool. Suricata a Network Security Monitoring engine. Discover界面这个界面是用来过滤包, 所有的数据包都在这里, 然后可以经过左边的筛选出http包头, user-agent等数据, 时间戳等, 右上角就有很方便的设置 Visualize界面那么这个界面用来干啥的呢. 是用来展示可视化界面的, 这里还可以新建一个自定义可视化视图, 例如饼状图, 柱状图等 Dev Tools界面难度太高, 个人认为是大佬们用的, 这里就跳过了吧… Monitoring界面顾名思义, 就知道这个是用来monitor的, 和DashBoard不一样的是, 这里可以监视5个实用工具的状态和硬件信息 Management界面这里就是关于一些设置的东东, 包括了远程主机, 过滤器设置等东西, 用得上的时候再说吧 04 后记emmm, 略显简陋的blog, 大概了解就好, 简单了解以后还是很好上手的. Done 05 后后记安装完以后, 可以用 sudo su 命令切换成root, 默认是Debian, 操作命令就不献丑贴出来的, 更改IP啥的操作都是可以进行的 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Others</category>
@@ -467,7 +480,7 @@
   </entry>
   <entry>
     <title><![CDATA[代理类集合(持续更新)]]></title>
-    <url>%2F2019%2F08%2F17%2Fproxy_in_all%2F</url>
+    <url>%2F2019%2F08%2F18%2Fproxy_in_all%2F</url>
     <content type="text"><![CDATA[00 前言代理的事情是真的烦, 国内的网络环境真是辣鸡, 现在把所有的代理都集合一起, 免得到处找 01 终端代理类参考链接: 让终端走代理的几种方法 如何让终端命令比如apt、这些走代理？ 比较好的方法是proxychains，或者export也可以 export的范围会小一点，但是会更方便 比如wget、curl，proxychains就很万能了，但是每次都要在前面加语句，略为麻烦，主要针对一些不适用 02 fish在 ~/.config/fish/config.fish 中设置，兼容bashrc指令 03 git命令为 git config --global/local http.proxy 'http/socks5://127.0.0.1:1080' git config --global/local https.proxy 'https/socks5://127.0.0.1:1080' 04 shell/bashrc命令为 123alias setproxysocks5='export ALL_PROXY=socks5h://127.0.0.1:10808'alias unsetproxy='unset ALL_PROXY'alias setproxyhttp='export ALL_PROXY=http://127.0.0.1:10888' ##v2ray和curl会有socks5的冲突,从网上找到的参考链接里可以发现，我们加上socks5h就可以了 对于 socks5 和 socks5h 的区别： socks5h: the hostname is resolved by the SOCKS server (also known as CURLPROXY_SOCKS5_HOSTNAME type);socks5: the hostname is resolved locally; 也就是说socks5适合本地能够解析目标主机域名(比如github.com)但是访问速度慢,来提高下载速度socks5h用与本地不能解析目标主机域名(比如google),由代理服务器解析目标主机域名 05 npm12npm config set proxy http://server:portnpm config set https-proxy http://server:port 待补充 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Network</category>
@@ -480,7 +493,7 @@
   </entry>
   <entry>
     <title><![CDATA[Hexo安装后续2]]></title>
-    <url>%2F2019%2F08%2F17%2Fhexo_installation_2%2F</url>
+    <url>%2F2019%2F08%2F18%2Fhexo_installation_2%2F</url>
     <content type="text"><![CDATA[00 前言继无限折腾后, 终于把博客弄成了自己喜欢的模样, 赞一个! 01 折腾事项折腾了许多东东, 不过最着急的是版本太新, 自己找不到地方可以调整的, 只能换成旧版5.x的虽然7.x版本的新特性很多, 也很方便, 但教程始终不多, 还特别多误导, 网上的教程除了抄还是抄拥有阅读官方文档的能力很重要也就是我英语得抓紧学了 02 优化项目bgm, bg picture, copyright, code copy, icp等等, 都加上去了 03 博客迁移计划啊, 心态巨崩, 看我怎么把我的旧博客迁移回来, 包括了图片,最重要的还是要重新整理, 心态巨崩 新版博客计划: 取消掉过多的参考链接, 参考链接均详细描述 进行详细tag标志, 以及categories分类 对于未完成的blog进行持续更新tag和categories, 完成后进行删除 后续新增英文blog计划 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Others</category>

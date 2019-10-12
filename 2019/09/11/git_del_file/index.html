@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="VM,Network,">
+  <meta name="keywords" content="git,">
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
-<meta name="keywords" content="VM,Network">
+<meta name="description" content="00 前言对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件有两个办法进行处理:  使用filter-branch   使用BFG   或者删除分支/仓库 也可以">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="虚拟机上网相关">
-<meta property="og:url" content="https://zzdkl.com.cn/2019/08/17/network_in_VM/index.html">
+<meta property="og:title" content="Git删除历史文件">
+<meta property="og:url" content="https://zzdkl.com.cn/2019/09/11/git_del_file/index.html">
 <meta property="og:site_name" content="One Blog">
-<meta property="og:description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
+<meta property="og:description" content="00 前言对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件有两个办法进行处理:  使用filter-branch   使用BFG   或者删除分支/仓库 也可以">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-17T13:12:36.128Z">
+<meta property="og:updated_time" content="2019-10-11T02:30:47.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="虚拟机上网相关">
-<meta name="twitter:description" content="00 前言今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究">
+<meta name="twitter:title" content="Git删除历史文件">
+<meta name="twitter:description" content="00 前言对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件有两个办法进行处理:  使用filter-branch   使用BFG   或者删除分支/仓库 也可以">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://zzdkl.com.cn/2019/08/17/network_in_VM/">
+  <link rel="canonical" href="https://zzdkl.com.cn/2019/09/11/git_del_file/">
 
 
 
 
 
-  <title>虚拟机上网相关 | One Blog</title>
+  <title>Git删除历史文件 | One Blog</title>
   
 
 
@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/08/17/network_in_VM/">
+    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/09/11/git_del_file/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Elliot Bia">
@@ -308,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">虚拟机上网相关</h1>
+          <h1 class="post-title" itemprop="name headline">Git删除历史文件</h1>
         
 
         <div class="post-meta">
@@ -320,8 +320,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-17T21:11:16+08:00">
-                2019-08-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-11T08:01:32+08:00">
+                2019-09-11
               </time>
             
 
@@ -343,8 +343,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/del/" itemprop="url" rel="index">
+                    <span itemprop="name">del</span>
                   </a>
                 </span>
 
@@ -374,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  373
+                  325
                 </span>
               
 
@@ -411,32 +422,22 @@
       
 
       
-        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天我要讲一下关于虚拟机上网的问题，NAT，桥接，让宿主机通过虚拟机上网。来吧，一起探究</p>
+        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>对于历史提交敏感文件(包含了密码), 或者不小心提交了大文件<br>有两个办法进行处理:</p>
+<ol>
+<li>使用filter-branch  </li>
+<li>使用BFG </li>
+</ol>
+<p>或者删除分支/仓库 也可以</p>
 <a id="more"></a>
 
-<h1 id="01-预备知识"><a href="#01-预备知识" class="headerlink" title="01. 预备知识"></a>01. 预备知识</h1><ol>
-<li>首先参考这两个链接，很有用</li>
-</ol>
-<p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">NAT转换</a></p>
-<p><a href="https://blog.51cto.com/xpleaf/1900870" target="_blank" rel="noopener">桥接模式</a></p>
-<ol start="2">
-<li>之后就是设置IP的操作<ol>
-<li>Windows下的<code>ipconfig/release SPECIFY_NETWORK_ADAPTER(etho0;WLAN)</code> 释放指定网卡，然后重设IP</li>
-<li>Linux下设置IP地址<figure class="highlight lsl"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__ip地址配置__</span><br><span class="line">ifconfig   	<span class="comment">//查看与配置网络状态命令</span></span><br><span class="line">ifconfig eth0 <span class="number">192.168</span><span class="number">.0</span><span class="number">.200</span> netmask <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span>        <span class="comment">//临时设置eth0网卡的ip地址与子网掩码</span></span><br><span class="line">service network restart	<span class="comment">//重启网络服务</span></span><br></pre></td></tr></tbody></table></figure>
+<p>第一种方法过于复杂, 这里推荐第二种</p>
+<h1 id="01-文档"><a href="#01-文档" class="headerlink" title="01 文档"></a>01 文档</h1><p>首先上来就是<a href="https://rtyley.github.io/bfg-repo-cleaner/" target="_blank" rel="noopener">官方文档</a><br>这里再提一句:  <strong>阅读官方文档的能力很重要</strong><br>这也是我以后需要加强的地方, 不管是中英文档  </p>
+<p>然后上来就是<a href="https://www.awaimai.com/2202.html" target="_blank" rel="noopener">中文文档</a>  </p>
+<h1 id="02-使用"><a href="#02-使用" class="headerlink" title="02 使用"></a>02 使用</h1><p>参考文档就行, 这里就把执行过的命令copy一下</p>
+<figure class="highlight dsconfig"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">git </span><span class="string">clone </span><span class="built_in">--mirror</span> <span class="string">xxx.</span><span class="string">git </span> <span class="comment"># 这里使用mirror</span></span><br><span class="line"></span><br><span class="line"><span class="string">java </span>-<span class="string">jar </span><span class="string">xxx\</span><span class="string">bfg.</span><span class="string">jar </span> <span class="built_in">--delete-folders</span> 文档收集 <span class="built_in">--delete-files</span> 文档收集  <span class="built_in">--no-blob-protection</span>  <span class="string">xxx.</span><span class="string">git </span>  <span class="comment"># 这里删除了文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="string">git </span><span class="string">reflog </span><span class="string">expire </span><span class="built_in">--expire=now</span> <span class="built_in">--all</span> &amp;&amp; <span class="string">git </span><span class="string">gc </span><span class="built_in">--prune=now</span> <span class="built_in">--aggressive</span>  <span class="comment"># 这里整理空间</span></span><br><span class="line"></span><br><span class="line"><span class="string">git </span><span class="string">push </span> <span class="comment"># 推送, 记得关闭仓库保护</span></span><br></pre></td></tr></tbody></table></figure>
 
-</li>
-</ol>
-</li>
-</ol>
-<h1 id="02-宿主机通过虚拟机上网-桥接"><a href="#02-宿主机通过虚拟机上网-桥接" class="headerlink" title="02. 宿主机通过虚拟机上网(桥接)"></a>02. 宿主机通过虚拟机上网(桥接)</h1><p>通过参考链接的网络拓扑图我们可以清楚VMWare软件的网卡配置原理</p>
-<p>首先，让虚拟机获得IP，测试能否上网</p>
-<p>第二，释放掉宿主机IP，设置新IP，并设置虚拟机IP为网关地址</p>
-<p>进行测试</p>
-<h1 id="03-宿主机通过虚拟机上网-NAT"><a href="#03-宿主机通过虚拟机上网-NAT" class="headerlink" title="03. 宿主机通过虚拟机上网(NAT)"></a>03. 宿主机通过虚拟机上网(NAT)</h1><p>这个就是 <strong>难点</strong> 了.23333,其实如果能看懂网络拓扑图，问题也不难</p>
-<p>最重要的点就是：如何通过VMnet8上网而不是宿主机的物理网卡，于此同时又不停用宿主机物理网卡(因为虚拟机出口网关要用)</p>
-<p>这样就显得有点 <strong>没事找事干</strong> 了。</p>
-<p>这里没有其他特别好的办法，也就VPN了</p>
-<h1 id="04-总结"><a href="#04-总结" class="headerlink" title="04. 总结"></a>04. 总结</h1><p>没事瞎折腾找资料写着玩</p>
+<p>需要注意的无非就是mirror, 删除命令和push的时候需要关闭保护<br>mirror应该无影响(未测)<br>删除命令可更改(看需求)<br>push需要关闭保护</p>
+<h1 id="03-后记"><a href="#03-后记" class="headerlink" title="03 后记"></a>03 后记</h1><p>遇到这些棘手问题, 一般都是解决了就懒得写文档了<br>要强迫一下自己养成记录的文档才行了  </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -485,7 +486,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://zzdkl.com.cn/2019/08/17/network_in_VM/" title="虚拟机上网相关">https://zzdkl.com.cn/2019/08/17/network_in_VM/</a>
+    <a href="https://zzdkl.com.cn/2019/09/11/git_del_file/" title="Git删除历史文件">https://zzdkl.com.cn/2019/09/11/git_del_file/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -500,9 +501,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/VM/" rel="tag"><i class="fa fa-tag"></i> VM</a>
-          
-            <a href="/tags/Network/" rel="tag"><i class="fa fa-tag"></i> Network</a>
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
           
         </div>
       
@@ -515,8 +514,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/17/tpot_installation/" rel="next" title="tpot安装与介绍">
-                <i class="fa fa-chevron-left"></i> tpot安装与介绍
+              <a href="/2019/09/09/git_conflict/" rel="next" title="git冲突相关">
+                <i class="fa fa-chevron-left"></i> git冲突相关
               </a>
             
           </div>
@@ -525,8 +524,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/17/MS_activate/" rel="prev" title="巨硬Win10与Office激活">
-                巨硬Win10与Office激活 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/11/01_dump_win_pwd/" rel="prev" title="把Windows密码dump下来">
+                把Windows密码dump下来 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -634,7 +633,7 @@ var jiathis_config={
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -645,7 +644,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -656,7 +655,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -716,7 +715,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-预备知识"><span class="nav-text">01. 预备知识</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-宿主机通过虚拟机上网-桥接"><span class="nav-text">02. 宿主机通过虚拟机上网(桥接)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-宿主机通过虚拟机上网-NAT"><span class="nav-text">03. 宿主机通过虚拟机上网(NAT)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-总结"><span class="nav-text">04. 总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-文档"><span class="nav-text">01 文档</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-使用"><span class="nav-text">02 使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-后记"><span class="nav-text">03 后记</span></a></li></ol></div>
             
 
           </div>
@@ -757,7 +756,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.4k</span>
+    <span title="Site words total count">21.7k</span>
   
 </div>
 
