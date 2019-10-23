@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzdkl.com.cn/"/>
-  <updated>2019-10-23T08:30:36.943Z</updated>
+  <updated>2019-10-23T09:06:25.855Z</updated>
   <id>https://zzdkl.com.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zzdkl.com.cn/2019/10/23/03_aotu_evaluation/"/>
     <id>https://zzdkl.com.cn/2019/10/23/03_aotu_evaluation/</id>
     <published>2019-10-23T07:53:44.596Z</published>
-    <updated>2019-10-23T08:30:36.943Z</updated>
+    <updated>2019-10-23T09:06:25.855Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>为了3分的成绩, 我是如此的不务正业</p><p>写了一个自动化评价脚本, 支持特性为:</p><ul><li>1/3的概率出现95分评价, 躲避教务系统追踪, 1/9概率出现90分评价</li><li>自定义主观题评价内容, 同上为了躲避系统追踪</li><li>打包exe文件, 去除python环境依赖</li></ul><p>后续升级计划:  </p><ul><li>深度学习验证码自动识别, 跳过登录操作</li><li>升级为数据库存储, 支持多人</li><li>自动化多人操作</li><li>增加cookie存活检测, 若失效自动登录</li></ul><p>简单来说升级了给个账号密码就可以后顾无忧, 每天自动跑脚本, 不用管<br>毕竟生命宝贵</p><p>懒咯, 升级计划待定</p><a id="more"></a><h1 id="01-用法"><a href="#01-用法" class="headerlink" title="01 用法"></a>01 用法</h1><p>打开<code>God_Dam_Fuck_SMU_Evaluation.exe</code>即可<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-05-30.png" alt="exe文件"><br>然后出现的黑框和浏览器输入账号密码即可</p><p>完成后图示如下:<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-06-53.png" alt="Done"></p><h1 id="02-自定义内容"><a href="#02-自定义内容" class="headerlink" title="02 自定义内容"></a>02 自定义内容</h1><p>就在当前文件夹的<code>content.txt</code>里改就好了, 换行为新评价<br>请务必更改<code>content.txt</code>内容, 因为都不知道有多少人用过<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-08-51.png" alt="content"></p><p><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-09-14.png" alt="content1"></p><h1 id="03-反馈bug"><a href="#03-反馈bug" class="headerlink" title="03 反馈bug"></a>03 反馈bug</h1><p>及时反馈是好事啦, 将文件夹的<code>a.log</code>发给我就好<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-10-57.png" alt="log"></p><p>下载地址:<br><a href="/upload_image/files/God_Dam_Fuck_SMU_Evaluation.zip">点这里</a></p><p>源码地址: <a href="https://github.com/elliot-bia/God_Dam_Fuck_SMU_Evaluation" target="_blank" rel="noopener">https://github.com/elliot-bia/God_Dam_Fuck_SMU_Evaluation</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>为了3分的成绩, 我是如此的不务正业</p><p>写了一个自动化评价脚本, 支持特性为:</p><ul><li>1/3的概率出现95分评价, 躲避教务系统追踪, 1/9概率出现90分评价</li><li>自定义主观题评价内容, 同上为了躲避系统追踪</li><li>打包exe文件, 去除python环境依赖</li></ul><p>后续升级计划:  </p><ul><li>深度学习验证码自动识别, 跳过登录操作</li><li>升级为数据库存储, 支持多人</li><li>自动化多人操作</li><li>增加cookie存活检测, 若失效自动登录</li></ul><p>简单来说升级了给个账号密码就可以后顾无忧, 每天自动跑脚本, 不用管<br>毕竟生命宝贵</p><p>懒咯, 升级计划待定</p><p>评价的是昨天的课, 一天执行一次即可, 记得检查结果</p><a id="more"></a><h1 id="01-用法"><a href="#01-用法" class="headerlink" title="01 用法"></a>01 用法</h1><p>打开<code>God_Dam_Fuck_SMU_Evaluation.exe</code>即可<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-05-30.png" alt="exe文件"><br>然后出现的黑框和浏览器输入账号密码即可</p><p>完成后图示如下:<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-06-53.png" alt="Done"></p><h1 id="02-自定义内容"><a href="#02-自定义内容" class="headerlink" title="02 自定义内容"></a>02 自定义内容</h1><p>就在当前文件夹的<code>content.txt</code>里改就好了, 换行为新评价<br>请务必更改<code>content.txt</code>内容, 因为都不知道有多少人用过<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-08-51.png" alt="content"></p><p><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-09-14.png" alt="content1"></p><h1 id="03-反馈bug"><a href="#03-反馈bug" class="headerlink" title="03 反馈bug"></a>03 反馈bug</h1><p>及时反馈是好事啦, 将文件夹的<code>a.log</code>发给我就好<br><img src="/upload_image/2019/10/Snipaste_2019-10-23_16-10-57.png" alt="log"></p><p>下载地址:<br><a href="/upload_image/files/God_Dam_Fuck_SMU_Evaluation.zip">点这里</a></p><p>源码地址: <a href="https://github.com/elliot-bia/God_Dam_Fuck_SMU_Evaluation" target="_blank" rel="noopener">https://github.com/elliot-bia/God_Dam_Fuck_SMU_Evaluation</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -43,6 +43,7 @@
 &lt;/ul&gt;
 &lt;p&gt;简单来说升级了给个账号密码就可以后顾无忧, 每天自动跑脚本, 不用管&lt;br&gt;毕竟生命宝贵&lt;/p&gt;
 &lt;p&gt;懒咯, 升级计划待定&lt;/p&gt;
+&lt;p&gt;评价的是昨天的课, 一天执行一次即可, 记得检查结果&lt;/p&gt;
     
     </summary>
     
@@ -262,9 +263,9 @@
       <category term="Chrome" scheme="https://zzdkl.com.cn/categories/Browers/Chrome/"/>
     
     
-      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
-    
       <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
+    
+      <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
     
   </entry>
   
