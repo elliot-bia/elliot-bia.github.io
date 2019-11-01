@@ -200,9 +200,9 @@
     
       <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="BackUp" scheme="https://zzdkl.com.cn/categories/Windows/BackUp/"/>
-    
       <category term="Software" scheme="https://zzdkl.com.cn/categories/Software/"/>
+    
+      <category term="BackUp" scheme="https://zzdkl.com.cn/categories/Windows/BackUp/"/>
     
       <category term="AOMEI" scheme="https://zzdkl.com.cn/categories/Software/AOMEI/"/>
     
@@ -845,9 +845,9 @@
     
       <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
-    
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
+    
+      <category term="Database" scheme="https://zzdkl.com.cn/categories/Database/"/>
     
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Database/excel/"/>
     
@@ -912,9 +912,9 @@
     
       <category term="Office" scheme="https://zzdkl.com.cn/categories/Office/"/>
     
-      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
-    
       <category term="excel" scheme="https://zzdkl.com.cn/categories/Office/excel/"/>
+    
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
     
       <category term="IP" scheme="https://zzdkl.com.cn/categories/Network/IP/"/>
     
