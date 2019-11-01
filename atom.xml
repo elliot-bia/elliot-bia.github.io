@@ -32,9 +32,9 @@
     
     </summary>
     
-      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
-    
       <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
+    
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
       <category term="WSL" scheme="https://zzdkl.com.cn/categories/Windows/WSL/"/>
     
@@ -168,9 +168,9 @@
     <link href="https://zzdkl.com.cn/2019/10/28/test/"/>
     <id>https://zzdkl.com.cn/2019/10/28/test/</id>
     <published>2019-10-28T07:22:38.701Z</published>
-    <updated>2019-08-30T02:16:23.000Z</updated>
+    <updated>2019-11-01T06:39:25.664Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>test</p><a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>test</p><a id="more"></a><p>tset2</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
@@ -628,9 +628,9 @@
     
     </summary>
     
-      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
-    
       <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
+    
+      <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
       <category term="WSL" scheme="https://zzdkl.com.cn/categories/Windows/WSL/"/>
     
