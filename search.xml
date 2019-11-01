@@ -87,8 +87,8 @@
     <content type="text"><![CDATA[00 前言最近对于系统备份有着需求，主要有以下几点场景：系统重装系统备份系统还原推荐使用AOMEI 更新:采用傲梅科技的轻松备份专业版即可, 非常方便国际网站CN网站 1. 系统重装主要是更换硬件后的重装系统，需要对软件进行重新安装和调优 2. 系统备份希望能够将系统状态保持在最新版，并保存一个地方 3. 系统还原乐于折腾，弄好系统还原设置就可以大胆的搞了 01 dism++工具说明 ： 用来自定义优化windows系统，系统备份等，常用的“系统优化”里的右键菜单管理和系统备份 任何有疑问的地方参考官方文档 1. 系统备份操作直接备份成esd文件即可，然后再转为ISO刻录文件也可以 官方文档 iso、wim、esd文件的区别 注意 ： 压缩率越高，CPU要求越高参考资料1 2. 系统还原操作待补充。。。 3. 增量备份操作对wim格式可以增量备份，esd暂未测试（更新：esd也支持增量备份） esd修改困难esd适合iso发布用不推荐一直改改改 坑点 ： 设置白名单也会出现 “无法完成操作，因为文件包含病毒或潜在的垃圾软件” 这尼玛。。。 2. 系统还原使用dism++ （待测试）进PE还原wim、esd文件 （待测试）刻录成ISO引导盘 （待测试） document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Windows</category>
-        <category>Software</category>
         <category>BackUp</category>
+        <category>Software</category>
         <category>AOMEI</category>
       </categories>
       <tags>
@@ -100,8 +100,8 @@
     <url>%2F2019%2F10%2F28%2FswitchOmege%2F</url>
     <content type="text"><![CDATA[00 前言强烈推荐SwitchyOmega！ 插件SwitchyOmega在Chrome和Firefox上都有，强烈推荐需要“文明#PC#上网”的朋友！ 首先推荐阅读链接：简单配置 配置上图，主要有两个配置 2. 对于PAC没有涉及到的网站，手工进行添加即可 然后在配置文件中就可以看到添加的文件了，我把配置放上来 我把网址参数发上来 https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 参考网站2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Browers</category>
         <category>Network</category>
+        <category>Browers</category>
         <category>SwitchyOmega</category>
         <category>Chrome</category>
       </categories>
@@ -229,8 +229,8 @@
         <category>Network</category>
       </categories>
       <tags>
-        <tag>VM</tag>
         <tag>Network</tag>
+        <tag>VM</tag>
       </tags>
   </entry>
   <entry>
@@ -399,8 +399,8 @@
     <content type="text"><![CDATA[00 前言今日任务：查找出excel表中的Plugin_ID,然后进行导入数据库 所用工具：sqlite stdio 01 查找Plugin_ID人工太慢了，学好python的重要性又多了一步。人生苦短，我学python 首先我参考excel表中的vlookup函数，vlookup()参考资料 坑点来了：vlookup()不支持255个字符以上的查询。。office官方参考链接 找了找资料，换成了loopup()函数，还是不行，网上找了找资料，发现这样是可以的 =LOOKUP(1,0/(J1:J10=值),N1:N10) 前一个J列为匹配的列，这里为description，N列为匹配显示的列，这里为plugin_ID 经过处理后，需 另存为csv文件 最终结果如下 02 导入数据库通过excel导入数据库 用sqlite工具即可，这里选择sqlite studio和navicat premium为例 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Office</category>
-        <category>excel</category>
         <category>Database</category>
+        <category>excel</category>
         <category>excel</category>
       </categories>
       <tags>
@@ -428,9 +428,9 @@
     <url>%2F2019%2F10%2F28%2Fdispose_ip_in_excel%2F</url>
     <content type="text"><![CDATA[00.前言在excel中处理IP地址是很经常的事情，那么对于IP地址的处理又不似数据那样的简单，有很多小数点 这个特性就造成了IP地址处理的棘手程度。 现在我们就对excel表格中IP地址的处理进行简答的总结，处理一下 01. IP和漏洞数量计算对于脚本处理后的xlsx文件，进行处理 在插入中选择数据透视表 然后在右边手动添加如下的配置即可，注意需要去掉漏洞的空白 截图如下 ！！需要注意把紧急和高危的数据列进行置换 方法是复制数据到另一列中，然后选中列，按住shift键进行右移 02. IP地址填充0例如： 172.10.3.4 ，把它填充成 172.010.003.004 处理方法：把这个IP地址放在A列，在B列放入这个函数即可 1=TEXT(LEFT(A1,FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND( ".",A1,1)+1,FIND(".",A1,FIND(".",A1,1)+1)-FIND(".",A1,1)-1),"000") &amp; "." &amp; TEXT(MID(A1,FIND(".",A1,FIND(".",A1,1)+1)+1,FIND(".",A1, FIND(".",A1,FIND(".",A1,1)+1)+1)-FIND(".",A1,FIND(".",A1,1)+1)-1), "000") &amp; "." &amp; TEXT(RIGHT(A1,LEN(A1)-FIND(".",A1,FIND(".",A1,FIND( ".",A1,1)+1)+1)),"000") 截图如下 03. IP地址去掉0对于上面办法得到的IP地址，进行排序即可 可是我们最后需要的却不是 172.010.003.004 这个格式，我们就对它进行处理 首先选中数据 在数据中选分列,在第三步的目标区域选中粘贴的位置 然后对后面三列数据选择插入整列(为了方便加入小数点.) 然后再选中数据，进行定位条件（快捷键F5)，选中空值，输入小数点，然后Ctrl+Enter进行全部替换 参考链接 1F5键打开“定位”对话框，单击“定位条件”按钮，在“定位条件”对话框中选择“空值”，单击“确定”。Excel会选中区域中的所有空白单元格，在编辑栏中输入“0”，然后按Ctrl+Enter键在所有空白单元格中输入零值。 最后合并IP，使用函数=CONCATENATE(K10,L10,M10,N10,O10,P10,Q10) 参考链接 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
+        <category>Network</category>
         <category>Office</category>
         <category>excel</category>
-        <category>Network</category>
         <category>IP</category>
       </categories>
       <tags>
@@ -498,6 +498,18 @@
       </categories>
       <tags>
         <tag>0708</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[简单网络故障排查]]></title>
+    <url>%2F2019%2F10%2F28%2F04_network_troubleshooting%2F</url>
+    <content type="text"><![CDATA[00 前言今天来写一下简单的网络故障排查地点: 某高校校内网络需要校园网账号进行实名登录后才可上网今天来写一下遇到的以下情况: 等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况 01 原因排查对于以上出现的情况, 无非就有三种情况: 自己的电脑网络配置出现问题 学校的网络线路有问题 访问的目标网站网络有问题 问题出现在 自己 学校 目标网站 这个三个情况, 下面分别对这三个情况进行简单判断和分析, 以及解决办法 02 电脑配置问题自己的电脑出问题很明显的特征就是: 自己一个人不能上网, 但是舍友可以此处的重点是: 自己一个人不能上网, 如果舍友或者身边的人可以, 那这就是很典型的自己电脑配置出现了问题而且不能上网的特征就是: 不能打开校园网认证界面, 如下图:图1图2 如果身边的人也有一部分人能上, 一部分人不能上, 请跳转到学校网络故障问题 解决的办法有: 重启 设置IP地址为自动获取(DHCP) 重设网络配置 基本上以上的三个办法可以解决绝大部分的电脑配置问题对于方法2, 可以参考这个百度经验链接(win7)这个百度经验链接(win10) 对于方法3, 需要使用管理员身份运行的命令提示行窗口进行以下命令: 1netsh winsock reset 然后重启. 这个办法略微复杂, 可参考win7参考链接win10参考链接 当然, 除了以上之外的方法, 我写了个UI脚本, 简单方便 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Network</category>
+        <category>Troubleshooting</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
       </tags>
   </entry>
   <entry>

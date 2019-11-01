@@ -71,7 +71,7 @@
 
 
 
-  <meta name="keywords" content="git,gitlab,">
+  <meta name="keywords" content="Network,">
 
 
 
@@ -84,21 +84,24 @@
 
 
 
-<meta name="description" content="00 前言近日接到新任务：搭建本地git 使用到gitlab、docker安装。难度略大">
-<meta name="keywords" content="git,gitlab">
+<meta name="description" content="00 前言今天来写一下简单的网络故障排查地点: 某高校校内网络需要校园网账号进行实名登录后才可上网今天来写一下遇到的以下情况: 等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况">
+<meta name="keywords" content="Network">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git&amp;gitlab相关">
-<meta property="og:url" content="https://zzdkl.com.cn/2019/10/28/git_and_gitlab/index.html">
+<meta property="og:title" content="简单网络故障排查">
+<meta property="og:url" content="https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/index.html">
 <meta property="og:site_name" content="One Blog">
-<meta property="og:description" content="00 前言近日接到新任务：搭建本地git 使用到gitlab、docker安装。难度略大">
+<meta property="og:description" content="00 前言今天来写一下简单的网络故障排查地点: 某高校校内网络需要校园网账号进行实名登录后才可上网今天来写一下遇到的以下情况: 等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/05/Snipaste_2019-05-13_17-47-25.png">
-<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/06/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8.jpg">
-<meta property="og:updated_time" content="2019-10-11T03:02:16.000Z">
+<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png">
+<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png">
+<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png">
+<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_09-29-17.png">
+<meta property="og:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_09-30-27.png">
+<meta property="og:updated_time" content="2019-11-01T06:36:50.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git&amp;gitlab相关">
-<meta name="twitter:description" content="00 前言近日接到新任务：搭建本地git 使用到gitlab、docker安装。难度略大">
-<meta name="twitter:image" content="https://zzdkl.com.cn/upload_image/2019/05/Snipaste_2019-05-13_17-47-25.png">
+<meta name="twitter:title" content="简单网络故障排查">
+<meta name="twitter:description" content="00 前言今天来写一下简单的网络故障排查地点: 某高校校内网络需要校园网账号进行实名登录后才可上网今天来写一下遇到的以下情况: 等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况">
+<meta name="twitter:image" content="https://zzdkl.com.cn/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png">
 
 
 
@@ -128,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://zzdkl.com.cn/2019/10/28/git_and_gitlab/">
+  <link rel="canonical" href="https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/">
 
 
 
 
 
-  <title>git&gitlab相关 | One Blog</title>
+  <title>简单网络故障排查 | One Blog</title>
   
 
 
@@ -294,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/10/28/git_and_gitlab/">
+    <link itemprop="mainEntityOfPage" href="https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Elliot Bia">
@@ -311,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git&gitlab相关</h1>
+          <h1 class="post-title" itemprop="name headline">简单网络故障排查</h1>
         
 
         <div class="post-meta">
@@ -346,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
                   </a>
                 </span>
 
@@ -357,8 +360,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/gitlab/" itemprop="url" rel="index">
-                    <span itemprop="name">gitlab</span>
+                  <a href="/categories/Network/Troubleshooting/" itemprop="url" rel="index">
+                    <span itemprop="name">Troubleshooting</span>
                   </a>
                 </span>
 
@@ -388,7 +391,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  823
+                  517
                 </span>
               
 
@@ -404,7 +407,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  2
                 </span>
               
             </div>
@@ -425,56 +428,39 @@
       
 
       
-        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>近日接到新任务：搭建本地git</p>
-<p>使用到gitlab、docker安装。难度略大</p>
+        <h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天来写一下简单的网络故障排查<br>地点: 某高校校内网络需要校园网账号进行实名登录后才可上网<br>今天来写一下遇到的以下情况:<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png" alt="网卡1"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png" alt="网卡2"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png" alt="网卡3"></p>
+<p>等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况</p>
 <a id="more"></a>
-
-<h1 id="01-gitlab进行docker安装"><a href="#01-gitlab进行docker安装" class="headerlink" title="01 gitlab进行docker安装"></a>01 gitlab进行docker安装</h1><p><a href="https://www.jianshu.com/p/24959481340e" target="_blank" rel="noopener">安装参考链接</a></p>
-<p>安装好以后，会显示如下图</p>
-<p><img src="/upload_image/2019/05/Snipaste_2019-05-13_17-47-25.png" alt="安装完成"></p>
-<p>接下来访问<code>http://ip</code>即可访问控制台</p>
-<h1 id="02-git知识点"><a href="#02-git知识点" class="headerlink" title="02 git知识点"></a>02 git知识点</h1><ol>
-<li>git 的操作流程</li>
-<li>什么是分支（branch），什么是合并分支（merge bracnh）</li>
-<li>git 拉取和推送代码</li>
-<li>git 的设置（代理，SSL证书）</li>
-</ol>
-<h2 id="2-1-Git的配置命令"><a href="#2-1-Git的配置命令" class="headerlink" title="2.1 Git的配置命令"></a>2.1 Git的配置命令</h2><p>git config 配置文件，不写级别，默认是配置仓库级</p>
-<p><strong>系统级文件 $(prefix)/etc/gitconfig</strong></p>
-<p>git config –system 用来指定读写系统级文件。初始不存在，若不存在则无影响。</p>
-<p><strong>用户级文件 ~/.gitconfig</strong></p>
-<p>git config –global 指定只操作用户级文件。初始不存在，若不存在则无影响。</p>
-<p><strong>Repository 级文件 .git/config</strong></p>
-<p>git config –local 对写操作，则只写入 Repository 级文件（默认行为）；对读操作，则只从 Repository 级文件读。</p>
-<h2 id="2-2-Git参考资料"><a href="#2-2-Git参考资料" class="headerlink" title="2.2 Git参考资料"></a>2.2 Git参考资料</h2><p><a href="https://blog.cnbluebox.com/blog/2014/04/15/gitlabde-shi-yong/" target="_blank" rel="noopener">入门推荐阅读</a></p>
-<p><a href="https://www.cnblogs.com/wangmingshun/p/5425150.html" target="_blank" rel="noopener">分支知识参考链接</a></p>
-<p><a href="https://blog.csdn.net/lizhihaoweiwei/article/details/76849755" target="_blank" rel="noopener">代理参考链接</a></p>
-<p>SSL类自签名证书解决办法：  <a href="https://note.youdao.com/ynoteshare1/index.html?id=0bc261368fa768ce84a687ab8c795e48&amp;type=note?auto" target="_blank" rel="noopener">来自大佬的办法</a></p>
-<pre><code>忽略SSL证书错误的方法
-
-env GIT_SSL_NO_VERIFY=true git clone https://xxx-xxx/sectools.git   #忽略SSL证书确认进行clone项目
-
-cd sectools/
-
-git config http.sslVerify "false"   #设置该项目忽略SSL证书错误</code></pre><p>自行百度，不过多说明</p>
-<h2 id="2-3-上Git常用命令速查表"><a href="#2-3-上Git常用命令速查表" class="headerlink" title="2.3 上Git常用命令速查表"></a>2.3 上Git常用命令速查表</h2><p><img src="/upload_image/2019/06/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8.jpg" alt="Git常用命令速查表"></p>
-<h1 id="03-gitlab操作"><a href="#03-gitlab操作" class="headerlink" title="03 gitlab操作"></a>03 gitlab操作</h1><p>使用<a href="https://blog.csdn.net/Adelly/article/details/79099772" target="_blank" rel="noopener">参考链接</a></p>
+<h1 id="01-原因排查"><a href="#01-原因排查" class="headerlink" title="01 原因排查"></a>01 原因排查</h1><p>对于以上出现的情况, 无非就有三种情况:  </p>
 <ol>
-<li>首先需要了解的知识点：</li>
+<li>自己的电脑网络配置出现问题  </li>
+<li>学校的网络线路有问题  </li>
+<li>访问的目标网站网络有问题  </li>
 </ol>
-<h2 id="3-1-用户与组：涉及到权限控制"><a href="#3-1-用户与组：涉及到权限控制" class="headerlink" title="3.1 用户与组：涉及到权限控制"></a>3.1 用户与组：涉及到权限控制</h2><hr>
-<p>Guest(匿名用户) - 创建项目、写留言薄</p>
-<p>Reporter（报告人）- 创建项目、写留言薄、 <strong>拉项目、下载项目、创建代码片段</strong></p>
-<p>Developer（开发者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、<strong>创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki</strong></p>
-<p>Master（管理者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、<strong>增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子</strong></p>
-<p>Owner（所有者）- 创建项目、写留言薄、拉项目、下载项目、创建代码片段、创建合并请求、创建新分支、推送不受保护的分支、移除不受保护的分支 、创建标签、编写wiki、增加团队成员、推送受保护的分支、移除受保护的分支、编辑项目、添加部署密钥、配置项目钩子、<strong>开关公有模式、将项目转移到另一个名称空间、删除项目</strong></p>
-<hr>
-<h1 id="04-git-常用命令"><a href="#04-git-常用命令" class="headerlink" title="04 git 常用命令"></a>04 git 常用命令</h1><h2 id="4-1-账号类"><a href="#4-1-账号类" class="headerlink" title="4.1 账号类"></a>4.1 账号类</h2><p>git config –system –unset credential.helper   #删除所有已添加的账号</p>
-<p>git config –global credential.helper store  #命令实现保存用户名和密码不用再输入</p>
-<p>git config user.name ‘github用户名’ #添加用户</p>
-<p>git config user.email ‘邮箱’</p>
-<h2 id="4-2-pull-request的git命令"><a href="#4-2-pull-request的git命令" class="headerlink" title="4.2 pull request的git命令"></a>4.2 pull request的git命令</h2><p>如何将自己的分支推送到master分支？</p>
-<p>—-敲里嘛，搞了一晚上没搞定，不弄了，反正只能web端进行发起merge request—</p>
+<p>问题出现在 </p>
+<ol>
+<li><p>自己  </p>
+</li>
+<li><p>学校</p>
+</li>
+<li><p>目标网站</p>
+<p>这个三个情况, 下面分别对这三个情况进行简单判断和分析, 以及解决办法</p>
+</li>
+</ol>
+<h1 id="02-电脑配置问题"><a href="#02-电脑配置问题" class="headerlink" title="02 电脑配置问题"></a>02 电脑配置问题</h1><p>自己的电脑出问题很明显的特征就是: <code>自己一个人不能上网, 但是舍友可以</code><br>此处的重点是: <code>自己一个人不能上网</code>, 如果舍友或者身边的人可以, 那这就是很典型的自己电脑配置出现了问题<br>而且不能上网的特征就是: <code>不能打开校园网认证界面</code>, 如下图:<br>图1<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-29-17.png" alt="图1"><br>图2<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-30-27.png" alt="图2"></p>
+<p>如果身边的人也有一部分人能上, 一部分人不能上, 请跳转到学校网络故障问题</p>
+<p>解决的办法有:  </p>
+<ol>
+<li>重启</li>
+<li>设置IP地址为自动获取(DHCP)  </li>
+<li>重设网络配置</li>
+</ol>
+<p>基本上以上的三个办法可以解决绝大部分的电脑配置问题<br>对于方法2, 可以参考<br><a href="https://jingyan.baidu.com/article/47a29f243fce1ec0142399a3.html" target="_blank" rel="noopener">这个百度经验链接(win7)</a><br><a href="https://jingyan.baidu.com/article/f006222846cc1cfbd3f0c88f.html" target="_blank" rel="noopener">这个百度经验链接(win10)</a>  </p>
+<p>对于方法3, 需要使用管理员身份运行的命令提示行窗口进行以下命令:</p>
+<figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netsh winsock reset</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后重启. 这个办法略微复杂, 可参考<br><a href="http://www.xitongzhijia.net/xtjc/20161210/88577.html" target="_blank" rel="noopener">win7参考链接</a><br><a href="https://jingyan.baidu.com/article/22fe7cedfa1fc13002617fc6.html" target="_blank" rel="noopener">win10参考链接</a></p>
+<p>当然, 除了以上之外的方法, 我写了个UI脚本, 简单方便  </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -523,7 +509,7 @@ git config http.sslVerify "false"   #设置该项目忽略SSL证书错误</code>
   </li>
   <li class="post-copyright-link">
     <strong>Post link:</strong>
-    <a href="https://zzdkl.com.cn/2019/10/28/git_and_gitlab/" title="git&gitlab相关">https://zzdkl.com.cn/2019/10/28/git_and_gitlab/</a>
+    <a href="https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/" title="简单网络故障排查">https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice: </strong>
@@ -538,9 +524,7 @@ git config http.sslVerify "false"   #设置该项目忽略SSL证书错误</code>
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
-          
-            <a href="/tags/gitlab/" rel="tag"><i class="fa fa-tag"></i> gitlab</a>
+            <a href="/tags/Network/" rel="tag"><i class="fa fa-tag"></i> Network</a>
           
         </div>
       
@@ -553,8 +537,8 @@ git config http.sslVerify "false"   #设置该项目忽略SSL证书错误</code>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/28/getshell_in_target_drone/" rel="next" title="靶机getshell">
-                <i class="fa fa-chevron-left"></i> 靶机getshell
+              <a href="/2019/10/28/03_aotu_evaluation/" rel="next" title="自动化教务系统评价脚本">
+                <i class="fa fa-chevron-left"></i> 自动化教务系统评价脚本
               </a>
             
           </div>
@@ -563,8 +547,8 @@ git config http.sslVerify "false"   #设置该项目忽略SSL证书错误</code>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/28/git_conflict/" rel="prev" title="git冲突相关">
-                git冲突相关 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/28/0708_recurrence/" rel="prev" title="0708复现">
+                0708复现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -754,7 +738,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-gitlab进行docker安装"><span class="nav-text">01 gitlab进行docker安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-git知识点"><span class="nav-text">02 git知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Git的配置命令"><span class="nav-text">2.1 Git的配置命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Git参考资料"><span class="nav-text">2.2 Git参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-上Git常用命令速查表"><span class="nav-text">2.3 上Git常用命令速查表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-gitlab操作"><span class="nav-text">03 gitlab操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-用户与组：涉及到权限控制"><span class="nav-text">3.1 用户与组：涉及到权限控制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-git-常用命令"><span class="nav-text">04 git 常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-账号类"><span class="nav-text">4.1 账号类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-pull-request的git命令"><span class="nav-text">4.2 pull request的git命令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#00-前言"><span class="nav-text">00 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-原因排查"><span class="nav-text">01 原因排查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-电脑配置问题"><span class="nav-text">02 电脑配置问题</span></a></li></ol></div>
             
 
           </div>
