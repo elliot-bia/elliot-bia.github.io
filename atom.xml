@@ -236,9 +236,9 @@
       <category term="Chrome" scheme="https://zzdkl.com.cn/categories/Browers/Chrome/"/>
     
     
-      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
-    
       <category term="Proxy" scheme="https://zzdkl.com.cn/tags/Proxy/"/>
+    
+      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
@@ -878,9 +878,9 @@
     
     </summary>
     
-      <category term="Docker" scheme="https://zzdkl.com.cn/categories/Docker/"/>
-    
       <category term="Linux" scheme="https://zzdkl.com.cn/categories/Linux/"/>
+    
+      <category term="Docker" scheme="https://zzdkl.com.cn/categories/Docker/"/>
     
       <category term="Network" scheme="https://zzdkl.com.cn/categories/Docker/Network/"/>
     
@@ -995,9 +995,9 @@
     
       <category term="Sec" scheme="https://zzdkl.com.cn/categories/Sec/"/>
     
-      <category term="AppScan" scheme="https://zzdkl.com.cn/categories/Sec/AppScan/"/>
-    
       <category term="Python" scheme="https://zzdkl.com.cn/categories/Python/"/>
+    
+      <category term="AppScan" scheme="https://zzdkl.com.cn/categories/Sec/AppScan/"/>
     
       <category term="AppScan" scheme="https://zzdkl.com.cn/categories/Python/AppScan/"/>
     

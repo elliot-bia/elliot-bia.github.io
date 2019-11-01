@@ -106,8 +106,8 @@
         <category>Chrome</category>
       </categories>
       <tags>
-        <tag>Network</tag>
         <tag>Proxy</tag>
+        <tag>Network</tag>
       </tags>
   </entry>
   <entry>
@@ -413,8 +413,8 @@
     <url>%2F2019%2F10%2F28%2Fdocker_network_configuration%2F</url>
     <content type="text"><![CDATA[00 前言今天任务： 提高安全性，使用容器网络连接不同容器 连接使用固定ip，以防容器重启后地址改变 研究容器网络链接如何实现 01 实现方式 : Docker容器访问与互联 （端口映射）过时资料 推荐参考链接 –name –hostname参数 首先设置各个容器的名称，使用–name参数 -p 和 -P 的区别就是一个指定端口，一个随机端口 删除所有容器（不兼容fish）： docker rm $(docker ps -a -q) 列出所有容器的IP地址： 1docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq) 02 容器间通信 （容器互联）已不支持–link参数 ~ –link :alias ~ ~ 参考连接 ~ 继续更新，两班倒的生活真是要人命 03 进阶结果 （hostname直接访问）居然找的是过时的4年前的资料。。。 一口老血吐出来，经过大佬指点，直接使用hostname访问即可 --name和--hostname有什么区别？ name只是容器名字，用来容器操作 hostname为容器主机名字，可以用来网络查找，类似于域名，但却缺少DNS过程，详细DNS过程以后再详细研究（应该涉及到跨主机容器通信） 这里有个疑问点：使用hostname访问需不需要创建网络？ 不行，指定IP的话就必须要创建一个网络 不指定IP的话，–add-host参数又好像不太可用所以还是创建一个网络最保险 04 网络设置创建网络 docker network create -d bridge my-bridge-network 删除网络 docker network rm my-bridge-network 设置子网 docker network create --subnet=172.18.0.0/16 mynetwork 12345678docker network所有子命令如下：docker network createdocker network connectdocker network lsdocker network rmdocker network disconnectdocker network inspect 创建网络参考链接1创建网络参考链接2_推荐链接 05 –expose参数EXPOSE 仅仅是声明容器打算使用什么端口而已，并不会自动在宿主进行端口映射只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务 用法 ： --expose 3389 expose优秀参考链接 06 最后结果最后结果为： 创建一个网络，分配子网 docker network create --subnet=172.18.0.0/16 mynetwork 创建容器时，使用--ip指定IP 使用expose避免暴露端口到主机 添加name和hostname 使用--add-host把容器加进host表 --add-host NAME:IP 最后结果命令为： 123docker network create --subnet=172.18.0.0/16 GitHub_NetWork # 创建网络docker run -itd --expose 27017 --name mongo_name --hostname mongo --network test_network --ip 172.18.0.2 --add-host hawkeye:172.18.0.3 -v $PWD/db:/data/db mongo # 创建容器docker run -tid -p 8004:80 --name hawkeye_name --hostname hawkeye --network test_network --ip 172.18.0.3 --add-host mongo:172.18.0.2 -e MONGODB_URI=mongodb://mongo:27017 daocloud.io/0xbug/hawkeye # 创建容器2 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Docker</category>
         <category>Linux</category>
+        <category>Docker</category>
         <category>Network</category>
         <category>Docker</category>
       </categories>
@@ -468,8 +468,8 @@
     <content type="text"><![CDATA[00 前言最近独立开发了AppScan报告处理脚本, 将实现以下功能: 自动化处理扫描结果 自动化处理扫描任务 01 后续改进计划目前脚本还是比较粗糙, 仅完成了基本操作后续改进计划有: 批量处理结果(难易程度: 3) 批量进行扫描(难易程度: 2) 批量进行扫描并自动进行结果处理(难易程度: 7) 去除数据库依赖, 仅使用HTML文档内容(难易程度: 6) 02 任务安排按照计划顺序进行, 预计前3计划能在9月底完成 待更新… document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Sec</category>
-        <category>AppScan</category>
         <category>Python</category>
+        <category>AppScan</category>
         <category>AppScan</category>
       </categories>
       <tags>
