@@ -1,3 +1,15 @@
+/*
+ * @File: 
+ * @Project: 
+ * @Author: zzy
+ * @mail: elliot.bia.8989@outlook.com
+ * @github: https://github.com/elliot-bia
+ * @Date: 2019-10-28 15:22:41
+ * @LastEditors: zzy
+ * @LastEditTime: 2019-11-01 11:44:02
+ * @---------------------------------
+ * @Description: 
+ */
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     autoplay: true,
@@ -76,6 +88,12 @@ const ap = new APlayer({
             artist: '林志炫',
             url: 'http://music.163.com/song/media/outer/url?id=390345.mp3',
             cover: 'http://p1.music.126.net/EHtTAPbMTLnkHk-3HpEGfQ==/37383395359884.jpg',
+        },
+        {
+            name: "人质",
+            artist: '张慧妹',
+            url: 'http://music.163.com/song/media/outer/url?id=327096.mp3',
+            cover: 'http://p2.music.126.net/tyk7m0lkzAyEblOLR6VtGg==/109951163271830284.jpg',
         }
         
     ]
