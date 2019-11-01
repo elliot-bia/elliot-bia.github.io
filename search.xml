@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test1]]></title>
+    <url>%2F2019%2F11%2F01%2F05_test%2F</url>
+    <content type="text"><![CDATA[00 前言 test document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[WSL设置]]></title>
     <url>%2F2019%2F10%2F28%2Fwsl_configuration%2F</url>
     <content type="text"><![CDATA[00前言—更新—辣鸡wsl, 各种不兼容, 返回vm怀抱 vm笔记本发热有点严重, 投入wsl怀抱 vim粘贴乱码解决 :set paste 01 ssh1apt-get install openssh-server vim etc/ssh/sshd_config : 123PermitRootLogin yesPort 2222ListenAddress 127.0.0.1 这里不能开机自启, 手动吧 02 tmux首先设置PS1 1PS1=' \n\[\033[37m\][\[\033[m\]\[\033[1;36m\]\t\[\033[m\] - \e[1;32m\]\u\[\e[m\]\[\e[1;33m\]@\[\e[m\]\[\e[35m\]\H\[\e[m\] \[\e[4;37m\]`pwd`\[\e[m\]\[\033[37m\]]\[\033[m\]\n\[\e[36m\]\$ =&gt; \[\e[m\] ' 可以使用以下方法 1234cd ~git clone https://github.com/****/.tmux.gitln -s -f .tmux/.tmux.confcp .tmux/.tmux.conf.local . 优化 vim .tmux.conf 12unbind %bind | splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录 或者自定义: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071# Use something easier to type as the prefix.set -g prefix C-aunbind C-bbind C-a send-prefix# 窗口计数从1开始，方便切换set -g base-index 1setw -g pane-base-index 1# 启用和关闭status barbind S set status onbind D set status off# 消息背景色# set -g message-bg whiteset -g mode-keys vi# 关闭自动重命名窗口setw -g allow-rename offsetw -g automatic-rename off# bind a reload keybind r source-file ~/.tmux.conf \; display-message "Config reloaded..."# I personally rebind the keys so "|" splits the current window vertically, and "-" splits it horizontally. Not the easiest things to type, though easy to remember.bind | split-window -hbind _ split-window -v# fixes the delay problemset -sg escape-time 0# 面板切换bind-key k select-pane -Ubind-key j select-pane -Dbind-key h select-pane -Lbind-key l select-pane -R# 面板大小调整bind -r ^k resizep -U 10bind -r ^j resizep -D 10bind -r ^h resizep -L 10bind -r ^l resizep -R 10# 状态栏# 颜色set -g status-bg blackset -g status-fg white# 对齐方式set-option -g status-justify centre# 左下角set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'set-option -g status-left-length 20# 窗口列表set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=grey,dim]'set-window-option -g window-status-current-format '#[fg=cyan,bold]#I#[fg=blue]:#[fg=cyan]#W#[fg=dim]'# 右下角set -g status-right '#[fg=green][#[fg=cyan]%H:%M#[fg=green]]'# 开启鼠标set-option -g mouse on# 面板unbind '"'bind - splitw -v -c '#{pane_current_path}' # 垂直方向新增面板，默认进入当前目录unbind %bind | splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录 03 优化关闭cmd的声音 04 备份/还原参考 05 代理apt-get install proxychains vim /etc/proxychains.conf 123dynamic_chainsocks5 127.0.0.1 10808http 127.0.0.1 10888 vim .bashrc 12345complete -c proxychainsalias setproxysocks5='export ALL_PROXY=socks5h://127.0.0.1:10808'alias unsetproxy='unset ALL_PROXY'alias setproxyhttp='export ALL_PROXY=http://127.0.0.1:10888' 05 辣鸡zsh/fish永别, 不兼容tmux, 字符换显示错误, 各种辣鸡, 永别 06 自动补齐增强包apt-get install bash-completion 07 其他安装包不再赘述 08 文件传输c, d, e盘都在/mnt 的目录下 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Linux</category>
         <category>Windows</category>
+        <category>Linux</category>
         <category>WSL</category>
         <category>Kali</category>
       </categories>
@@ -87,8 +92,8 @@
     <content type="text"><![CDATA[00 前言最近对于系统备份有着需求，主要有以下几点场景：系统重装系统备份系统还原推荐使用AOMEI 更新:采用傲梅科技的轻松备份专业版即可, 非常方便国际网站CN网站 1. 系统重装主要是更换硬件后的重装系统，需要对软件进行重新安装和调优 2. 系统备份希望能够将系统状态保持在最新版，并保存一个地方 3. 系统还原乐于折腾，弄好系统还原设置就可以大胆的搞了 01 dism++工具说明 ： 用来自定义优化windows系统，系统备份等，常用的“系统优化”里的右键菜单管理和系统备份 任何有疑问的地方参考官方文档 1. 系统备份操作直接备份成esd文件即可，然后再转为ISO刻录文件也可以 官方文档 iso、wim、esd文件的区别 注意 ： 压缩率越高，CPU要求越高参考资料1 2. 系统还原操作待补充。。。 3. 增量备份操作对wim格式可以增量备份，esd暂未测试（更新：esd也支持增量备份） esd修改困难esd适合iso发布用不推荐一直改改改 坑点 ： 设置白名单也会出现 “无法完成操作，因为文件包含病毒或潜在的垃圾软件” 这尼玛。。。 2. 系统还原使用dism++ （待测试）进PE还原wim、esd文件 （待测试）刻录成ISO引导盘 （待测试） document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
         <category>Windows</category>
-        <category>BackUp</category>
         <category>Software</category>
+        <category>BackUp</category>
         <category>AOMEI</category>
       </categories>
       <tags>
@@ -298,8 +303,8 @@
     <url>%2F2019%2F10%2F28%2Fkali_wsl_install_beEF%2F</url>
     <content type="text"><![CDATA[00 前言Windows里安装Kali子系统（Windows Linux子系统（WSL）） 01. 安装wsl参考链接 第一需要在“控制面板–程序–启动或关闭Windows功能–适用于Linux的Windows子系统”打开选项，然后重启 或者用管理员权限运行powershell并运行下面的命令： 1Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux 在Windows APP Store里安装Kali： 安装成功 打开如下 02. Kali进行配置 首先要设置用户名和密码，默认root账号已存在，不能再次设置 WSL默认的Linux均无任何安装包，需手动更新，不过已配好官方源 在CMD里直接输入 wsl 即可进入WSL子系统，如图，也可手动打开图标，均需管理员权限 我们可以看见默认的目录是在/mnt/c/Users/Elliot 下的 进行更新，以及安装beEF所必须的环境，依赖包。命令如下： apt-get update apt-get install ruby apt-get install libssl-dev libsqlite3-dev sqlite sudo apt-get install g++ apt-get install git –fix-missing 另一个坑点：没有root权限 解决办法：1.切换到root 2.更改密码 参考链接 命令： su root passwd root 安装好环境这些变量之后，切换到一个目录进行安装，我这里是非root用户的根目录（坑点之一，下面有讲） cd ~ git clone https://github.com/beefproject/beef 下载好后切换到目录 cd beef ,使用下列命令进行安装 gem install bundler bundle install ./install 坑点：bundle install 不让用root进行安装，切换回普通用户重新下载安装，以下是警告内容 更新：这个警告应该只是一个警告，可无视 安装好以后，修改默认账号密码 vim ./config.yaml 使用 ./beef 开始服务 访问 http://127.0.0.1:3000/ui/panel 即可 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
       <categories>
-        <category>Linux</category>
         <category>Windows</category>
+        <category>Linux</category>
         <category>WSL</category>
         <category>Kali</category>
       </categories>
