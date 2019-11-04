@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzdkl.com.cn/"/>
-  <updated>2019-11-01T06:40:49.617Z</updated>
+  <updated>2019-11-04T04:05:44.888Z</updated>
   <id>https://zzdkl.com.cn/</id>
   
   <author>
@@ -17,20 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test1</title>
-    <link href="https://zzdkl.com.cn/2019/11/01/05_test/"/>
-    <id>https://zzdkl.com.cn/2019/11/01/05_test/</id>
-    <published>2019-11-01T06:40:35.314Z</published>
-    <updated>2019-11-01T06:40:49.617Z</updated>
+    <title>简单网络故障排查</title>
+    <link href="https://zzdkl.com.cn/2019/11/04/04_network_troubleshooting/"/>
+    <id>https://zzdkl.com.cn/2019/11/04/04_network_troubleshooting/</id>
+    <published>2019-11-04T04:05:43.097Z</published>
+    <updated>2019-11-04T04:05:44.888Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><a id="more"></a><p>test</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天来写一下简单的网络故障排查<br>地点: 某高校校内网络需要校园网账号进行实名登录后才可上网<br>今天来写一下遇到的以下情况:<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png" alt="网卡1"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png" alt="网卡2"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png" alt="网卡3"></p><p>等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况</p><a id="more"></a><h1 id="01-原因排查"><a href="#01-原因排查" class="headerlink" title="01 原因排查"></a>01 原因排查</h1><p>对于以上出现的情况, 无非就有三种情况:  </p><ol><li>自己的电脑网络配置出现问题  </li><li>学校的网络线路有问题  </li><li>访问的目标网站网络有问题  </li></ol><p>问题出现在 </p><ol><li><p>自己  </p></li><li><p>学校</p></li><li><p>目标网站</p><p>这个三个情况, 下面分别对这三个情况进行简单判断和分析, 以及解决办法</p></li></ol><h1 id="02-电脑配置问题"><a href="#02-电脑配置问题" class="headerlink" title="02 电脑配置问题"></a>02 电脑配置问题</h1><p>自己的电脑出问题很明显的特征就是: <code>自己一个人不能上网, 但是舍友可以</code><br>此处的重点是: <code>自己一个人不能上网</code>, 如果舍友或者身边的人可以, 那这就是很典型的自己电脑配置出现了问题<br>而且不能上网的特征就是: <code>不能打开校园网认证界面</code>, 如下图:<br>图1<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-29-17.png" alt="图1"><br>图2<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-30-27.png" alt="图2"></p><p>如果身边的人也有一部分人能上, 一部分人不能上, 请跳转到学校网络故障问题</p><p>解决的办法有:  </p><ol><li>重启</li><li>设置IP地址为自动获取(DHCP)  </li><li>重设网络配置</li></ol><p>基本上以上的三个办法可以解决绝大部分的电脑配置问题<br>对于方法2, 可以参考<br><a href="https://jingyan.baidu.com/article/47a29f243fce1ec0142399a3.html" target="_blank" rel="noopener">这个百度经验链接(win7)</a><br><a href="https://jingyan.baidu.com/article/f006222846cc1cfbd3f0c88f.html" target="_blank" rel="noopener">这个百度经验链接(win10)</a>  </p><p>对于方法3, 需要使用管理员身份运行的命令提示行窗口进行以下命令:</p><figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netsh winsock reset</span></span><br></pre></td></tr></tbody></table></figure><p>然后重启. 这个办法略微复杂, 可参考<br><a href="http://www.xitongzhijia.net/xtjc/20161210/88577.html" target="_blank" rel="noopener">win7参考链接</a><br><a href="https://jingyan.baidu.com/article/22fe7cedfa1fc13002617fc6.html" target="_blank" rel="noopener">win10参考链接</a></p><p>当然, 除了以上之外的方法, 我写了个UI脚本, 简单方便  </p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;00-前言&quot;&gt;&lt;a href=&quot;#00-前言&quot; class=&quot;headerlink&quot; title=&quot;00 前言&quot;&gt;&lt;/a&gt;00 前言&lt;/h1&gt;
+      &lt;h1 id=&quot;00-前言&quot;&gt;&lt;a href=&quot;#00-前言&quot; class=&quot;headerlink&quot; title=&quot;00 前言&quot;&gt;&lt;/a&gt;00 前言&lt;/h1&gt;&lt;p&gt;今天来写一下简单的网络故障排查&lt;br&gt;地点: 某高校校内网络需要校园网账号进行实名登录后才可上网&lt;br&gt;今天来写一下遇到的以下情况:&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png&quot; alt=&quot;网卡1&quot;&gt;&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png&quot; alt=&quot;网卡2&quot;&gt;&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png&quot; alt=&quot;网卡3&quot;&gt;&lt;/p&gt;
+&lt;p&gt;等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况&lt;/p&gt;
     
     </summary>
     
+      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
+    
+      <category term="Troubleshooting" scheme="https://zzdkl.com.cn/categories/Network/Troubleshooting/"/>
+    
+    
+      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
@@ -218,9 +225,9 @@
     
       <category term="Windows" scheme="https://zzdkl.com.cn/categories/Windows/"/>
     
-      <category term="BackUp" scheme="https://zzdkl.com.cn/categories/Windows/BackUp/"/>
-    
       <category term="Software" scheme="https://zzdkl.com.cn/categories/Software/"/>
+    
+      <category term="BackUp" scheme="https://zzdkl.com.cn/categories/Windows/BackUp/"/>
     
       <category term="AOMEI" scheme="https://zzdkl.com.cn/categories/Software/AOMEI/"/>
     
@@ -1069,31 +1076,6 @@
     
     
       <category term="0708" scheme="https://zzdkl.com.cn/tags/0708/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简单网络故障排查</title>
-    <link href="https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/"/>
-    <id>https://zzdkl.com.cn/2019/10/28/04_network_troubleshooting/</id>
-    <published>2019-10-28T07:22:38.409Z</published>
-    <updated>2019-11-01T06:36:50.585Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>今天来写一下简单的网络故障排查<br>地点: 某高校校内网络需要校园网账号进行实名登录后才可上网<br>今天来写一下遇到的以下情况:<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png" alt="网卡1"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png" alt="网卡2"><br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png" alt="网卡3"></p><p>等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况</p><a id="more"></a><h1 id="01-原因排查"><a href="#01-原因排查" class="headerlink" title="01 原因排查"></a>01 原因排查</h1><p>对于以上出现的情况, 无非就有三种情况:  </p><ol><li>自己的电脑网络配置出现问题  </li><li>学校的网络线路有问题  </li><li>访问的目标网站网络有问题  </li></ol><p>问题出现在 </p><ol><li><p>自己  </p></li><li><p>学校</p></li><li><p>目标网站</p><p>这个三个情况, 下面分别对这三个情况进行简单判断和分析, 以及解决办法</p></li></ol><h1 id="02-电脑配置问题"><a href="#02-电脑配置问题" class="headerlink" title="02 电脑配置问题"></a>02 电脑配置问题</h1><p>自己的电脑出问题很明显的特征就是: <code>自己一个人不能上网, 但是舍友可以</code><br>此处的重点是: <code>自己一个人不能上网</code>, 如果舍友或者身边的人可以, 那这就是很典型的自己电脑配置出现了问题<br>而且不能上网的特征就是: <code>不能打开校园网认证界面</code>, 如下图:<br>图1<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-29-17.png" alt="图1"><br>图2<br><img src="/upload_image/2019/10/Snipaste_2019-10-30_09-30-27.png" alt="图2"></p><p>如果身边的人也有一部分人能上, 一部分人不能上, 请跳转到学校网络故障问题</p><p>解决的办法有:  </p><ol><li>重启</li><li>设置IP地址为自动获取(DHCP)  </li><li>重设网络配置</li></ol><p>基本上以上的三个办法可以解决绝大部分的电脑配置问题<br>对于方法2, 可以参考<br><a href="https://jingyan.baidu.com/article/47a29f243fce1ec0142399a3.html" target="_blank" rel="noopener">这个百度经验链接(win7)</a><br><a href="https://jingyan.baidu.com/article/f006222846cc1cfbd3f0c88f.html" target="_blank" rel="noopener">这个百度经验链接(win10)</a>  </p><p>对于方法3, 需要使用管理员身份运行的命令提示行窗口进行以下命令:</p><figure class="highlight ebnf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netsh winsock reset</span></span><br></pre></td></tr></tbody></table></figure><p>然后重启. 这个办法略微复杂, 可参考<br><a href="http://www.xitongzhijia.net/xtjc/20161210/88577.html" target="_blank" rel="noopener">win7参考链接</a><br><a href="https://jingyan.baidu.com/article/22fe7cedfa1fc13002617fc6.html" target="_blank" rel="noopener">win10参考链接</a></p><p>当然, 除了以上之外的方法, 我写了个UI脚本, 简单方便  </p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;00-前言&quot;&gt;&lt;a href=&quot;#00-前言&quot; class=&quot;headerlink&quot; title=&quot;00 前言&quot;&gt;&lt;/a&gt;00 前言&lt;/h1&gt;&lt;p&gt;今天来写一下简单的网络故障排查&lt;br&gt;地点: 某高校校内网络需要校园网账号进行实名登录后才可上网&lt;br&gt;今天来写一下遇到的以下情况:&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_08-58-17.png&quot; alt=&quot;网卡1&quot;&gt;&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_08-59-13.png&quot; alt=&quot;网卡2&quot;&gt;&lt;br&gt;&lt;img src=&quot;/upload_image/2019/10/Snipaste_2019-10-30_09-00-10.png&quot; alt=&quot;网卡3&quot;&gt;&lt;/p&gt;
-&lt;p&gt;等等以上的情况都会出现, 但是网络问题情况出现会比较复杂, 这里简单的说一下常见的网络故障排查情况&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Network" scheme="https://zzdkl.com.cn/categories/Network/"/>
-    
-      <category term="Troubleshooting" scheme="https://zzdkl.com.cn/categories/Network/Troubleshooting/"/>
-    
-    
-      <category term="Network" scheme="https://zzdkl.com.cn/tags/Network/"/>
     
   </entry>
   
