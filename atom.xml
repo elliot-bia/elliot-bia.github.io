@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zzdkl.com.cn/"/>
-  <updated>2019-11-19T08:42:34.936Z</updated>
+  <updated>2019-11-19T09:24:17.152Z</updated>
   <id>https://zzdkl.com.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://zzdkl.com.cn/2019/11/19/05_get_score/"/>
     <id>https://zzdkl.com.cn/2019/11/19/05_get_score/</id>
     <published>2019-11-19T08:30:35.817Z</published>
-    <updated>2019-11-19T08:42:34.936Z</updated>
+    <updated>2019-11-19T09:24:17.152Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>某天计协某位小伙子问了一个问题:<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-34-00.png" alt="pic"></p><p>原因就是教务系统不评价就不让看成绩 = =</p><p>哦耶, 谁让我宠你们, 就写了个小脚本</p><p>(顺便一提, 教务系统现在不接受90分以上的评价…无言以对)</p><a id="more"></a><h1 id="01-用法"><a href="#01-用法" class="headerlink" title="01 用法"></a>01 用法</h1><p>下载解压后, 一定要解压出来= = , 双击文件即可<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-36-34.png" alt="pic2"></p><p>登录时间只有30秒, 然后就会出成绩了~<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-37-57.png" alt="pic3"></p><p>当当当!<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-38-43.png" alt="pic4"></p><h1 id="02-下载"><a href="#02-下载" class="headerlink" title="02 下载"></a>02 下载</h1><p><a href="/upload_image/2019/11/查看教务成绩.zip">点这里下载</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>某天计协某位小伙子问了一个问题:<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-34-00.png" alt="pic"></p><p>原因就是教务系统不评价就不让看成绩 = =</p><p>哦耶, 谁让我宠你们, 就写了个小脚本</p><p>(顺便一提, 教务系统现在不接受90分以上的评价…无言以对)</p><a id="more"></a><h1 id="01-用法"><a href="#01-用法" class="headerlink" title="01 用法"></a>01 用法</h1><p>下载解压后, 一定要解压出来= = , 双击文件即可<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-36-34.png" alt="pic2"></p><p>登录时间只有30秒, 然后就会出成绩了~<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-37-57.png" alt="pic3"></p><p>当当当!<br><img src="/upload_image/2019/11/Snipaste_2019-11-19_16-38-43.png" alt="pic4"></p><h1 id="02-下载"><a href="#02-下载" class="headerlink" title="02 下载"></a>02 下载</h1><p><a href="/upload_image/2019/11/查看教务成绩.zip">点这里下载</a></p><p>需要安装谷歌浏览器…没装的话…让舍友帮忙吧</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
     <summary type="html">
     
