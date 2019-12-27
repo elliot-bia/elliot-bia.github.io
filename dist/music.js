@@ -5,8 +5,8 @@
  * @mail: elliot.bia.8989@outlook.com
  * @github: https://github.com/elliot-bia
  * @Date: 2019-10-28 15:22:41
- * @LastEditors: zzy
- * @LastEditTime: 2019-11-01 11:44:02
+ * @LastEditors  : zzy
+ * @LastEditTime : 2019-12-27 10:35:41
  * @---------------------------------
  * @Description: 
  */
@@ -94,6 +94,12 @@ const ap = new APlayer({
             artist: '张慧妹',
             url: 'http://music.163.com/song/media/outer/url?id=327096.mp3',
             cover: 'http://p2.music.126.net/tyk7m0lkzAyEblOLR6VtGg==/109951163271830284.jpg',
+        },
+        {
+            name: "起风了",
+            artist: '林俊杰',
+            url: '/music/起风了.mp3',
+            cover: 'http://i1.hdslb.com/bfs/archive/74e86176c570365bc35b9ec48ee96128e9b3412c.jpg',
         }
         
     ]

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>新年寄望</title>
+      <link href="/2019/12/04/06_life/"/>
+      <url>/2019/12/04/06_life/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="00-前言"><a href="#00-前言" class="headerlink" title="00 前言"></a>00 前言</h1><p>转眼间又快到了2020年元旦, 时间过得真快啊</p><a id="more"></a><p>well, 最近一两个月都不在状态, 慢慢去调整, 不管是身体状况还是心理状况, 情况总在慢慢变好</p><p>现在做一个年终总结吧</p><h1 id="01-回望"><a href="#01-回望" class="headerlink" title="01 回望"></a>01 回望</h1><p>回望2019年, 大概是变化最大的一年, 入了门槛, 有了经验, 都是在望好的方向走</p><p>也有差的地方, 失眠依旧严重以及其他方面</p><h1 id="02-展望"><a href="#02-展望" class="headerlink" title="02 展望"></a>02 展望</h1><p>对于2020年, 我想让自己再勤奋点, 堕落会腐蚀你的灵魂, 侵袭你的肉体, 所以要坚持勤奋点</p><p><code>努力不一定成功, 放弃一定舒服</code> 这句话不得不佩服是真理, 人的本性果然是好吃懒做</p><h1 id="03-计划"><a href="#03-计划" class="headerlink" title="03 计划"></a>03 计划</h1><p>英语还是要好好学, 毕竟是学位证还是要拿到的  </p><p>Linux, 冲</p><p>python…</p><p>…感觉还是好多要学的, 又无从下手, 甚至不想动手, 想逃避, 果然又回到懒惰这个原点来了</p><h1 id="04-总结"><a href="#04-总结" class="headerlink" title="04 总结"></a>04 总结</h1><p>ok, 莫要懒惰, 这都是什么人生疾苦啊, 我受不了了</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NewYear </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小脚本</title>
       <link href="/2019/11/19/05_get_score/"/>
       <url>/2019/11/19/05_get_score/</url>
